@@ -12,7 +12,7 @@
     <link rel="apple-touch-icon"
         href="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Government_Seal_of_Bangladesh.svg/240px-Government_Seal_of_Bangladesh.svg.png">
 
-    <!-- স্পষ্ট ও সুস্পষ্ট বাংলা ফন্ট Noto Sans Bengali -->
+    <!-- স্পষ্ট ও নির্ভুল বাংলা ফন্ট Noto Sans Bengali -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap"
@@ -208,7 +208,7 @@
             cursor: pointer;
         }
 
-        /* ফায়ার সার্ভিস সেকশন কার্ড */
+        /* ফায়ার সার্ভিস সেকশন */
         .fire-service-wrapper {
             background: var(--fire-bg);
             border: 1.5px solid var(--fire-border);
@@ -392,7 +392,7 @@
 
         .allowance-list {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 14px;
             margin-bottom: 18px;
         }
@@ -502,8 +502,8 @@
             </div>
         </div>
 
-        <!-- ২. ২০২৮ সালের বর্ধিত সাধারণ ভাতা সংক্রান্ত তথ্য -->
-        <div class="section-title">২. ২০২৮ সালের বর্ধিত সাধারণ ভাতা সংক্রান্ত তথ্য (গেজেটের অনুচ্ছেদ ১২-৩০)</div>
+        <!-- ২. ২০২৮ সালের বর্ধিত সাধারণ ও বিশেষ এলাকা ভাতা সংক্রান্ত তথ্য -->
+        <div class="section-title">২. ২০২৮ সালের বর্ধিত ভাতা সংক্রান্ত তথ্য (গেজেটের অনুচ্ছেদ ১২-৩০)</div>
 
         <div class="form-grid">
             <div class="form-group">
@@ -512,6 +512,16 @@
                     <option value="dhaka">ঢাকা উত্তর ও দক্ষিণ সিটি কর্পোরেশন</option>
                     <option value="other_cc">অন্যান্য সিটি কর্পোরেশন, সাভার ও কক্সবাজার পৌরসভা</option>
                     <option value="others" selected>অন্যান্য স্থান (জেলা / উপজেলা)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="remoteAllowance">পাহাড়ি বা হাওড়/দ্বীপ/চর ভাতা:</label>
+                <select id="remoteAllowance">
+                    <option value="none" selected>প্রযোজ্য নয় (সাধারণ এলাকা)</option>
+                    <option value="hill_sadar">পার্বত্য জেলা সদর ও সদর উপজেলা (২০%, সর্বোচ্চ ৫,০০০ টাকা)</option>
+                    <option value="hill_other">পার্বত্য জেলার অন্যান্য উপজেলা (২০%, সর্বোচ্চ ৫,৫০০ টাকা)</option>
+                    <option value="haor">হাওড় / দ্বীপ / চর এলাকা (২০%, সর্বোচ্চ ৫,০০০ টাকা)</option>
                 </select>
             </div>
 
@@ -575,7 +585,7 @@
                         <option value="20+">২০+ বছর হতে তদূর্ধ্ব</option>
                     </select>
                     <span class="help-text" style="color: #991b1b;">* প্রজ্ঞাপন নং ০৭.০০.০০০০.১৭৩.৪৪.০৫৮.১৫-১২৪, তারিখ:
-                        ২৯/১০/২০১৮ অনুযায়ী উপসহকারী পরিচালক (গ্রেড-১০) হতে ফায়ারফাইটার/নার্সিং এ্যাটেনডেন্ট (গ্রেড-১৮)
+                        ২৯/১০/২০১৮ অনুযায়ী উপসহকারী পরিচালক (গ্রেড-১০) হতে ফায়ারম্যান/নার্সিং এ্যাটেনডেন্ট (গ্রেড-১৮)
                         পর্যন্ত প্রযোজ্য।</span>
                 </div>
             </div>
@@ -627,13 +637,13 @@
                 <!-- বিশেষ বাহিনী ও ঝুঁকি ভাতার অবগতি নোট -->
                 <div class="special-forces-note">
                     <strong>📌 বিশেষ ভাতা ও প্রতিরক্ষা বাহিনীর অবগতি নোট:</strong><br>
-                    ফায়ার সার্ভিস ও সিভিল ডিফেন্স অধিদপ্তরের অপারেশনাল কর্মচারীদের ঝুঁকি ভাতা (অর্থ বিভাগের প্রজ্ঞাপন
-                    নং- ০৭.০০.০০০০.১৭৩.৪৪.০৫৮.১৫-১২৪, তারিখ: ২৯/১০/২০১৮ এবং চাকরি (বেতন ও ভাতাদি) আদেশ, ২০২৬-এর অনুচ্ছেদ
-                    ২৯ মোতাবেক) সফলভাবে সংযুক্ত করা হয়েছে।<br>
-                    অন্যান্য বিশেষ বাহিনী ও দপ্তর (যেমন: পুলিশ বাহিনী, বর্ডার গার্ড বাংলাদেশ (বিজিবি), প্রতিরক্ষা
-                    সার্ভিসের বেসামরিক কর্মচারী, বাংলাদেশ কোস্টগার্ড, কারারক্ষী, আনসার ও গ্রাম প্রতিরক্ষা বাহিনী,
-                    এনএসআই, ডিজিএফআই এবং স্বাস্থ্য পরিদপ্তরের কুষ্ঠ ও যক্ষ্মা কার্যক্রমের ঝুঁকিভাতা) স্ব-স্ব দপ্তরের
-                    নির্ধারিত আদেশ অনুযায়ী ডিডিও কর্তৃক অতিরিক্ত হিসেবে যুক্ত হবে।
+                    ফায়ার সার্ভিস ও সিভিল ডিফেন্স অধিদপ্তরের অপারেশনাল কর্মচারীদের ঝুঁকি ভাতা (২৯/১০/২০১৮ প্রজ্ঞাপন)
+                    এবং পার্বত্য/হাওড় ভাতা (অনুচ্ছেদ ২৫ ও ২৬) সফলভাবে সংযুক্ত করা হয়েছে।<br>
+                    অন্যান্য বিশেষ বাহিনী ও দপ্তর (যেমন: পুলিশ বাহিনী, ফায়ার সার্ভিস, বিজিবি, প্রতিরক্ষা সার্ভিসের
+                    বেসামরিক কর্মচারী,
+                    কোস্টগার্ড, কারারক্ষী, আনসার ও গ্রাম প্রতিরক্ষা বাহিনী, এনএসআই, ডিজিএফআই এবং স্বাস্থ্য পরিদপ্তরের
+                    কুষ্ঠ ও যক্ষ্মা কার্যক্রমের ঝুঁকিভাতা) স্ব-স্ব দপ্তরের নির্ধারিত আদেশ অনুযায়ী ডিডিও কর্তৃক অতিরিক্ত
+                    হিসেবে যুক্ত হবে।
                 </div>
             </div>
 
@@ -643,9 +653,9 @@
                     <li><strong>১৫% বিশেষ সুবিধা কর্তন:</strong> ১ জুলাই ২০২৬ হতে পূর্বের ১৫% বিশেষ সুবিধা সম্পূর্ণ
                         বিলুপ্ত হয়েছে। ৩০ জুন ২০২৬-এর মূল বেতনের উপর যে ১৫% আহরণ করা হতো, তা নতুন স্কেলের বর্ধিত বকেয়া
                         (Arrears) হতে একবারই সমন্বয় করা হয়েছে [অনুচ্ছেদ ১(৩)(ট)]।</li>
-                    <li><strong>ভাতা কার্যকরের সময়সীমা:</strong> বাড়িভাড়া, চিকিৎসা ও টিফিনসহ সকল বর্ধিত সাধারণ ভাতাদি
-                        ১ জানুয়ারি ২০২৮ তারিখ হতে কার্যকর হবে। ৩১ ডিসেম্বর ২০২৭ পর্যন্ত পূর্বের সমপরিমাণ অঙ্কেই ভাতাদি
-                        বহাল থাকবে [অনুচ্ছেদ ১(৩)(ঞ)]।</li>
+                    <li><strong>ভাতা কার্যকরের সময়সীমা:</strong> বাড়িভাড়া, চিকিৎসা, পাহাড়ি/হাওড় ভাতা ও টিফিনসহ সকল
+                        বর্ধিত সাধারণ ভাতাদি ১ জানুয়ারি ২০২৮ তারিখ হতে কার্যকর হবে। ৩১ ডিসেম্বর ২০২৭ পর্যন্ত পূর্বের
+                        সমপরিমাণ অঙ্কেই ভাতাদি বহাল থাকবে [অনুচ্ছেদ ১(৩)(ঞ)]।</li>
                 </ol>
             </div>
 
@@ -883,6 +893,21 @@
             }
             const houseRent = basic2028 * hrPercent;
 
+            // পাহাড়ি ও হাওড়/দ্বীপ/চর ভাতা (অনুচ্ছেদ ২৫ ও ২৬)
+            let remoteAllowanceAmt = 0;
+            let remoteAllowanceTitle = '';
+            const remoteType = document.getElementById('remoteAllowance').value;
+            if (remoteType === 'hill_sadar') {
+                remoteAllowanceAmt = Math.min(basic2028 * 0.20, 5000);
+                remoteAllowanceTitle = 'পাহাড়ি ভাতা (সদর উপজেলা - অনুচ্ছেদ ২৫)';
+            } else if (remoteType === 'hill_other') {
+                remoteAllowanceAmt = Math.min(basic2028 * 0.20, 5500);
+                remoteAllowanceTitle = 'পাহাড়ি ভাতা (অন্যান্য উপজেলা - অনুচ্ছেদ ২৫)';
+            } else if (remoteType === 'haor') {
+                remoteAllowanceAmt = Math.min(basic2028 * 0.20, 5000);
+                remoteAllowanceTitle = 'হাওড় / দ্বীপ / চর ভাতা (অনুচ্ছেদ ২৬)';
+            }
+
             // চিকিৎসা ভাতা (অনুচ্ছেদ ১৩)
             const ageGroup = document.getElementById('ageGroup').value;
             const medical = (ageGroup === '50_plus') ? 4000 : 3000;
@@ -928,12 +953,25 @@
                 }
             }
 
-            const grossTotal = basic2028 + houseRent + medical + education + tiffin + conveyance + mobile + washing + fireRisk;
+            const grossTotal = basic2028 + houseRent + remoteAllowanceAmt + medical + education + tiffin + conveyance + mobile + washing + fireRisk;
 
             // ভাতার তালিকা প্রস্তুত
             let allowancesHtml = `
     <div class="allowance-item"><span>মূল বেতন (Basic):</span> <strong>${toBn(basic2028.toFixed(2))} টাকা</strong></div>
     <div class="allowance-item"><span>বাড়ি ভাড়া (${toBn(hrPercent * 100)}%):</span> <strong>${toBn(houseRent.toFixed(2))} টাকা</strong></div>
+  `;
+
+            // পাহাড়ি বা হাওড় ভাতা প্রযোজ্য থাকলে তালিকায় যুক্ত হবে
+            if (remoteAllowanceAmt > 0) {
+                allowancesHtml += `
+      <div class="allowance-item" style="background:#eff6ff; border-color:#bfdbfe;">
+        <span style="color:#1d4ed8; font-weight:600;">${remoteAllowanceTitle}:</span> 
+        <strong style="color:#1d4ed8;">${toBn(remoteAllowanceAmt.toFixed(2))} টাকা</strong>
+      </div>
+    `;
+            }
+
+            allowancesHtml += `
     <div class="allowance-item"><span>চিকিৎসা ভাতা:</span> <strong>${toBn(medical)} টাকা</strong></div>
     <div class="allowance-item"><span>শিক্ষা সহায়ক ভাতা:</span> <strong>${toBn(education)} টাকা</strong></div>
     <div class="allowance-item"><span>টিফিন ভাতা:</span> <strong>${toBn(tiffin)} টাকা</strong></div>
