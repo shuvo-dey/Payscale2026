@@ -3,10 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>জাতীয় বেতন স্কেল ২০২৬ পে-ফিক্সেশন ও বেতন-ভাতা ক্যালকুলেটর</title>
 
-    <!-- বাংলাদেশ সরকারের অফিশিয়াল সিলমোহর (Favicon) -->
+    <!-- বাংলাদেশ সরকারের অফিশিয়াল সিলমোহর (Favicon) -->
     <link rel="icon" type="image/svg+xml"
         href="https://upload.wikimedia.org/wikipedia/commons/8/84/Government_Seal_of_Bangladesh.svg">
     <link rel="apple-touch-icon"
@@ -15,7 +15,7 @@
     <!-- স্পষ্ট ও নির্ভুল বাংলা ফন্ট Noto Sans Bengali -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
 
     <style>
@@ -135,17 +135,28 @@
             color: var(--secondary);
         }
 
+        /* মোবাইলে আইওএস স্ক্রিন জুম বন্ধ রাখতে font-size: 16px */
         select,
         input[type="number"] {
             padding: 13px 15px;
             border: 1.8px solid var(--border-color);
             border-radius: 10px;
-            font-size: 15.5px;
+            font-size: 16px;
             font-weight: 500;
             outline: none;
             background-color: #ffffff;
             color: var(--text-main);
             transition: all 0.25s ease;
+            -webkit-appearance: none;
+            appearance: none;
+        }
+
+        select {
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23475569' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 14px center;
+            background-size: 16px;
+            padding-right: 40px;
         }
 
         select:focus,
@@ -184,16 +195,18 @@
         .checkbox-label {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
             font-size: 14.5px;
             font-weight: 600;
             color: var(--slate-dark);
             cursor: pointer;
             background: #ffffff;
-            padding: 10px 14px;
+            padding: 11px 14px;
             border-radius: 8px;
             border: 1.5px solid #e2e8f0;
             transition: all 0.2s ease;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
         }
 
         .checkbox-label:hover {
@@ -202,13 +215,14 @@
         }
 
         .checkbox-label input {
-            width: 18px;
-            height: 18px;
+            width: 20px;
+            height: 20px;
             accent-color: var(--primary);
             cursor: pointer;
+            flex-shrink: 0;
         }
 
-        /* ফায়ার সার্ভিস সেকশন */
+        /* ফায়ার সার্ভিস সেকশন */
         .fire-service-wrapper {
             background: var(--fire-bg);
             border: 1.5px solid var(--fire-border);
@@ -234,8 +248,9 @@
             border-top: 1px dashed var(--fire-border);
         }
 
+        /* আকর্ষণীয় ক্যালকুলেট বাটন */
         .calc-btn-wrapper {
-            margin: 10px 0 25px 0;
+            margin: 15px 0 25px 0;
         }
 
         .calc-btn {
@@ -244,46 +259,52 @@
             color: #ffffff;
             border: none;
             padding: 18px 24px;
-            border-radius: 12px;
+            border-radius: 14px;
             font-size: 19px;
-            font-weight: 700;
+            font-weight: 800;
             cursor: pointer;
             letter-spacing: 0.5px;
-            box-shadow: 0 8px 25px rgba(5, 150, 105, 0.4);
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 12px;
-            transition: all 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            animation: pulseGlow 2.5s infinite;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        @keyframes pulseGlow {
+            0% {
+                box-shadow: 0 0 0 0 rgba(5, 150, 105, 0.6);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(5, 150, 105, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(5, 150, 105, 0);
+            }
         }
 
         .calc-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 12px 30px rgba(5, 150, 105, 0.5);
             background: linear-gradient(135deg, #10b981 0%, #059669 50%, #047857 100%);
+            box-shadow: 0 15px 30px rgba(5, 150, 105, 0.4);
         }
 
         .calc-btn:active {
-            transform: translateY(1px);
+            transform: scale(0.98);
         }
 
         .calc-btn .icon {
             font-size: 22px;
-            animation: pulseIcon 1.5s infinite;
+            animation: bounceIcon 1.5s infinite;
         }
 
-        @keyframes pulseIcon {
-            0% {
-                transform: scale(1);
-            }
-
-            50% {
-                transform: scale(1.2);
-            }
-
-            100% {
-                transform: scale(1);
-            }
+        @keyframes bounceIcon {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-3px); }
         }
 
         .result-section {
@@ -297,7 +318,6 @@
                 opacity: 0;
                 transform: translateY(14px);
             }
-
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -320,6 +340,20 @@
             color: #064e3b;
         }
 
+        /* মোবাইল স্ক্রোল নির্দেশিকা (শুধু মোবাইলে দেখাবে) */
+        .mobile-scroll-hint {
+            display: none;
+            font-size: 12.5px;
+            font-weight: 600;
+            color: #0369a1;
+            background-color: #f0f9ff;
+            border: 1px solid #bae6fd;
+            padding: 6px 12px;
+            border-radius: 6px;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+
         .table-container {
             overflow-x: auto;
             border: 1.5px solid #e2e8f0;
@@ -327,10 +361,12 @@
             margin-bottom: 25px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
             background: #ffffff;
+            -webkit-overflow-scrolling: touch;
         }
 
         table {
             width: 100%;
+            min-width: 560px; /* মোবাইলে টেবিল চেপে যেন নষ্ট না হয় */
             border-collapse: collapse;
             text-align: left;
         }
@@ -338,8 +374,8 @@
         th,
         td {
             border-bottom: 1px solid #e2e8f0;
-            padding: 14px 16px;
-            font-size: 15px;
+            padding: 13px 14px;
+            font-size: 14.5px;
         }
 
         th {
@@ -347,6 +383,7 @@
             color: var(--secondary);
             font-weight: 700;
             border-bottom: 2px solid #cbd5e1;
+            white-space: nowrap;
         }
 
         tr:last-child td {
@@ -361,7 +398,7 @@
             display: inline-block;
             padding: 4px 10px;
             border-radius: 6px;
-            font-size: 13px;
+            font-size: 12.5px;
             font-weight: 700;
             background-color: #e0f2fe;
             color: #0369a1;
@@ -371,7 +408,7 @@
             background: #f0fdf4;
             border: 1.5px solid #86efac;
             border-radius: 14px;
-            padding: 22px 24px;
+            padding: 24px;
             margin-top: 30px;
             box-shadow: 0 4px 15px rgba(22, 101, 52, 0.06);
         }
@@ -394,7 +431,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 14px;
-            margin-bottom: 18px;
+            margin-bottom: 22px;
         }
 
         .allowance-item {
@@ -414,19 +451,58 @@
             font-weight: 700;
         }
 
+        /* মোট বেতনের (Gross Total) হাইলাইটেড ও ডাইনামিক কার্ড */
         .allowance-total {
-            border-top: 2px dashed #4ade80;
-            padding-top: 14px;
+            background: linear-gradient(135deg, #064e3b 0%, #047857 60%, #0f766e 100%);
+            color: #ffffff;
+            border: 2px solid #6ee7b7;
+            padding: 18px 22px;
+            border-radius: 14px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-size: 18.5px;
+            flex-wrap: wrap;
+            gap: 12px;
+            box-shadow: 0 10px 25px -3px rgba(4, 120, 87, 0.35);
+            transition: transform 0.2s ease;
+        }
+
+        .total-label-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .total-icon {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 8px 12px;
+            border-radius: 10px;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .total-title-text {
+            font-size: 17.5px;
             font-weight: 700;
-            color: #14532d;
+            color: #f0fdf4;
+            letter-spacing: 0.2px;
+        }
+
+        .total-amount-highlight {
+            font-size: 25px;
+            font-weight: 800;
+            color: #fef08a; /* উজ্জ্বল সোনালি রং */
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+            background: rgba(0, 0, 0, 0.18);
+            padding: 6px 18px;
+            border-radius: 10px;
+            border: 1px solid rgba(254, 240, 138, 0.35);
         }
 
         .special-forces-note {
-            margin-top: 15px;
+            margin-top: 18px;
             padding: 14px 16px;
             background-color: #ffffff;
             border: 1.5px solid #86efac;
@@ -448,25 +524,160 @@
             line-height: 1.65;
         }
 
-        .developer-credit {
+        .developer-credit-permanent {
             margin-top: 35px;
-            padding-top: 20px;
-            border-top: 1.5px solid #e2e8f0;
+            padding-top: 22px;
+            border-top: 1.5px dashed #cbd5e1;
             text-align: center;
             font-size: 14.5px;
             color: var(--slate-dark);
         }
 
-        .developer-credit strong {
+        .developer-credit-permanent strong {
             color: var(--primary-dark);
             font-size: 16px;
-            font-weight: 700;
+            font-weight: 800;
+            letter-spacing: 0.3px;
         }
 
-        .developer-credit p {
+        .developer-credit-permanent p {
             margin-top: 6px;
             font-size: 13px;
             color: #64748b;
+        }
+
+        /* 📱 স্মার্টফোন ও ছোট স্ক্রিনের জন্য অপটিমাইজেশন (Mobile-Friendly Media Queries) */
+        @media (max-width: 640px) {
+            body {
+                padding: 14px 8px;
+            }
+
+            .container {
+                padding: 22px 14px;
+                border-radius: 16px;
+            }
+
+            .header {
+                margin-bottom: 22px;
+                padding-bottom: 18px;
+            }
+
+            .bd-logo {
+                width: 68px;
+                height: 68px;
+                margin-bottom: 8px;
+            }
+
+            .header h1 {
+                font-size: 21px;
+                line-height: 1.35;
+            }
+
+            .header p {
+                font-size: 13.5px;
+            }
+
+            .section-title {
+                font-size: 16px;
+                margin-bottom: 12px;
+            }
+
+            .form-grid {
+                gap: 14px;
+                margin-bottom: 18px;
+            }
+
+            .checkbox-container {
+                padding: 14px 12px;
+                margin-bottom: 18px;
+            }
+
+            .checkbox-grid {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+            .checkbox-label {
+                padding: 10px 12px;
+                font-size: 14px;
+            }
+
+            .calc-btn {
+                padding: 16px 18px;
+                font-size: 17.5px;
+                border-radius: 12px;
+            }
+
+            .calc-btn .icon {
+                font-size: 20px;
+            }
+
+            .summary-card {
+                padding: 16px 14px;
+                font-size: 14px;
+            }
+
+            .summary-card p {
+                font-size: 14.5px;
+            }
+
+            .mobile-scroll-hint {
+                display: block; /* শুধু মোবাইলে দেখাবে */
+            }
+
+            .allowance-box {
+                padding: 18px 14px;
+            }
+
+            .allowance-title {
+                font-size: 16.5px;
+            }
+
+            .allowance-list {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+            .allowance-item {
+                padding: 10px 12px;
+                font-size: 14px;
+            }
+
+            /* মোবাইলে গ্রস টোটাল সুন্দরভাবে সেন্টারে বড় দেখাবে */
+            .allowance-total {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+                padding: 16px 14px;
+            }
+
+            .total-label-wrapper {
+                flex-direction: column;
+                gap: 6px;
+            }
+
+            .total-title-text {
+                font-size: 16px;
+            }
+
+            .total-amount-highlight {
+                font-size: 23px;
+                width: 100%;
+                text-align: center;
+                padding: 8px 12px;
+            }
+
+            .special-forces-note,
+            .footer-note {
+                padding: 14px 12px;
+                font-size: 13px;
+            }
+
+            .developer-credit-permanent {
+                font-size: 13.5px;
+                margin-top: 25px;
+                padding-top: 18px;
+            }
         }
     </style>
 </head>
@@ -488,7 +699,7 @@
 
         <div class="form-grid">
             <div class="form-group">
-                <label for="grade">বর্তমান গ্রেড নির্বাচন করুন (২০২৬ এর নতুন পে-স্কেল অনুযায়ী):</label>
+                <label for="grade">বর্তমান গ্রেড নির্বাচন করুন (২০২৬ এর নতুন পে-স্কেল অনুযায়ী):</label>
                 <select id="grade" onchange="updateScaleHint()">
                     <option value="">-- গ্রেড বাছাই করুন --</option>
                 </select>
@@ -496,7 +707,7 @@
             </div>
 
             <div class="form-group">
-                <label for="basicOld">৩০ জুন ২০২৬-এ আহরিত মূল বেতন (২০১৫ পে-স্কেল অনুযায়ী):</label>
+                <label for="basicOld">৩০ জুন ২০২৬-এ আহরিত মূল বেতন (২০১৫ পে-স্কেল অনুযায়ী):</label>
                 <input type="number" id="basicOld" placeholder="যেমন: ১২০৯০">
                 <span class="help-text">১ জুলাই ২০২৬-এর ইনক্রিমেন্ট লাগার পূর্বের মূল বেতন লিখুন</span>
             </div>
@@ -507,7 +718,7 @@
 
         <div class="form-grid">
             <div class="form-group">
-                <label for="location">কর্মস্থল এলাকা (বাড়িভাড়ার জন্য):</label>
+                <label for="location">কর্মস্থল এলাকা (বাড়িভাড়ার জন্য):</label>
                 <select id="location">
                     <option value="dhaka">ঢাকা উত্তর ও দক্ষিণ সিটি কর্পোরেশন</option>
                     <option value="other_cc">অন্যান্য সিটি কর্পোরেশন, সাভার ও কক্সবাজার পৌরসভা</option>
@@ -516,17 +727,17 @@
             </div>
 
             <div class="form-group">
-                <label for="remoteAllowance">পাহাড়ি বা হাওড়/দ্বীপ/চর ভাতা:</label>
+                <label for="remoteAllowance">পাহাড়ি বা হাওড়/দ্বীপ/চর ভাতা:</label>
                 <select id="remoteAllowance">
-                    <option value="none" selected>প্রযোজ্য নয় (সাধারণ এলাকা)</option>
+                    <option value="none" selected>প্রযোজ্য নয় (সাধারণ এলাকা)</option>
                     <option value="hill_sadar">পার্বত্য জেলা সদর ও সদর উপজেলা (২০%, সর্বোচ্চ ৫,০০০ টাকা)</option>
                     <option value="hill_other">পার্বত্য জেলার অন্যান্য উপজেলা (২০%, সর্বোচ্চ ৫,৫০০ টাকা)</option>
-                    <option value="haor">হাওড় / দ্বীপ / চর এলাকা (২০%, সর্বোচ্চ ৫,০০০ টাকা)</option>
+                    <option value="haor">হাওড় / দ্বীপ / চর এলাকা (২০%, সর্বোচ্চ ৫,০০০ টাকা)</option>
                 </select>
             </div>
 
             <div class="form-group">
-                <label for="ageGroup">কর্মচারীর বয়সসীমা (চিকিৎসা ভাতার জন্য):</label>
+                <label for="ageGroup">কর্মচারীর বয়সসীমা (চিকিৎসা ভাতার জন্য):</label>
                 <select id="ageGroup">
                     <option value="50_below">৫০ বছর বা তার কম (মাসিক ৩,০০০ টাকা)</option>
                     <option value="50_plus">৫০ বছর ১ দিন হতে পিআরএল পর্যন্ত (মাসিক ৪,০০০ টাকা)</option>
@@ -534,9 +745,9 @@
             </div>
 
             <div class="form-group">
-                <label for="childrenCount">সন্তান সংখ্যা (শিক্ষা সহায়ক ভাতার জন্য):</label>
+                <label for="childrenCount">সন্তান সংখ্যা (শিক্ষা সহায়ক ভাতার জন্য):</label>
                 <select id="childrenCount">
-                    <option value="0">সন্তান নেই / প্রযোজ্য নয়</option>
+                    <option value="0">সন্তান নেই / প্রযোজ্য নয়</option>
                     <option value="1">১ সন্তান (মাসিক ৫০০ টাকা)</option>
                     <option value="2">২ বা ততোধিক সন্তান (মাসিক ১,০০০ টাকা)</option>
                 </select>
@@ -553,7 +764,7 @@
                 </label>
                 <label class="checkbox-label">
                     <input type="checkbox" id="conveyanceEligible">
-                    <span>যাতায়াত ভাতা (সিটি কর্পোরেশনস্থ ১১-২০তম গ্রেড: ৬০০ টাকা)</span>
+                    <span>যাতায়াত ভাতা (সিটি কর্পোরেশনস্থ ১১-২০তম গ্রেড: ৬০০ টাকা)</span>
                 </label>
                 <label class="checkbox-label">
                     <input type="checkbox" id="washingEligible">
@@ -569,13 +780,13 @@
             </div>
             <label class="checkbox-label" style="background:#ffffff; border-color: var(--fire-border);">
                 <input type="checkbox" id="fireServiceEligible" onchange="toggleFireServiceBox()">
-                <span style="color: var(--fire-red); font-weight:700;">আমি ফায়ার সার্ভিস ও সিভিল ডিফেন্স অধিদপ্তরের
-                    অপারেশনাল কাজে নিয়োজিত কর্মচারী</span>
+                <span style="color: var(--fire-red); font-weight:700;">আমি ফায়ার সার্ভিস ও সিভিল ডিফেন্স অধিদপ্তরের
+                    অপারেশনাল কাজে নিয়োজিত কর্মচারী</span>
             </label>
 
             <div class="fire-details" id="fireDetailsBox">
                 <div class="form-group" style="max-width: 420px; margin-top: 10px;">
-                    <label for="fireServiceYears" style="color: var(--fire-red);">চাকরির মোট বয়স / মেয়াদ নির্বাচন
+                    <label for="fireServiceYears" style="color: var(--fire-red);">চাকরির মোট বয়স / মেয়াদ নির্বাচন
                         করুন:</label>
                     <select id="fireServiceYears" style="border-color: var(--fire-border);">
                         <option value="0-5">০ হতে ৫ বছর</option>
@@ -585,18 +796,17 @@
                         <option value="20+">২০+ বছর হতে তদূর্ধ্ব</option>
                     </select>
                     <span class="help-text" style="color: #991b1b;">* প্রজ্ঞাপন নং ০৭.০০.০০০০.১৭৩.৪৪.০৫৮.১৫-১২৪, তারিখ:
-                        ২৯/১০/২০১৮ অনুযায়ী উপসহকারী পরিচালক (গ্রেড-১০) হতে ফায়ারম্যান/নার্সিং এ্যাটেনডেন্ট (গ্রেড-১৮)
-                        পর্যন্ত প্রযোজ্য।</span>
+                        ২৯/১০/২০১৮ অনুযায়ী উপসহকারী পরিচালক হতে ফায়ারফাইটার/নার্সিং এ্যাটেনডেন্ট পর্যন্ত প্রযোজ্য।</span>
                 </div>
             </div>
         </div>
 
-        <!-- ক্যালকুলেট বাটন -->
+        <!-- আকর্ষণীয় ক্যালকুলেট বাটন -->
         <div class="calc-btn-wrapper">
             <button class="calc-btn" onclick="calculateFullPay()">
                 <span class="icon">⚡</span>
-                <span>গেজেট অনুযায়ী বেতন ও ভাতাদি হিসাব করুন</span>
-                <span>➔</span>
+                <span>গেজেট অনুযায়ী বেতন ও ভাতাদি হিসাব করুন</span>
+                <span style="font-size: 21px;">➔</span>
             </button>
         </div>
 
@@ -606,6 +816,10 @@
             <div class="summary-card" id="summaryCard"></div>
 
             <div class="section-title">সময়ভিত্তিক মূল বেতন ও অতিরিক্ত নিট বৃদ্ধি বিবরণী:</div>
+            
+            <!-- মোবাইলের জন্য স্ক্রোল সহায়িকা -->
+            <div class="mobile-scroll-hint">👈 পুরো ছকটি দেখতে ডানে-বামে আঙুল দিয়ে টানুন 👉</div>
+            
             <div class="table-container">
                 <table>
                     <thead>
@@ -629,21 +843,24 @@
 
                 <div class="allowance-list" id="allowanceItemsList"></div>
 
+                <!-- হাইলাইটেড সর্বমোট প্রদেয় বেতন ও ভাতাদি কার্ড -->
                 <div class="allowance-total">
-                    <span>সর্বমোট প্রদেয় বেতন ও ভাতাদি (Gross Total):</span>
-                    <span id="grossTotalText">০ টাকা</span>
+                    <div class="total-label-wrapper">
+                        <div class="total-icon">💰</div>
+                        <div class="total-title-text">সর্বমোট প্রদেয় বেতন ও ভাতাদি (Gross Total):</div>
+                    </div>
+                    <div class="total-amount-highlight" id="grossTotalText">০ টাকা</div>
                 </div>
 
                 <!-- বিশেষ বাহিনী ও ঝুঁকি ভাতার অবগতি নোট -->
                 <div class="special-forces-note">
                     <strong>📌 বিশেষ ভাতা ও প্রতিরক্ষা বাহিনীর অবগতি নোট:</strong><br>
                     ফায়ার সার্ভিস ও সিভিল ডিফেন্স অধিদপ্তরের অপারেশনাল কর্মচারীদের ঝুঁকি ভাতা (২৯/১০/২০১৮ প্রজ্ঞাপন)
-                    এবং পার্বত্য/হাওড় ভাতা (অনুচ্ছেদ ২৫ ও ২৬) সফলভাবে সংযুক্ত করা হয়েছে।<br>
-                    অন্যান্য বিশেষ বাহিনী ও দপ্তর (যেমন: পুলিশ বাহিনী, ফায়ার সার্ভিস, বিজিবি, প্রতিরক্ষা সার্ভিসের
-                    বেসামরিক কর্মচারী,
-                    কোস্টগার্ড, কারারক্ষী, আনসার ও গ্রাম প্রতিরক্ষা বাহিনী, এনএসআই, ডিজিএফআই এবং স্বাস্থ্য পরিদপ্তরের
-                    কুষ্ঠ ও যক্ষ্মা কার্যক্রমের ঝুঁকিভাতা) স্ব-স্ব দপ্তরের নির্ধারিত আদেশ অনুযায়ী ডিডিও কর্তৃক অতিরিক্ত
-                    হিসেবে যুক্ত হবে।
+                    এবং পার্বত্য/হাওড় ভাতা (অনুচ্ছেদ ২৫ ও ২৬) সফলভাবে সংযুক্ত করা হয়েছে।<br>
+                    অন্যান্য বিশেষ বাহিনী ও দপ্তর (যেমন: পুলিশ বাহিনী, ফায়ার সার্ভিস, বিজিবি, প্রতিরক্ষা সার্ভিসের
+                    বেসামরিক কর্মচারী, কোস্টগার্ড, কারারক্ষী, আনসার ও গ্রাম প্রতিরক্ষা বাহিনী, এনএসআই, ডিজিএফআই এবং
+                    স্বাস্থ্য পরিদপ্তরের কুষ্ঠ ও যক্ষ্মা কার্যক্রমের ঝুঁকিভাতা) স্ব-স্ব দপ্তরের নির্ধারিত আদেশ অনুযায়ী
+                    ডিডিও কর্তৃক অতিরিক্ত হিসেবে যুক্ত হবে।
                 </div>
             </div>
 
@@ -652,20 +869,20 @@
                 <ol style="padding-left: 20px; margin-top: 6px;">
                     <li><strong>১৫% বিশেষ সুবিধা কর্তন:</strong> ১ জুলাই ২০২৬ হতে পূর্বের ১৫% বিশেষ সুবিধা সম্পূর্ণ
                         বিলুপ্ত হয়েছে। ৩০ জুন ২০২৬-এর মূল বেতনের উপর যে ১৫% আহরণ করা হতো, তা নতুন স্কেলের বর্ধিত বকেয়া
-                        (Arrears) হতে একবারই সমন্বয় করা হয়েছে [অনুচ্ছেদ ১(৩)(ট)]।</li>
-                    <li><strong>ভাতা কার্যকরের সময়সীমা:</strong> বাড়িভাড়া, চিকিৎসা, পাহাড়ি/হাওড় ভাতা ও টিফিনসহ সকল
+                        (Arrears) হতে একবারই সমন্বয় করা হয়েছে [অনুচ্ছেদ ১(৩)(ট)]।</li>
+                    <li><strong>ভাতা কার্যকরের সময়সীমা:</strong> বাড়িভাড়া, চিকিৎসা, পাহাড়ি/হাওড় ভাতা ও টিফিনসহ সকল
                         বর্ধিত সাধারণ ভাতাদি ১ জানুয়ারি ২০২৮ তারিখ হতে কার্যকর হবে। ৩১ ডিসেম্বর ২০২৭ পর্যন্ত পূর্বের
                         সমপরিমাণ অঙ্কেই ভাতাদি বহাল থাকবে [অনুচ্ছেদ ১(৩)(ঞ)]।</li>
                 </ol>
             </div>
 
-            <!-- ডেভেলপার ক্রেডিট -->
-            <div class="developer-credit">
-                ডিজাইন ও ডেভেলপমেন্ট: <strong>Shuvo Dey</strong>
-                <p>© ২০২৬ গণপ্রজাতন্ত্রী বাংলাদেশ সরকারের অর্থ মন্ত্রণালয় কর্তৃক জারিকৃত ‘চাকরি (বেতন ও ভাতাদি) আদেশ,
-                    ২০২৬’ গেজেট মোতাবেক প্রস্তুতকৃত। সর্বস্বত্ব সংরক্ষিত।</p>
-            </div>
+        </div>
 
+        <!-- সব সময় দৃশ্যমান স্থায়ী ফুটার ও কপিরাইট সেকশন -->
+        <div class="developer-credit-permanent">
+            ডিজাইন ও ডেভেলপমেন্ট: <strong>Shuvo Dey</strong>
+            <p>© ২০২৬ গণপ্রজাতন্ত্রী বাংলাদেশ সরকারের অর্থ মন্ত্রণালয় কর্তৃক জারিকৃত ‘চাকরি (বেতন ও ভাতাদি) আদেশ,
+                ২০২৬’ গেজেট মোতাবেক প্রস্তুতকৃত। সর্বস্বত্ব সংরক্ষিত।</p>
         </div>
 
     </div>
@@ -695,7 +912,7 @@
             20: { oldMin: 8250, newSteps: [20000, 21000, 22100, 23200, 24400, 25600, 26900, 28200, 29600, 31100, 32600, 34300, 36000, 37800, 39600, 41600, 43700, 45900, 48400] }
         };
 
-        // ফায়ার সার্ভিস ঝুঁকি ভাতার ছক (প্রজ্ঞাপন নং ০৭.০০.০০০০.১৭৩.৪৪.০৫৮.১৫-১২৪, তারিখ: ২৯/১০/২০১৮)
+        // ফায়ার সার্ভিস ঝুঁকি ভাতার ছক (প্রজ্ঞাপন নং ০৭.০০.০০০০.১৭৩.৪৪.০৫৮.১৫-১২৪, তারিখ: ২৯/১০/২০১৮)
         const fireRiskRates = {
             18: { '0-5': 1400, '5-10': 1700, '10-15': 2000, '15-20': 2400, '20+': 2800 },
             17: { '0-5': 1500, '5-10': 1800, '10-15': 2200, '15-20': 2500, '20+': 3000 },
@@ -755,7 +972,7 @@
                 return;
             }
 
-            // ১. অনুচ্ছেদ ৫ অনুযায়ী পে-ফিক্সেশন
+            // ১. অনুচ্ছেদ ৫ অনুযায়ী পে-ফিক্সেশন
             const diff = basicOld - gData.oldMin;
             const newStart = gData.newSteps[0];
             const interim = newStart + diff;
@@ -774,7 +991,7 @@
                 }
             }
 
-            // ২. অনুচ্ছেদ ৯(২) অনুযায়ী ১ জুলাই ২০২৬-এর বার্ষিক বেতনবৃদ্ধি (১টি ইনক্রিমেন্ট)
+            // ২. অনুচ্ছেদ ৯(২) অনুযায়ী ১ জুলাই ২০২৬-এর বার্ষিক বেতনবৃদ্ধি (১টি ইনক্রিমেন্ট)
             let fullBasicWithInc = fixedStep;
             let inc2026Index = fixedIndex;
             if (inc2026Index + 1 < gData.newSteps.length) {
@@ -788,7 +1005,7 @@
             // ১৫% বিশেষ সুবিধা (পূর্বের ৩০ জুন ২০২৬ মূল বেতনের ১৫%)
             const oldSpecialBenefit = basicOld * 0.15;
 
-            // ৩. অনুচ্ছেদ ১(৩) অনুযায়ী বাস্তবায়নের স্তরবিন্যাস
+            // ৩. অনুচ্ছেদ ১(৩) অনুযায়ী বাস্তবায়নের স্তরবিন্যাস
             const isHigherGrade = (grade <= 9);
             const pStep1 = isHigherGrade ? 0.40 : 0.50; // ১ম ধাপ: ৯ম+ ৪০%, ১০-২০তম ৫০%
             const pStep2 = isHigherGrade ? 0.70 : 0.75; // ২য় ধাপ: ৯ম+ ৭০%, ১০-২০তম ৭৫%
@@ -802,7 +1019,7 @@
             const incStep2 = totalIncrease * pStep2;
             const basicStep2 = basicOld + incStep2;
             const netGainStep2 = incStep2 - oldSpecialBenefit;
-            const step2IncrementalGain = netGainStep2 - netGainStep1; // ১ম ধাপের চেয়ে অতিরিক্ত নিট লাভ
+            const step2IncrementalGain = netGainStep2 - netGainStep1; // ১ম ধাপের চেয়ে অতিরিক্ত নিট লাভ
 
             // ৩য় ধাপ: ১ জুলাই ২০২৭ – ৩১ ডিসেম্বর ২০২৭ (১০০% স্কেল + ১ জুলাই ২০২৭ ইনক্রিমেন্ট)
             let basicStep3 = fullBasicWithInc;
@@ -811,14 +1028,14 @@
             }
             const incStep3 = basicStep3 - basicOld;
             const netGainStep3 = incStep3 - oldSpecialBenefit;
-            const step3IncrementalGain = netGainStep3 - netGainStep2; // ২য় ধাপের চেয়ে অতিরিক্ত নিট লাভ
+            const step3IncrementalGain = netGainStep3 - netGainStep2; // ২য় ধাপের চেয়ে অতিরিক্ত নিট লাভ
 
             // সামারি কার্ড আপডেট
             document.getElementById('summaryCard').innerHTML = `
-    <p><strong>নির্বাচিত গ্রেড:</strong> ${toBn(grade)}ম গ্রেড &nbsp;|&nbsp; <strong>৩০ জুন ২০২৬-এ মূল বেতন:</strong> ${toBn(basicOld.toFixed(2))} টাকা</p>
-    <p><strong>নতুন স্কেলে নির্ধারিত পূর্ণ মূল বেতন:</strong> ${toBn(fullBasicWithInc)} টাকা (১ জুলাই ২০২৬ ইনক্রিমেন্টসহ)</p>
-    <p><strong>বেতনবৃদ্ধি বাবদ মোট পার্থক্য:</strong> ${toBn(totalIncrease)} টাকা &nbsp;|&nbsp; <strong>বিলুপ্ত ১৫% বিশেষ সুবিধা:</strong> ${toBn(oldSpecialBenefit.toFixed(2))} টাকা/মাস</p>
-  `;
+                <p><strong>নির্বাচিত গ্রেড:</strong> ${toBn(grade)}ম গ্রেড &nbsp;|&nbsp; <strong>৩০ জুন ২০২৬-এ মূল বেতন:</strong> ${toBn(basicOld.toFixed(2))} টাকা</p>
+                <p><strong>নতুন স্কেলে নির্ধারিত পূর্ণ মূল বেতন:</strong> ${toBn(fullBasicWithInc)} টাকা (১ জুলাই ২০২৬ ইনক্রিমেন্টসহ)</p>
+                <p><strong>বেতনবৃদ্ধি বাবদ মোট পার্থক্য:</strong> ${toBn(totalIncrease)} টাকা &nbsp;|&nbsp; <strong>বিলুপ্ত ১৫% বিশেষ সুবিধা:</strong> ${toBn(oldSpecialBenefit.toFixed(2))} টাকা/মাস</p>
+            `;
 
             // টেবিল ডাটা প্রদর্শন
             const rows = [
@@ -827,21 +1044,21 @@
                     rule: `১ম ধাপ: বৃদ্ধিপ্রাপ্ত পার্থক্যের ${toBn(pStep1 * 100)}% প্রদান`,
                     basic: basicStep1,
                     displayText: `+${toBn(netGainStep1.toFixed(2))} টাকা/মাস`,
-                    subNote: `(১৫% বিশেষ সুবিধা কর্তন সমন্বয়ের পর নিট লাভ)`
+                    subNote: `(১৫% বিশেষ সুবিধা কর্তন সমন্বয়ের পর নিট লাভ)`
                 },
                 {
                     period: '১ জানুয়ারি ২০২৭ – ৩০ জুন ২০২৭',
                     rule: `২য় ধাপ: বৃদ্ধিপ্রাপ্ত পার্থক্যের ${toBn(pStep2 * 100)}% প্রদান`,
                     basic: basicStep2,
                     displayText: `আরও অতিরিক্ত +${toBn(step2IncrementalGain.toFixed(2))} টাকা/মাস`,
-                    subNote: `(১ম ধাপের চেয়ে অতিরিক্ত বৃদ্ধি | মোট নিট বৃদ্ধি: ${toBn(netGainStep2.toFixed(2))} টাকা)`
+                    subNote: `(১ম ধাপের চেয়ে অতিরিক্ত বৃদ্ধি | মোট নিট বৃদ্ধি: ${toBn(netGainStep2.toFixed(2))} টাকা)`
                 },
                 {
                     period: '১ জুলাই ২০২৭ – ৩১ ডিসেম্বর ২০২৭',
                     rule: '৩য় ধাপ: শতভাগ স্কেল + ১ জুলাই ২০২৭ বার্ষিক ইনক্রিমেন্ট',
                     basic: basicStep3,
                     displayText: `আরও অতিরিক্ত +${toBn(step3IncrementalGain.toFixed(2))} টাকা/মাস`,
-                    subNote: `(২য় ধাপের চেয়ে অতিরিক্ত বৃদ্ধি | মোট নিট বৃদ্ধি: ${toBn(netGainStep3.toFixed(2))} টাকা)`
+                    subNote: `(২য় ধাপের চেয়ে অতিরিক্ত বৃদ্ধি | মোট নিট বৃদ্ধি: ${toBn(netGainStep3.toFixed(2))} টাকা)`
                 },
                 {
                     period: '১ জানুয়ারি ২০২৮ হইতে',
@@ -855,25 +1072,25 @@
             let tableHtml = '';
             rows.forEach(r => {
                 tableHtml += `
-      <tr>
-        <td><strong>${r.period}</strong></td>
-        <td><span class="badge">${r.rule}</span></td>
-        <td class="text-right"><strong>${toBn(r.basic.toFixed(2))} টাকা</strong></td>
-        <td class="text-right" style="color: #047857; font-weight: 700;">
-          ${r.displayText}<br>
-          <small style="font-size: 12px; color: #64748b; font-weight: 500;">${r.subNote}</small>
-        </td>
-      </tr>
-    `;
+                    <tr>
+                        <td><strong>${r.period}</strong></td>
+                        <td><span class="badge">${r.rule}</span></td>
+                        <td class="text-right"><strong>${toBn(r.basic.toFixed(2))} টাকা</strong></td>
+                        <td class="text-right" style="color: #047857; font-weight: 700;">
+                            ${r.displayText}<br>
+                            <small style="font-size: 12px; color: #64748b; font-weight: 500;">${r.subNote}</small>
+                        </td>
+                    </tr>
+                `;
             });
             document.getElementById('resultTableBody').innerHTML = tableHtml;
 
-            // ৪. ২০২৮ সালের জানুয়ারি মাসের পূর্ণাঙ্গ বেতন ও ভাতার হিসাব (অনুচ্ছেদ ১২-৩০)
+            // ৪. ২০২৮ সালের জানুয়ারি মাসের পূর্ণাঙ্গ বেতন ও ভাতার হিসাব (অনুচ্ছেদ ১২-৩০)
             const basic2028 = basicStep3;
             const location = document.getElementById('location').value;
             let hrPercent = 0.45;
 
-            // বাড়িভাড়ার শতকরা হার নির্ধারণ (অনুচ্ছেদ ১৫(৬))
+            // বাড়িভাড়ার শতকরা হার নির্ধারণ (অনুচ্ছেদ ১৫(৬))
             if (grade >= 16 && grade <= 20) {
                 if (location === 'dhaka') hrPercent = 0.60;
                 else if (location === 'other_cc') hrPercent = 0.50;
@@ -893,26 +1110,26 @@
             }
             const houseRent = basic2028 * hrPercent;
 
-            // পাহাড়ি ও হাওড়/দ্বীপ/চর ভাতা (অনুচ্ছেদ ২৫ ও ২৬)
+            // পাহাড়ি ও হাওড়/দ্বীপ/চর ভাতা (অনুচ্ছেদ ২৫ ও ২৬)
             let remoteAllowanceAmt = 0;
             let remoteAllowanceTitle = '';
             const remoteType = document.getElementById('remoteAllowance').value;
             if (remoteType === 'hill_sadar') {
                 remoteAllowanceAmt = Math.min(basic2028 * 0.20, 5000);
-                remoteAllowanceTitle = 'পাহাড়ি ভাতা (সদর উপজেলা - অনুচ্ছেদ ২৫)';
+                remoteAllowanceTitle = 'পাহাড়ি ভাতা (সদর উপজেলা - অনুচ্ছেদ ২৫)';
             } else if (remoteType === 'hill_other') {
                 remoteAllowanceAmt = Math.min(basic2028 * 0.20, 5500);
-                remoteAllowanceTitle = 'পাহাড়ি ভাতা (অন্যান্য উপজেলা - অনুচ্ছেদ ২৫)';
+                remoteAllowanceTitle = 'পাহাড়ি ভাতা (অন্যান্য উপজেলা - অনুচ্ছেদ ২৫)';
             } else if (remoteType === 'haor') {
                 remoteAllowanceAmt = Math.min(basic2028 * 0.20, 5000);
-                remoteAllowanceTitle = 'হাওড় / দ্বীপ / চর ভাতা (অনুচ্ছেদ ২৬)';
+                remoteAllowanceTitle = 'হাওড় / দ্বীপ / চর ভাতা (অনুচ্ছেদ ২৬)';
             }
 
             // চিকিৎসা ভাতা (অনুচ্ছেদ ১৩)
             const ageGroup = document.getElementById('ageGroup').value;
             const medical = (ageGroup === '50_plus') ? 4000 : 3000;
 
-            // শিক্ষা সহায়ক ভাতা (অনুচ্ছেদ ১৮)
+            // শিক্ষা সহায়ক ভাতা (অনুচ্ছেদ ১৮)
             const children = parseInt(document.getElementById('childrenCount').value);
             let education = 0;
             if (children === 1) education = 500;
@@ -924,7 +1141,7 @@
                 tiffin = 500;
             }
 
-            // যাতায়াত ভাতা (অনুচ্ছেদ ২১: ১১-২০তম গ্রেড সিটি কর্পোরেশনে ৬০০ টাকা)
+            // যাতায়াত ভাতা (অনুচ্ছেদ ২১: ১১-২০তম গ্রেড সিটি কর্পোরেশনে ৬০০ টাকা)
             let conveyance = 0;
             if (grade >= 11 && grade <= 20 && document.getElementById('conveyanceEligible').checked) {
                 conveyance = 600;
@@ -957,37 +1174,37 @@
 
             // ভাতার তালিকা প্রস্তুত
             let allowancesHtml = `
-    <div class="allowance-item"><span>মূল বেতন (Basic):</span> <strong>${toBn(basic2028.toFixed(2))} টাকা</strong></div>
-    <div class="allowance-item"><span>বাড়ি ভাড়া (${toBn(hrPercent * 100)}%):</span> <strong>${toBn(houseRent.toFixed(2))} টাকা</strong></div>
-  `;
+                <div class="allowance-item"><span>মূল বেতন (Basic):</span> <strong>${toBn(basic2028.toFixed(2))} টাকা</strong></div>
+                <div class="allowance-item"><span>বাড়ি ভাড়া (${toBn(hrPercent * 100)}%):</span> <strong>${toBn(houseRent.toFixed(2))} টাকা</strong></div>
+            `;
 
-            // পাহাড়ি বা হাওড় ভাতা প্রযোজ্য থাকলে তালিকায় যুক্ত হবে
+            // পাহাড়ি বা হাওড় ভাতা প্রযোজ্য থাকলে তালিকায় যুক্ত হবে
             if (remoteAllowanceAmt > 0) {
                 allowancesHtml += `
-      <div class="allowance-item" style="background:#eff6ff; border-color:#bfdbfe;">
-        <span style="color:#1d4ed8; font-weight:600;">${remoteAllowanceTitle}:</span> 
-        <strong style="color:#1d4ed8;">${toBn(remoteAllowanceAmt.toFixed(2))} টাকা</strong>
-      </div>
-    `;
+                    <div class="allowance-item" style="background:#eff6ff; border-color:#bfdbfe;">
+                        <span style="color:#1d4ed8; font-weight:600;">${remoteAllowanceTitle}:</span> 
+                        <strong style="color:#1d4ed8;">${toBn(remoteAllowanceAmt.toFixed(2))} টাকা</strong>
+                    </div>
+                `;
             }
 
             allowancesHtml += `
-    <div class="allowance-item"><span>চিকিৎসা ভাতা:</span> <strong>${toBn(medical)} টাকা</strong></div>
-    <div class="allowance-item"><span>শিক্ষা সহায়ক ভাতা:</span> <strong>${toBn(education)} টাকা</strong></div>
-    <div class="allowance-item"><span>টিফিন ভাতা:</span> <strong>${toBn(tiffin)} টাকা</strong></div>
-    <div class="allowance-item"><span>যাতায়াত ভাতা:</span> <strong>${toBn(conveyance)} টাকা</strong></div>
-    <div class="allowance-item"><span>মোবাইল ভাতা:</span> <strong>${toBn(mobile)} টাকা</strong></div>
-    <div class="allowance-item"><span>ধোলাই ভাতা:</span> <strong>${toBn(washing)} টাকা</strong></div>
-  `;
+                <div class="allowance-item"><span>চিকিৎসা ভাতা:</span> <strong>${toBn(medical)} টাকা</strong></div>
+                <div class="allowance-item"><span>শিক্ষা সহায়ক ভাতা:</span> <strong>${toBn(education)} টাকা</strong></div>
+                <div class="allowance-item"><span>টিফিন ভাতা:</span> <strong>${toBn(tiffin)} টাকা</strong></div>
+                <div class="allowance-item"><span>যাতায়াত ভাতা:</span> <strong>${toBn(conveyance)} টাকা</strong></div>
+                <div class="allowance-item"><span>মোবাইল ভাতা:</span> <strong>${toBn(mobile)} টাকা</strong></div>
+                <div class="allowance-item"><span>ধোলাই ভাতা:</span> <strong>${toBn(washing)} টাকা</strong></div>
+            `;
 
-            // ফায়ার সার্ভিস যুক্ত থাকলে তালিকায় প্রদর্শন
+            // ফায়ার সার্ভিস যুক্ত থাকলে তালিকায় প্রদর্শন
             if (isFireEligible && fireRisk > 0) {
                 allowancesHtml += `
-      <div class="allowance-item" style="background:#fef2f2; border-color:#fca5a5;">
-        <span style="color:#b91c1c; font-weight:600;">ফায়ার সার্ভিস ঝুঁকি ভাতা (২৯/১০/২০১৮ প্রজ্ঞাপন):</span> 
-        <strong style="color:#b91c1c;">${toBn(fireRisk)} টাকা</strong>
-      </div>
-    `;
+                    <div class="allowance-item" style="background:#fef2f2; border-color:#fca5a5;">
+                        <span style="color:#b91c1c; font-weight:600;">ফায়ার সার্ভিস ঝুঁকি ভাতা (২৯/১০/২০১৮ প্রজ্ঞাপন):</span> 
+                        <strong style="color:#b91c1c;">${toBn(fireRisk)} টাকা</strong>
+                    </div>
+                `;
             }
 
             document.getElementById('allowanceItemsList').innerHTML = allowancesHtml;
@@ -1001,3 +1218,4 @@
 </body>
 
 </html>
+
