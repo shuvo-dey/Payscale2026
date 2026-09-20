@@ -6,6 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>জাতীয় বেতন স্কেল ২০২৬ পে-ফিক্সেশন ও বেতন-ভাতা ক্যালকুলেটর</title>
 
+    <!-- Facebook & Social Media Preview Meta Tags -->
+    <meta property="og:title" content="জাতীয় বেতন স্কেল ২০২৬ পে-ফিক্সেশন ও বেতন-ভাতা ক্যালকুলেটর">
+    <meta property="og:description" content="অর্থ মন্ত্রণালয় জারিকৃত চাকরি (বেতন ও ভাতাদি) আদেশ, ২০২৬ অনুযায়ী পে-ফিক্সেশন ও বেতন-ভাতা হিসাব করার আধুনিক ক্যালকুলেটর।">
+    <meta property="og:image" content="https://payscale2026.netlify.app/preview-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://payscale2026.netlify.app/">
+    <meta property="og:type" content="website">
+
     <!-- বাংলাদেশ সরকারের অফিশিয়াল সিলমোহর (Favicon) -->
     <link rel="icon" type="image/svg+xml"
         href="https://upload.wikimedia.org/wikipedia/commons/8/84/Government_Seal_of_Bangladesh.svg">
@@ -97,7 +106,6 @@
             margin-top: 6px;
         }
 
-        /* গেজেট ডাউনলোড লিঙ্ক কার্ড */
         .gazette-link-wrapper {
             margin-top: 14px;
             display: flex;
@@ -126,7 +134,6 @@
             box-shadow: 0 6px 14px rgba(185, 28, 28, 0.15);
         }
 
-        /* ডায়নামিক ইন্টারেক্টিভ সেকশন কার্ড */
         .section-card-1 {
             background: #f0fdf4;
             border: 1.5px solid #a7f3d0;
@@ -134,12 +141,6 @@
             padding: 22px 20px;
             margin-bottom: 24px;
             box-shadow: 0 4px 12px rgba(5, 150, 105, 0.04);
-            transition: transform 0.25s ease, box-shadow 0.25s ease;
-        }
-
-        .section-card-1:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(5, 150, 105, 0.08);
         }
 
         .section-card-2 {
@@ -149,15 +150,8 @@
             padding: 22px 20px;
             margin-bottom: 24px;
             box-shadow: 0 4px 12px rgba(2, 132, 199, 0.04);
-            transition: transform 0.25s ease, box-shadow 0.25s ease;
         }
 
-        .section-card-2:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(2, 132, 199, 0.08);
-        }
-
-        /* হাইলাইটেড সেকশন টাইটেল ব্যাজ */
         .section-title-badge-1 {
             display: inline-flex;
             align-items: center;
@@ -170,7 +164,6 @@
             font-weight: 800;
             margin-bottom: 16px;
             gap: 8px;
-            box-shadow: 0 2px 6px rgba(5, 150, 105, 0.08);
         }
 
         .section-title-badge-2 {
@@ -185,7 +178,6 @@
             font-weight: 800;
             margin-bottom: 16px;
             gap: 8px;
-            box-shadow: 0 2px 6px rgba(2, 132, 199, 0.08);
         }
 
         .table-title-highlight {
@@ -221,7 +213,6 @@
             color: var(--secondary);
         }
 
-        /* ইনপুট ফিল্ড ও ড্রপডাউন */
         select {
             padding: 13px 15px;
             border: 1.8px solid var(--border-color);
@@ -244,7 +235,6 @@
         select:focus {
             border-color: var(--primary);
             box-shadow: 0 0 0 4px rgba(5, 150, 105, 0.18);
-            transform: translateY(-1px);
         }
 
         .help-text {
@@ -286,16 +276,13 @@
             padding: 11px 14px;
             border-radius: 8px;
             border: 1.5px solid #e2e8f0;
-            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.2s ease;
             user-select: none;
-            -webkit-tap-highlight-color: transparent;
         }
 
         .checkbox-label:hover {
             border-color: var(--primary);
             background-color: #f0fdf4;
-            transform: translateY(-1px);
-            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.04);
         }
 
         .checkbox-label input {
@@ -306,7 +293,6 @@
             flex-shrink: 0;
         }
 
-        /* ফায়ার সার্ভিস সেকশন */
         .fire-service-wrapper {
             background: var(--fire-bg);
             border: 1.5px solid var(--fire-border);
@@ -314,12 +300,6 @@
             border-radius: 16px;
             margin-bottom: 24px;
             box-shadow: 0 4px 12px rgba(185, 28, 28, 0.04);
-            transition: transform 0.25s ease, box-shadow 0.25s ease;
-        }
-
-        .fire-service-wrapper:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(185, 28, 28, 0.08);
         }
 
         .fire-title {
@@ -351,7 +331,6 @@
             font-size: 14.5px;
             font-weight: 700;
             margin-bottom: 8px;
-            box-shadow: 0 2px 6px rgba(30, 64, 175, 0.08);
         }
 
         .fire-medal-label-badge {
@@ -366,10 +345,8 @@
             font-size: 15px;
             font-weight: 800;
             margin: 18px 0 10px 0;
-            box-shadow: 0 2px 6px rgba(146, 64, 14, 0.08);
         }
 
-        /* ক্যালকুলেট বাটন */
         .calc-btn-wrapper {
             margin: 15px 0 25px 0;
         }
@@ -389,46 +366,13 @@
             align-items: center;
             justify-content: center;
             gap: 12px;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
-            animation: pulseGlow 2.5s infinite;
-            -webkit-tap-highlight-color: transparent;
-        }
-
-        @keyframes pulseGlow {
-            0% {
-                box-shadow: 0 0 0 0 rgba(5, 150, 105, 0.6);
-            }
-            70% {
-                box-shadow: 0 0 0 15px rgba(5, 150, 105, 0);
-            }
-            100% {
-                box-shadow: 0 0 0 0 rgba(5, 150, 105, 0);
-            }
+            box-shadow: 0 8px 25px rgba(5, 150, 105, 0.4);
         }
 
         .calc-btn:hover {
-            transform: translateY(-2px);
             background: linear-gradient(135deg, #10b981 0%, #059669 50%, #047857 100%);
-            box-shadow: 0 15px 30px rgba(5, 150, 105, 0.4);
         }
 
-        .calc-btn:active {
-            transform: scale(0.98);
-        }
-
-        .calc-btn .icon {
-            font-size: 22px;
-            animation: bounceIcon 1.5s infinite;
-        }
-
-        @keyframes bounceIcon {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-3px); }
-        }
-
-        /* পিডিএফ ডাউনলোড / প্রিন্ট বাটন */
         .print-btn-wrapper {
             margin: 16px 0;
             display: flex;
@@ -448,35 +392,11 @@
             align-items: center;
             gap: 10px;
             box-shadow: 0 6px 18px rgba(15, 23, 42, 0.15);
-            transition: all 0.25s ease;
-            -webkit-tap-highlight-color: transparent;
-        }
-
-        .print-btn:hover {
-            background: linear-gradient(135deg, #334155 0%, #1e293b 100%);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 24px rgba(15, 23, 42, 0.25);
-        }
-
-        .print-btn:active {
-            transform: scale(0.98);
         }
 
         .result-section {
             display: none;
             margin-top: 35px;
-            animation: fadeIn 0.4s ease-in-out forwards;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(14px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
         }
 
         .summary-card {
@@ -513,24 +433,20 @@
             border: 1.5px solid #e2e8f0;
             border-radius: 12px;
             margin-bottom: 25px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
             background: #ffffff;
-            -webkit-overflow-scrolling: touch;
         }
 
         table {
             width: 100%;
-            min-width: 560px;
+            min-width: 820px;
             border-collapse: collapse;
             text-align: left;
         }
 
-        th,
-        td {
+        th, td {
             border-bottom: 1px solid #e2e8f0;
             padding: 13px 14px;
-            font-size: 14.5px;
-            transition: background-color 0.2s ease;
+            font-size: 13.5px;
         }
 
         th {
@@ -541,23 +457,13 @@
             white-space: nowrap;
         }
 
-        tr:hover td {
-            background-color: #f8fafc;
-        }
-
-        tr:last-child td {
-            border-bottom: none;
-        }
-
-        .text-right {
-            text-align: right;
-        }
+        .text-right { text-align: right; }
 
         .badge {
             display: inline-block;
             padding: 4px 10px;
             border-radius: 6px;
-            font-size: 12.5px;
+            font-size: 12px;
             font-weight: 700;
             background-color: #e0f2fe;
             color: #0369a1;
@@ -569,12 +475,6 @@
             border-radius: 14px;
             padding: 24px;
             margin-top: 30px;
-            box-shadow: 0 4px 15px rgba(22, 101, 52, 0.06);
-            transition: transform 0.25s ease;
-        }
-
-        .allowance-box:hover {
-            transform: translateY(-2px);
         }
 
         .allowance-title {
@@ -596,8 +496,6 @@
             color: #14532d;
             font-size: 17.5px;
             font-weight: 800;
-            box-shadow: 0 2px 6px rgba(20, 83, 45, 0.08);
-            display: inline-block;
         }
 
         .allowance-list {
@@ -617,20 +515,10 @@
             align-items: center;
             font-size: 15px;
             font-weight: 500;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
-        .allowance-item:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.04);
-        }
+        .allowance-item strong { color: var(--primary-dark); font-weight: 700; }
 
-        .allowance-item strong {
-            color: var(--primary-dark);
-            font-weight: 700;
-        }
-
-        /* মোট বেতনের (Gross Total) হাইলাইটেড কার্ড */
         .allowance-total {
             background: linear-gradient(135deg, #064e3b 0%, #047857 60%, #0f766e 100%);
             color: #ffffff;
@@ -642,50 +530,14 @@
             align-items: center;
             flex-wrap: wrap;
             gap: 12px;
-            box-shadow: 0 10px 25px -3px rgba(4, 120, 87, 0.35);
-            transition: transform 0.25s ease, box-shadow 0.25s ease;
         }
 
-        .allowance-total:hover {
-            transform: scale(1.01);
-            box-shadow: 0 14px 30px -3px rgba(4, 120, 87, 0.45);
-        }
+        .total-label-wrapper { display: flex; align-items: center; gap: 12px; }
+        .total-icon { background: rgba(255, 255, 255, 0.15); padding: 8px 12px; border-radius: 10px; font-size: 24px; }
+        .total-title-text { font-size: 17.5px; font-weight: 700; color: #f0fdf4; }
+        .total-amount-highlight { font-size: 25px; font-weight: 800; color: #fef08a; background: rgba(0, 0, 0, 0.18); padding: 6px 18px; border-radius: 10px; }
 
-        .total-label-wrapper {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .total-icon {
-            background: rgba(255, 255, 255, 0.15);
-            padding: 8px 12px;
-            border-radius: 10px;
-            font-size: 24px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .total-title-text {
-            font-size: 17.5px;
-            font-weight: 700;
-            color: #f0fdf4;
-            letter-spacing: 0.2px;
-        }
-
-        .total-amount-highlight {
-            font-size: 25px;
-            font-weight: 800;
-            color: #fef08a;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
-            background: rgba(0, 0, 0, 0.18);
-            padding: 6px 18px;
-            border-radius: 10px;
-            border: 1px solid rgba(254, 240, 138, 0.35);
-        }
-
-        .special-forces-note {
+        .special-forces-note, .footer-note, .disclaimer-card {
             margin-top: 18px;
             padding: 14px 16px;
             background-color: #ffffff;
@@ -697,31 +549,9 @@
             line-height: 1.6;
         }
 
-        .footer-note {
-            margin-top: 25px;
-            padding: 16px 20px;
-            background: #fffbeb;
-            border-radius: 10px;
-            border: 1px solid #fef3c7;
-            font-size: 13.5px;
-            color: #92400e;
-            line-height: 1.65;
-        }
+        .footer-note { background: #fffbeb; border-color: #fef3c7; border-left-color: #d97706; color: #92400e; }
+        .disclaimer-card { background: #fff7ed; border-color: #fed7aa; border-left-color: #ea580c; color: #9a3412; margin-top: 30px; }
 
-        /* আইনি ও সচেতনতামূলক ডিসক্লেইমার কার্ড */
-        .disclaimer-card {
-            margin-top: 30px;
-            padding: 16px 20px;
-            background: #fff7ed;
-            border: 1.5px solid #fed7aa;
-            border-left: 5px solid #ea580c;
-            border-radius: 12px;
-            font-size: 13.5px;
-            color: #9a3412;
-            line-height: 1.6;
-        }
-
-        /* লাইভ ভিজিটর কাউন্টার কার্ড */
         .visitor-counter-card {
             margin-top: 25px;
             padding: 14px 20px;
@@ -733,28 +563,10 @@
             justify-content: center;
             flex-wrap: wrap;
             gap: 12px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
-            transition: transform 0.25s ease;
         }
 
-        .visitor-counter-card:hover {
-            transform: translateY(-2px);
-        }
-
-        .visitor-label {
-            font-size: 15px;
-            font-weight: 700;
-            color: var(--slate-dark);
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .visitor-badge-img {
-            height: 24px;
-            vertical-align: middle;
-            border-radius: 4px;
-        }
+        .visitor-label { font-size: 15px; font-weight: 700; color: var(--slate-dark); display: flex; align-items: center; gap: 6px; }
+        .visitor-badge-img { height: 24px; vertical-align: middle; border-radius: 4px; }
 
         .developer-credit-permanent {
             margin-top: 18px;
@@ -764,239 +576,87 @@
             font-size: 14.5px;
             color: var(--slate-dark);
         }
+        .developer-credit-permanent strong { color: var(--primary-dark); font-size: 16px; font-weight: 800; }
 
-        .developer-credit-permanent strong {
-            color: var(--primary-dark);
-            font-size: 16px;
-            font-weight: 800;
-            letter-spacing: 0.5px;
-        }
-
-        .developer-credit-permanent p {
-            margin-top: 6px;
-            font-size: 13px;
-            color: #64748b;
-        }
-
-        /* 🖨️ প্রিন্ট ও পিডিএফ ডাউনলোড অপটিমাইজেশন */
+        /* প্রিন্ট রিপোর্ট লেআউট (A4 সাইজ ফিট) */
         @media print {
             body {
-                background-color: #ffffff !important;
+                background: #ffffff !important;
                 padding: 0 !important;
-                color: #000000 !important;
+                margin: 0 !important;
             }
 
-            .container {
-                box-shadow: none !important;
-                border: none !important;
-                padding: 0 !important;
-                max-width: 100% !important;
+            body * {
+                visibility: hidden !important;
             }
 
-            .section-card-1,
-            .section-card-2,
-            .fire-service-wrapper,
-            .calc-btn-wrapper,
-            .print-btn-wrapper,
-            .gazette-link-wrapper,
-            .mobile-scroll-hint,
-            .visitor-counter-card {
+            #resultSection, #resultSection * {
+                visibility: visible !important;
+            }
+
+            #resultSection {
+                position: absolute !important;
+                left: 0 !important;
+                top: 0 !important;
+                width: 100% !important;
+                margin: 0 !important;
+                padding: 15px !important;
+                display: block !important;
+                background: #ffffff !important;
+            }
+
+            .print-btn-wrapper, .mobile-scroll-hint {
                 display: none !important;
             }
 
-            .result-section {
-                display: block !important;
-                margin-top: 10px !important;
+            .table-container {
+                overflow: visible !important;
+                border: 1px solid #333 !important;
+                width: 100% !important;
             }
 
-            .summary-card,
-            .allowance-box {
-                border: 1px solid #000000 !important;
+            table {
+                min-width: 100% !important;
+                width: 100% !important;
+                table-layout: auto !important;
+            }
+
+            th, td {
+                font-size: 10px !important;
+                padding: 5px 3px !important;
+                white-space: normal !important;
+                word-break: break-word !important;
+            }
+
+            .summary-card, .allowance-box {
+                border: 1px solid #333 !important;
                 background: #ffffff !important;
-                color: #000000 !important;
+                box-shadow: none !important;
             }
 
             .allowance-total {
-                background: #f1f5f9 !important;
-                color: #000000 !important;
-                border: 1.5px solid #000000 !important;
+                background: #064e3b !important;
+                color: #ffffff !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
             }
 
-            .total-amount-highlight {
-                color: #000000 !important;
-                background: transparent !important;
-                border: none !important;
-                font-weight: 800 !important;
+            @page {
+                size: A4 portrait;
+                margin: 10mm 6mm;
             }
         }
 
-        /* স্মার্টফোন মিডিয়া কুয়েরি */
         @media (max-width: 640px) {
-            body {
-                padding: 14px 8px;
-            }
-
-            .container {
-                padding: 22px 14px;
-                border-radius: 16px;
-            }
-
-            .header {
-                margin-bottom: 20px;
-                padding-bottom: 16px;
-            }
-
-            .bd-logo {
-                width: 68px;
-                height: 68px;
-                margin-bottom: 8px;
-            }
-
-            .header h1 {
-                font-size: 21px;
-                line-height: 1.35;
-            }
-
-            .header p {
-                font-size: 13.5px;
-            }
-
-            .gazette-link-btn {
-                font-size: 13px;
-                padding: 7px 14px;
-            }
-
-            .section-card-1,
-            .section-card-2,
-            .fire-service-wrapper {
-                padding: 16px 14px;
-                border-radius: 14px;
-                margin-bottom: 18px;
-            }
-
-            .section-title-badge-1,
-            .section-title-badge-2,
-            .table-title-highlight,
-            .allowance-title-highlight {
-                font-size: 15px;
-                padding: 6px 12px;
-                margin-bottom: 12px;
-            }
-
-            .fire-risk-label-badge,
-            .fire-medal-label-badge {
-                font-size: 13.5px;
-                padding: 6px 12px;
-            }
-
-            .form-grid {
-                gap: 14px;
-                margin-bottom: 12px;
-            }
-
-            .checkbox-container {
-                padding: 12px 10px;
-            }
-
-            .checkbox-grid {
-                grid-template-columns: 1fr;
-                gap: 10px;
-            }
-
-            .checkbox-label {
-                padding: 10px 12px;
-                font-size: 14px;
-            }
-
-            .calc-btn {
-                padding: 16px 18px;
-                font-size: 17.5px;
-                border-radius: 12px;
-            }
-
-            .print-btn {
-                width: 100%;
-                justify-content: center;
-                font-size: 15px;
-                padding: 12px;
-            }
-
-            .calc-btn .icon {
-                font-size: 20px;
-            }
-
-            .summary-card {
-                padding: 16px 14px;
-                font-size: 14px;
-            }
-
-            .summary-card p {
-                font-size: 14.5px;
-            }
-
-            .mobile-scroll-hint {
-                display: block;
-            }
-
-            .allowance-box {
-                padding: 18px 14px;
-            }
-
-            .allowance-title {
-                font-size: 16.5px;
-            }
-
-            .allowance-list {
-                grid-template-columns: 1fr;
-                gap: 10px;
-            }
-
-            .allowance-item {
-                padding: 10px 12px;
-                font-size: 14px;
-            }
-
-            .allowance-total {
-                flex-direction: column;
-                text-align: center;
-                gap: 10px;
-                padding: 16px 14px;
-            }
-
-            .total-label-wrapper {
-                flex-direction: column;
-                gap: 6px;
-            }
-
-            .total-title-text {
-                font-size: 16px;
-            }
-
-            .total-amount-highlight {
-                font-size: 23px;
-                width: 100%;
-                text-align: center;
-                padding: 8px 12px;
-            }
-
-            .special-forces-note,
-            .footer-note,
-            .disclaimer-card {
-                padding: 14px 12px;
-                font-size: 13px;
-            }
-
-            .visitor-counter-card {
-                flex-direction: column;
-                padding: 12px;
-                font-size: 13.5px;
-            }
-
-            .developer-credit-permanent {
-                font-size: 13.5px;
-                margin-top: 20px;
-                padding-top: 16px;
-            }
+            body { padding: 14px 8px; }
+            .container { padding: 22px 14px; border-radius: 16px; }
+            .header h1 { font-size: 21px; }
+            .section-card-1, .section-card-2, .fire-service-wrapper { padding: 16px 14px; }
+            .mobile-scroll-hint { display: block; }
+            .allowance-total { flex-direction: column; text-align: center; gap: 10px; }
+            .total-label-wrapper { flex-direction: column; gap: 6px; }
+            .total-amount-highlight { font-size: 23px; width: 100%; text-align: center; }
+            .print-btn { width: 100%; justify-content: center; }
         }
     </style>
 </head>
@@ -1012,7 +672,6 @@
             <h1>জাতীয় বেতন স্কেল ২০২৬ পে-ফিক্সেশন ও বেতন-ভাতা ক্যালকুলেটর</h1>
             <p>অর্থ মন্ত্রণালয় জারিকৃত ‘চাকরি (বেতন ও ভাতাদি) আদেশ, ২০২৬’ (এস.আর.ও নং ৩৪৭-আইন/২০২৬) অনুযায়ী প্রণীত</p>
 
-            <!-- গেজেট লিঙ্ক -->
             <div class="gazette-link-wrapper">
                 <a href="https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-mof/2026/8/650d48d2-18b6-41ad-aef8-19dd39b4e973.pdf"
                     target="_blank" rel="noopener noreferrer" class="gazette-link-btn">
@@ -1038,7 +697,6 @@
                     <span class="help-text" id="scaleHint"></span>
                 </div>
 
-                <!-- ইনপুট বক্সের বদলে স্বয়ংক্রিয় ড্রপডাউন -->
                 <div class="form-group">
                     <label for="basicOld">৩০ জুন ২০২৬-এ আহরিত মূল বেতন (২০১৫ পে-স্কেল অনুযায়ী):</label>
                     <select id="basicOld">
@@ -1058,11 +716,13 @@
 
             <div class="form-grid">
                 <div class="form-group">
-                    <label for="location">কর্মস্থল এলাকা (বাড়িভাড়ার জন্য):</label>
+                    <label for="location">কর্মস্থল এলাকা / বাসস্থান (বাধ্যতামূলক নির্বাচন করুন):</label>
                     <select id="location">
+                        <option value="">-- কর্মস্থল এলাকা বাছাই করুন --</option>
                         <option value="dhaka">ঢাকা উত্তর ও দক্ষিণ সিটি কর্পোরেশন</option>
                         <option value="other_cc">অন্যান্য সিটি কর্পোরেশন, সাভার ও কক্সবাজার পৌরসভা</option>
-                        <option value="others" selected>অন্যান্য স্থান (জেলা / উপজেলা)</option>
+                        <option value="others">অন্যান্য স্থান (জেলা / উপজেলা)</option>
+                        <option value="govt_quarter">সরকারি বাসভবনে বসবাসকারী (বাড়িভাড়া প্রযোজ্য নয়)</option>
                     </select>
                 </div>
 
@@ -1100,15 +760,15 @@
                 <div class="checkbox-grid">
                     <label class="checkbox-label">
                         <input type="checkbox" id="tiffinEligible" checked>
-                        <span>টিফিন ভাতা (শুধুমাত্র ১১তম হতে ২০তম গ্রেড: ৫০০ টাকা)</span>
+                        <span>টিফিন ভাতা (২০১৫ স্কেলে ২০০ টাকা / ২০২৬ স্কেলে ৫০০ টাকা)</span>
                     </label>
                     <label class="checkbox-label">
                         <input type="checkbox" id="conveyanceEligible">
-                        <span>যাতায়াত ভাতা (সিটি কর্পোরেশনস্থ ১১-২০তম গ্রেড: ৬০০ টাকা)</span>
+                        <span>যাতায়াত ভাতা (প্রযোজ্য ক্ষেত্রে)</span>
                     </label>
                     <label class="checkbox-label">
                         <input type="checkbox" id="washingEligible">
-                        <span>ধোলাই ভাতা (প্রযোজ্য ক্ষেত্রে: ৩০০ টাকা)</span>
+                        <span>ধোলাই ভাতা (প্রযোজ্য ক্ষেত্রে)</span>
                     </label>
                 </div>
             </div>
@@ -1117,7 +777,7 @@
         <!-- ফায়ার সার্ভিস ও সিভিল ডিফেন্স ঝুঁকিভাতা ও পদক ভাতা সেকশন -->
         <div class="fire-service-wrapper">
             <div class="fire-title">
-                <span>🚒 ফায়ার সার্ভিস ও সিভিল ডিফেন্স ঝুঁকি ভাতা ও পদক ভাতা</span>
+                <span>🚒 ফায়ার সার্ভিস ও সিভিল ডিফেন্স ঝুঁকি ভাতা ও পদক ভাতা (শুধুমাত্র ফায়ার সার্ভিস এর কর্মরত কর্মকর্তা/কর্মচারীদের জন্য)</span>
             </div>
             <label class="checkbox-label" style="background:#ffffff; border-color: var(--fire-border);">
                 <input type="checkbox" id="fireServiceEligible" onchange="toggleFireServiceBox()">
@@ -1125,7 +785,6 @@
             </label>
 
             <div class="fire-details" id="fireDetailsBox">
-                <!-- ঝুঁকিভাতার চাকরির বয়স -->
                 <div class="form-group" style="max-width: 480px; margin-top: 8px;">
                     <div>
                         <span class="fire-risk-label-badge">
@@ -1141,11 +800,10 @@
                         <option value="20+">২০+ বছর হতে তদূর্ধ্ব</option>
                     </select>
                     <span class="help-text" style="color: #991b1b; font-weight: 600;">
-                        * প্রজ্ঞাপন নং ০৭.০০.০০০০.১৭৩.৪৪.০৫৮.১৫-১২৪, তারিখ: ২৯/১০/২০১৮ অনুযায়ী উপসহকারী পরিচালক হতে ফায়ারফাইটার/নার্সিং এ্যাটেনডেন্ট পর্যন্ত প্রযোজ্য।
+                        * প্রজ্ঞাপন অনুযায়ী উপসহকারী পরিচালক হতে ফায়ারফাইটার/নার্সিং এ্যাটেনডেন্ট পর্যন্ত প্রযোজ্য। (২০২৬ সালের নতুন পে-স্কেলের গেজেটের অনুচ্ছেদ ২৯ এবং ১৭ সেপ্টেম্বর ২০২৬ এর নতুন প্রজ্ঞাপন অনুযায়ী ১ জানুয়ারি ২০২৮ থেকে নতুন হার এবং এর পূর্বে ২০১৮ সালের হার কার্যকর হইবে)।
                     </span>
                 </div>
 
-                <!-- পদক ভাতা সাবলীল শিরোনাম -->
                 <div>
                     <span class="fire-medal-label-badge">
                         <span>🎖️</span>
@@ -1173,7 +831,7 @@
             </div>
         </div>
 
-        <!-- আকর্ষণীয় ক্যালকুলেট বাটন -->
+        <!-- ক্যালকুলেট বাটন -->
         <div class="calc-btn-wrapper">
             <button class="calc-btn" onclick="calculateFullPay()">
                 <span class="icon">⚡</span>
@@ -1185,7 +843,6 @@
         <!-- রেজাল্ট সেকশন -->
         <div class="result-section" id="resultSection">
 
-            <!-- রেজাল্টের উপরে PDF ডাউনলোড বাটন -->
             <div class="print-btn-wrapper">
                 <button class="print-btn" onclick="window.print()">
                     <span>📥</span>
@@ -1195,15 +852,12 @@
 
             <div class="summary-card" id="summaryCard"></div>
 
-            <!-- সময়ভিত্তিক বিবরণের হাইলাইটেড টাইটেল -->
             <div>
                 <div class="table-title-highlight">
                     <span>📊</span>
                     <span>সময়ভিত্তিক মূল বেতন ও অতিরিক্ত নিট বৃদ্ধি বিবরণী:</span>
                 </div>
             </div>
-            
-            <div class="mobile-scroll-hint">👈 পুরো ছকটি দেখতে ডানে-বামে আঙুল দিয়ে টানুন 👉</div>
             
             <div class="table-container">
                 <table>
@@ -1212,7 +866,9 @@
                             <th>কার্যকর সময়কাল</th>
                             <th>বাস্তবায়ন নীতিমালা</th>
                             <th class="text-right">কার্যকর মূল বেতন (Basic)</th>
-                            <th class="text-right">পূর্বের ধাপের চেয়ে অতিরিক্ত নিট লাভ</th>
+                            <th class="text-right">পূর্বের পে-স্কেল অনুযায়ী সর্বসাকুল্যে বেতন <small style="display:block; font-weight:normal; font-size:11px;">(১৫% বিশেষ সুবিধা সহ, কর্তন বাদে)</small></th>
+                            <th class="text-right">বর্তমান সর্বসাকুল্যে বেতন <small style="display:block; font-weight:normal; font-size:11px;">(১৫% বিশেষ সুবিধা বাদ দিয়ে, কর্তন বাদে)</small></th>
+                            <th class="text-right">অতিরিক্ত নিট লাভ <small style="display:block; font-weight:normal; font-size:11px;">(১৫% বিশেষ সুবিধা বাদ দিয়ে)</small></th>
                         </tr>
                     </thead>
                     <tbody id="resultTableBody"></tbody>
@@ -1228,36 +884,29 @@
 
                 <div class="allowance-list" id="allowanceItemsList"></div>
 
-                <!-- হাইলাইটেড সর্বমোট প্রদেয় বেতন ও ভাতাদি কার্ড -->
                 <div class="allowance-total">
                     <div class="total-label-wrapper">
                         <div class="total-icon">💰</div>
-                        <div class="total-title-text">সর্বমোট প্রদেয় বেতন ও ভাতাদি (Gross Total):</div>
+                        <div class="total-title-text">সর্বমোট প্রদেয় নিট বেতন ও ভাতাদি (কল্যাণ ও অন্যান্য কর্তন বাদে):</div>
                     </div>
                     <div class="total-amount-highlight" id="grossTotalText">০ টাকা</div>
                 </div>
 
-                <!-- বিশেষ বাহিনী ও ঝুঁকি ভাতার অবগতি নোট -->
                 <div class="special-forces-note">
                     <strong>📌 বিশেষ ভাতা ও প্রতিরক্ষা বাহিনীর অবগতি নোট:</strong><br>
-                    ফায়ার সার্ভিস ও সিভিল ডিফেন্স অধিদপ্তরের অপারেশনাল কর্মচারীদের ঝুঁকি ভাতা (২৯/১০/২০১৮ প্রজ্ঞাপন), পদক ভাতা এবং পার্বত্য/হাওড় ভাতা (অনুচ্ছেদ ২৫ ও ২৬) সফলভাবে সংযুক্ত করা হয়েছে।<br>
-                    অন্যান্য বিশেষ বাহিনী ও দপ্তর (যেমন: পুলিশ বাহিনী, বিজিবি, প্রতিরক্ষা সার্ভিসের বেসামরিক কর্মচারী, কোস্টগার্ড, কারারক্ষী, আনসার ও গ্রাম প্রতিরক্ষা বাহিনী, এনএসআই, ডিজিএফআই এবং স্বাস্থ্য পরিদপ্তরের কুষ্ঠ ও যক্ষ্মা কার্যক্রমের ঝুঁকিভাতা) স্ব-স্ব দপ্তরের নির্ধারিত আদেশ অনুযায়ী ডিডিও কর্তৃক অতিরিক্ত হিসেবে যুক্ত হবে।
+                    ফায়ার সার্ভিস ও সিভিল ডিফেন্স অধিদপ্তরের অপারেশনাল কর্মচারীদের ঝুঁকি ভাতা এবং পার্বত্য/হাওড় ভাতা সফলভাবে সংযুক্ত করা হয়েছে। (উল্লেখ্য, নতুন পে-স্কেলের গেজেটের অনুচ্ছেদ ১(৩)(ঞ) ও অনুচ্ছেদ ২৯ অনুযায়ী ১ জানুয়ারি ২০২৮ পর্যন্ত পূর্বের ২০১৮ সালের ঝুঁকিভাতার হার এবং ১ জানুয়ারি ২০২৮ থেকে নতুন প্রজ্ঞাপনের হার প্রযোজ্য হইবে)।<br>
+                    অন্যান্য বিশেষ বাহিনী ও দপ্তর স্ব-স্ব দপ্তরের নির্ধারিত আদেশ অনুযায়ী ডিডিও কর্তৃক অতিরিক্ত হিসেবে যুক্ত হবে।
                 </div>
             </div>
 
             <div class="footer-note">
                 <strong>গেজেটের গুরুত্বপূর্ণ আইনি শর্তাবলি:</strong>
                 <ol style="padding-left: 20px; margin-top: 6px;">
-                    <li><strong>১৫% বিশেষ সুবিধা কর্তন:</strong> ১ জুলাই ২০২৬ হতে পূর্বের ১৫% বিশেষ সুবিধা সম্পূর্ণ
-                        বিলুপ্ত হয়েছে। ৩০ জুন ২০২৬-এর মূল বেতনের উপর যে ১৫% আহরণ করা হতো, তা নতুন স্কেলের বর্ধিত বকেয়া
-                        (Arrears) হতে একবারই সমন্বয় করা হয়েছে [অনুচ্ছেদ ১(৩)(ট)]।</li>
-                    <li><strong>ভাতা কার্যকরের সময়সীমা:</strong> বাড়িভাড়া, চিকিৎসা, পাহাড়ি/হাওড় ভাতা ও টিফিনসহ সকল
-                        বর্ধিত সাধারণ ভাতাদি ১ জানুয়ারি ২০২৮ তারিখ হতে কার্যকর হবে। ৩১ ডিসেম্বর ২০২৭ পর্যন্ত পূর্বের
-                        সমপরিমাণ অঙ্কেই ভাতাদি বহাল থাকবে [অনুচ্ছেদ ১(৩)(ঞ)]।</li>
+                    <li><strong>১৫% বিশেষ সুবিধা কর্তন:</strong> ১ জুলাই ২০২৬ হতে পূর্বের ১৫% বিশেষ সুবিধা সম্পূর্ণ বিলুপ্ত হয়েছে। ৩০ জুন ২০২৬-এর মূল বেতনের উপর যে ১৫% আহরণ করা হতো, তা নতুন স্কেলের বর্ধিত বকেয়া (Arrears) হতে একবারই সমন্বয় করা হয়েছে [অনুচ্ছেদ ১(৩)(ট)]।</li>
+                    <li><strong>ভাতা কার্যকরের সময়সীমা:</strong> বাড়িভাড়া, চিকিৎসা, পাহাড়ি/হাওড় ভাতা ও টিফিনসহ সকল বর্ধিত সাধারণ ভাতাদি ১ জানুয়ারি ২০২৮ তারিখ হতে কার্যকর হবে। ৩১ ডিসেম্বর ২০২৭ পর্যন্ত পূর্বের সমপরিমাণ অঙ্কেই ভাতাদি বহাল থাকবে [অনুচ্ছেদ ১(৩)(ঞ)]।</li>
                 </ol>
             </div>
 
-            <!-- রেজাল্টের নিচে PDF ডাউনলোড বাটন -->
             <div class="print-btn-wrapper" style="margin-top: 25px;">
                 <button class="print-btn" onclick="window.print()">
                     <span>📥</span>
@@ -1267,114 +916,48 @@
 
         </div>
 
-        <!-- সচেতনতামূলক ও দায়িত্বমুক্তি ডিসক্লেইমার কার্ড -->
         <div class="disclaimer-card">
             <strong>📌 আইনি দিকনির্দেশনা ও সতর্কতা:</strong><br>
             এটি কোনো অফিশিয়াল সরকারি ওয়েবসাইট নয়। গণপ্রজাতন্ত্রী বাংলাদেশ সরকারের অর্থ মন্ত্রণালয় কর্তৃক জারিকৃত ‘চাকরি (বেতন ও ভাতাদি) আদেশ, ২০২৬’ (এস.আর.ও নং ৩৪৭-আইন/২০২৬) গেজেটের বিধানাবলি অনুসারে হিসাব প্রদর্শনের জন্য তৈরি একটি সহায়ক পাবলিক ক্যালকুলেটর। কর্মচারীদের চূড়ান্ত বেতন নির্ধারণ ও অনুমোদন প্রক্রিয়ায় ড্রইং অ্যান্ড ডিসবার্সিং অফিসার (DDO) এবং সংশ্লিষ্ট হিসাবরক্ষণ অফিসের (CAO/DAO/UAO) প্রতিপাদনই চূড়ান্ত ও আইনগতভাবে কার্যকর বলিয়া গণ্য হইবে।
         </div>
 
-        <!-- লাইভ ভিজিটর কাউন্টার কার্ড -->
         <div class="visitor-counter-card">
             <span class="visitor-label">👁️ পেজ ভিজিটর কাউন্টার (আজ / সর্বমোট):</span>
             <img class="visitor-badge-img" src="https://hits.sh/payscale2026.netlify.app.svg?view=today-total&style=flat-square&label=Today%20/%20Total&color=059669&labelColor=0f172a" alt="Live Page Views" title="আজকের ও সর্বমোট পেজ ভিউ">
         </div>
 
-        <!-- সব সময় দৃশ্যমান স্থায়ী ফুটার ও কপিরাইট সেকশন -->
         <div class="developer-credit-permanent">
             ডিজাইন ও ডেভেলপমেন্ট: <strong>SHUVO DEY</strong>
-            <p>© ২০২৬ গণপ্রজাতন্ত্রী বাংলাদেশ সরকারের অর্থ মন্ত্রণালয় কর্তৃক জারিকৃত ‘চাকরি (বেতন ও ভাতাদি) আদেশ,
-                ২০২৬’ গেজেট মোতাবেক প্রস্তুতকৃত। সর্বস্বত্ব সংরক্ষিত।</p>
+            <p>© ২০২৬ গণপ্রজাতন্ত্রী বাংলাদেশ সরকারের অর্থ মন্ত্রণালয় কর্তৃক জারিকৃত ‘চাকরি (বেতন ও ভাতাদি) আদেশ, ২০২৬’ গেজেট মোতাবেক প্রস্তুতকৃত। সর্বস্বত্ব সংরক্ষিত।</p>
         </div>
 
     </div>
 
     <script>
-        // ২০১৫ স্কেল এবং ২০২৬ স্কেলের গ্রেডভিত্তিক পূর্ণাঙ্গ অনুমোদিত ধাপসমূহ
         const scalesData = {
-            1: {
-                oldSteps: [78000],
-                newSteps: [156000]
-            },
-            2: {
-                oldSteps: [66000, 68480, 71050, 73720, 76490],
-                newSteps: [132000, 135700, 139400, 143200, 147200, 151200, 153000]
-            },
-            3: {
-                oldSteps: [56500, 58760, 61120, 63570, 66120, 68770, 71530, 74400],
-                newSteps: [113000, 117000, 121100, 125300, 129700, 134300, 139000, 143800, 148800]
-            },
-            4: {
-                oldSteps: [50000, 52000, 54080, 56250, 58500, 60840, 63280, 65820, 68460, 71200],
-                newSteps: [100000, 103500, 107200, 110900, 114800, 118800, 123000, 127300, 131700, 136300, 142400]
-            },
-            5: {
-                oldSteps: [43000, 44940, 46970, 49090, 51300, 53610, 56030, 58560, 61200, 63960, 66840, 69850],
-                newSteps: [86000, 89500, 93100, 96800, 100700, 104700, 108900, 113200, 117700, 122500, 127400, 132400, 139700]
-            },
-            6: {
-                oldSteps: [35500, 37280, 39150, 41110, 43170, 45330, 47600, 49980, 52480, 55110, 57870, 60770, 63810, 67010],
-                newSteps: [71000, 74600, 78300, 82200, 86400, 90700, 95200, 100000, 104900, 110200, 115700, 121500, 127600, 134000]
-            },
-            7: {
-                oldSteps: [29000, 30450, 31980, 33580, 35260, 37030, 38890, 40840, 42890, 45040, 47300, 49670, 52160, 54770, 57510, 60390, 63410],
-                newSteps: [58000, 60900, 64000, 67200, 70500, 74100, 77800, 81700, 85700, 90000, 94500, 99200, 104200, 109400, 114900, 120600, 126800]
-            },
-            8: {
-                oldSteps: [23000, 24150, 25360, 26630, 27970, 29370, 30840, 32390, 34010, 35720, 37510, 39390, 41360, 43430, 45610, 47900, 50300, 52820, 55470],
-                newSteps: [46000, 48300, 50800, 53300, 56000, 58800, 61700, 64800, 68000, 71400, 75000, 78700, 82700, 86800, 91100, 95700, 100500, 105500, 110800]
-            },
-            9: {
-                oldSteps: [22000, 23100, 24260, 25480, 26760, 28100, 29510, 30990, 32540, 34170, 35880, 37680, 39570, 41550, 43630, 45820, 48120, 50530, 53060],
-                newSteps: [44000, 46200, 48600, 51000, 53500, 56200, 59000, 62000, 65100, 68300, 71700, 75300, 79100, 83000, 87200, 91500, 96100, 100900, 105900]
-            },
-            10: {
-                oldSteps: [16000, 16800, 17640, 18530, 19460, 20440, 21470, 22550, 23680, 24870, 26120, 27430, 28810, 30260, 31780, 33370, 35040, 36800, 38640],
-                newSteps: [32000, 33600, 35300, 37100, 38900, 40900, 42900, 45100, 47300, 49700, 52200, 54800, 57500, 60400, 63400, 66600, 69900, 73400, 77300]
-            },
-            11: {
-                oldSteps: [12500, 13130, 13790, 14480, 15210, 15980, 16780, 17620, 18510, 19440, 20420, 21450, 22530, 23660, 24850, 26100, 27410, 28790, 30230],
-                newSteps: [25000, 26300, 27600, 29000, 30400, 32000, 33600, 35200, 37000, 38800, 40800, 42800, 44900, 47200, 49500, 52000, 54600, 57300, 60500]
-            },
-            12: {
-                oldSteps: [11300, 11870, 12470, 13100, 13760, 14450, 15180, 15940, 16740, 17580, 18460, 19390, 20360, 21380, 22450, 23580, 24760, 26000, 27300],
-                newSteps: [24300, 25600, 26800, 28200, 29600, 31100, 32600, 34200, 36000, 37700, 39600, 41600, 43700, 45900, 48200, 50600, 53100, 55700, 58700]
-            },
-            13: {
-                oldSteps: [11000, 11550, 12130, 12740, 13380, 14050, 14760, 15500, 16280, 17100, 17960, 18860, 19810, 20810, 21860, 22960, 24110, 25320, 26590],
-                newSteps: [24000, 25200, 26500, 27800, 29200, 30700, 32200, 33800, 35500, 37300, 39100, 41100, 43200, 45300, 47600, 49900, 52400, 55100, 58000]
-            },
-            14: {
-                oldSteps: [10200, 10710, 11250, 11820, 12420, 13050, 13710, 14400, 15120, 15880, 16680, 17520, 18400, 19320, 20290, 21310, 22380, 23500, 24680],
-                newSteps: [23500, 24700, 26000, 27300, 28600, 30000, 31500, 33100, 34800, 36500, 38300, 40200, 42300, 44400, 46600, 48900, 51300, 53900, 56800]
-            },
-            15: {
-                oldSteps: [9700, 10190, 10700, 11240, 11810, 12410, 13040, 13700, 14390, 15110, 15870, 16670, 17510, 18390, 19310, 20280, 21300, 22370, 23490],
-                newSteps: [22800, 24000, 25200, 26400, 27800, 29100, 30600, 32100, 33700, 35400, 37200, 39000, 41000, 43000, 45200, 47400, 49800, 52300, 55200]
-            },
-            16: {
-                oldSteps: [9300, 9770, 10260, 10780, 11320, 11890, 12490, 13120, 13780, 14470, 15200, 15960, 16760, 17600, 18480, 19410, 20390, 21410, 22490],
-                newSteps: [21900, 23000, 24200, 25400, 26700, 28000, 29400, 30900, 32400, 34000, 35700, 37500, 39400, 41300, 43400, 45600, 47900, 50200, 52900]
-            },
-            17: {
-                oldSteps: [9000, 9450, 9930, 10430, 10960, 11510, 12090, 12700, 13340, 14010, 14720, 15460, 16240, 17060, 17920, 18820, 19770, 20760, 21800],
-                newSteps: [21400, 22500, 23600, 24800, 26100, 27400, 28700, 30200, 31700, 33200, 34900, 36700, 38500, 40400, 42400, 44500, 46800, 49100, 51900]
-            },
-            18: {
-                oldSteps: [8800, 9240, 9710, 10200, 10710, 11250, 11820, 12420, 13050, 13710, 14400, 15120, 15880, 16680, 17520, 18400, 19320, 20290, 21310],
-                newSteps: [21000, 22100, 23200, 24400, 25600, 26900, 28200, 29600, 31100, 32600, 34300, 36000, 37800, 39600, 41600, 43700, 45900, 48200, 50900]
-            },
-            19: {
-                oldSteps: [8500, 8930, 9380, 9850, 10350, 10870, 11420, 12000, 12600, 13230, 13900, 14600, 15330, 16100, 16910, 17760, 18650, 19590, 20570],
-                newSteps: [20500, 21600, 22700, 23800, 25000, 26200, 27500, 28900, 30300, 31900, 33400, 35100, 36900, 38700, 40600, 42700, 44800, 47000, 49600]
-            },
-            20: {
-                oldSteps: [8250, 8670, 9110, 9570, 10050, 10560, 11090, 11650, 12240, 12860, 13510, 14190, 14900, 15650, 16440, 17270, 18140, 19050, 20010],
-                newSteps: [20000, 21000, 22100, 23200, 24400, 25600, 26900, 28200, 29600, 31100, 32600, 34300, 36000, 37800, 39600, 41600, 43700, 45900, 48400]
-            }
+            1: { oldSteps: [78000], newSteps: [156000] },
+            2: { oldSteps: [66000, 68480, 71050, 73720, 76490], newSteps: [132000, 135700, 139400, 143200, 147200, 151200, 153000] },
+            3: { oldSteps: [56500, 58760, 61120, 63570, 66120, 68770, 71530, 74400], newSteps: [113000, 117000, 121100, 125300, 129700, 134300, 139000, 143800, 148800] },
+            4: { oldSteps: [50000, 52000, 54080, 56250, 58500, 60840, 63280, 65820, 68460, 71200], newSteps: [100000, 103500, 107200, 110900, 114800, 118800, 123000, 127300, 131700, 136300, 142400] },
+            5: { oldSteps: [43000, 44940, 46970, 49090, 51300, 53610, 56030, 58560, 61200, 63960, 66840, 69850], newSteps: [86000, 89500, 93100, 96800, 100700, 104700, 108900, 113200, 117700, 122500, 127400, 132400, 139700] },
+            6: { oldSteps: [35500, 37280, 39150, 41110, 43170, 45330, 47600, 49980, 52480, 55110, 57870, 60770, 63810, 67010], newSteps: [71000, 74600, 78300, 82200, 86400, 90700, 95200, 100000, 104900, 110200, 115700, 121500, 127600, 134000] },
+            7: { oldSteps: [29000, 30450, 31980, 33580, 35260, 37030, 38890, 40840, 42890, 45040, 47300, 49670, 52160, 54770, 57510, 60390, 63410], newSteps: [58000, 60900, 64000, 67200, 70500, 74100, 77800, 81700, 85700, 90000, 94500, 99200, 104200, 109400, 114900, 120600, 126800] },
+            8: { oldSteps: [23000, 24150, 25360, 26630, 27970, 29370, 30840, 32390, 34010, 35720, 37510, 39390, 41360, 43430, 45610, 47900, 50300, 52820, 55470], newSteps: [46000, 48300, 50800, 53300, 56000, 58800, 61700, 64800, 68000, 71400, 75000, 78700, 82700, 86800, 91100, 95700, 100500, 105500, 110800] },
+            9: { oldSteps: [22000, 23100, 24260, 25480, 26760, 28100, 29510, 30990, 32540, 34170, 35880, 37680, 39570, 41550, 43630, 45820, 48120, 50530, 53060], newSteps: [44000, 46200, 48600, 51000, 53500, 56200, 59000, 62000, 65100, 68300, 71700, 75300, 79100, 83000, 87200, 91500, 96100, 100900, 105900] },
+            10: { oldSteps: [16000, 16800, 17640, 18530, 19460, 20440, 21470, 22550, 23680, 24870, 26120, 27430, 28810, 30260, 31780, 33370, 35040, 36800, 38640], newSteps: [32000, 33600, 35300, 37100, 38900, 40900, 42900, 45100, 47300, 49700, 52200, 54800, 57500, 60400, 63400, 66600, 69900, 73400, 77300] },
+            11: { oldSteps: [12500, 13130, 13790, 14480, 15210, 15980, 16780, 17620, 18510, 19440, 20420, 21450, 22530, 23660, 24850, 26100, 27410, 28790, 30230], newSteps: [25000, 26300, 27600, 29000, 30400, 32000, 33600, 35200, 37000, 38800, 40800, 42800, 44900, 47200, 49500, 52000, 54600, 57300, 60500] },
+            12: { oldSteps: [11300, 11870, 12470, 13100, 13760, 14450, 15180, 15940, 16740, 17580, 18460, 19390, 20360, 21380, 22450, 23580, 24760, 26000, 27300], newSteps: [24300, 25600, 26800, 28200, 29600, 31100, 32600, 34200, 36000, 37700, 39600, 41600, 43700, 45900, 48200, 50600, 53100, 55700, 58700] },
+            13: { oldSteps: [11000, 11550, 12130, 12740, 13380, 14050, 14760, 15500, 16280, 17100, 17960, 18860, 19810, 20810, 21860, 22960, 24110, 25320, 26590], newSteps: [24000, 25200, 26500, 27800, 29200, 30700, 32200, 33800, 35500, 37300, 39100, 41100, 43200, 45300, 47600, 49900, 52400, 55100, 58000] },
+            14: { oldSteps: [10200, 10710, 11250, 11820, 12420, 13050, 13710, 14400, 15120, 15880, 16680, 17520, 18400, 19320, 20290, 21310, 22380, 23500, 24680], newSteps: [23500, 24700, 26000, 27300, 28600, 30000, 31500, 33100, 34800, 36500, 38300, 40200, 42300, 44400, 46600, 48900, 51300, 53900, 56800] },
+            15: { oldSteps: [9700, 10190, 10700, 11240, 11810, 12410, 13040, 13700, 14390, 15110, 15870, 16670, 17510, 18390, 19310, 20280, 21300, 22370, 23490], newSteps: [22800, 24000, 25200, 26400, 27800, 29100, 30600, 32100, 33700, 35400, 37200, 39000, 41000, 43000, 45200, 47400, 49800, 52300, 55200] },
+            16: { oldSteps: [9300, 9770, 10260, 10780, 11320, 11890, 12490, 13120, 13780, 14470, 15200, 15960, 16760, 17600, 18480, 19410, 20390, 21410, 22490], newSteps: [21900, 23000, 24200, 25400, 26700, 28000, 29400, 30900, 32400, 34000, 35700, 37500, 39400, 41300, 43400, 45600, 47900, 50200, 52900] },
+            17: { oldSteps: [9000, 9450, 9930, 10430, 10960, 11510, 12090, 12700, 13340, 14010, 14720, 15460, 16240, 17060, 17920, 18820, 19770, 20760, 21800], newSteps: [21400, 22500, 23600, 24800, 26100, 27400, 28700, 30200, 31700, 33200, 34900, 36700, 38500, 40400, 42400, 44500, 46800, 49100, 51900] },
+            18: { oldSteps: [8800, 9240, 9710, 10200, 10710, 11250, 11820, 12420, 13050, 13710, 14400, 15120, 15880, 16680, 17520, 18400, 19320, 20290, 21310], newSteps: [21000, 22100, 23200, 24400, 25600, 26900, 28200, 29600, 31100, 32600, 34300, 36000, 37800, 39600, 41600, 43700, 45900, 48200, 50900] },
+            19: { oldSteps: [8500, 8930, 9380, 9850, 10350, 10870, 11420, 12000, 12600, 13230, 13900, 14600, 15330, 16100, 16910, 17760, 18650, 19590, 20570], newSteps: [20500, 21600, 22700, 23800, 25000, 26200, 27500, 28900, 30300, 31900, 33400, 35100, 36900, 38700, 40600, 42700, 44800, 47000, 49600] },
+            20: { oldSteps: [8250, 8670, 9110, 9570, 10050, 10560, 11090, 11650, 12240, 12860, 13510, 14190, 14900, 15650, 16440, 17270, 18140, 19050, 20010], newSteps: [20000, 21000, 22100, 23200, 24400, 25600, 26900, 28200, 29600, 31100, 32600, 34300, 36000, 37800, 39600, 41600, 43700, 45900, 48400] }
         };
 
-        // ফায়ার সার্ভিস ঝুঁকি ভাতার ছক (প্রজ্ঞাপন নং ০৭.০০.০০০০.১৭৩.৪৪.০৫৮.১৫-১২৪, তারিখ: ২৯/১০/২০১৮)
-        const fireRiskRates = {
+        const fireRiskRates2018 = {
             18: { '0-5': 1400, '5-10': 1700, '10-15': 2000, '15-20': 2400, '20+': 2800 },
             17: { '0-5': 1500, '5-10': 1800, '10-15': 2200, '15-20': 2500, '20+': 3000 },
             16: { '0-5': 1600, '5-10': 1900, '10-15': 2300, '15-20': 2700, '20+': 3200 },
@@ -1386,7 +969,18 @@
             10: { '0-5': 2700, '5-10': 3200, '10-15': 3800, '15-20': 4500, '20+': 5400 }
         };
 
-        // ড্রপডাউনে গ্রেড তৈরি
+        const fireRiskRates2028 = {
+            18: { '0-5': 1480, '5-10': 2040, '10-15': 2400, '15-20': 2880, '20+': 3360 },
+            17: { '0-5': 1600, '5-10': 2160, '10-15': 2640, '15-20': 3000, '20+': 3600 },
+            16: { '0-5': 1720, '5-10': 2280, '10-15': 2760, '15-20': 3240, '20+': 3840 },
+            15: { '0-5': 2040, '5-10': 2400, '10-15': 2880, '15-20': 3480, '20+': 4080 },
+            14: { '0-5': 2160, '5-10': 2640, '10-15': 3240, '15-20': 3840, '20+': 4560 },
+            13: { '0-5': 2280, '5-10': 2760, '10-15': 3360, '15-20': 4080, '20+': 4800 },
+            12: { '0-5': 2520, '5-10': 3000, '10-15': 3600, '15-20': 4320, '20+': 5280 },
+            11: { '0-5': 2640, '5-10': 3240, '10-15': 3840, '15-20': 4560, '20+': 5520 },
+            10: { '0-5': 3240, '5-10': 3840, '10-15': 4560, '15-20': 5400, '20+': 6480 }
+        };
+
         const gradeSelect = document.getElementById('grade');
         for (let i = 1; i <= 20; i++) {
             const opt = document.createElement('option');
@@ -1397,7 +991,6 @@
             gradeSelect.appendChild(opt);
         }
 
-        // গ্রেড পরিবর্তনের সাথে সাথে ২০১৫ স্কেলের অনুমোদিত ধাপ ড্রপডাউনে পপুলেট করা
         function onGradeChange() {
             const g = parseInt(gradeSelect.value);
             const basicOldSelect = document.getElementById('basicOld');
@@ -1442,6 +1035,7 @@
 
         function calculateFullPay() {
             const grade = parseInt(document.getElementById('grade').value);
+            const location = document.getElementById('location').value;
             const basicOld = parseFloat(document.getElementById('basicOld').value);
 
             if (!grade) {
@@ -1449,15 +1043,20 @@
                 return;
             }
 
+            if (!location) {
+                alert('অনুগ্রহ করে কর্মস্থল এলাকা / বাসস্থান নির্বাচন করুন।');
+                document.getElementById('location').focus();
+                return;
+            }
+
             if (isNaN(basicOld) || basicOld <= 0) {
-                alert('অনুগ্রহ করে ৩০ জুন ২০২৬-এ আহরিত মূল বেতনের ধাপ নির্বাচন করুন।');
+                alert('অনুগ্রহ করে ৩০ জুন ২০২৬-এ আহরিত মূল বেতনের সঠিক ধাপ নির্বাচন করুন।');
                 return;
             }
 
             const gData = scalesData[grade];
             const oldMin = gData.oldSteps[0];
 
-            // ১. অনুচ্ছেদ ৫ অনুযায়ী পে-ফিক্সেশন
             const diff = basicOld - oldMin;
             const newStart = gData.newSteps[0];
             const interim = newStart + diff;
@@ -1476,7 +1075,6 @@
                 }
             }
 
-            // ২. অনুচ্ছেদ ৯(২) অনুযায়ী ১ জুলাই ২০২৬-এর বার্ষিক বেতনবৃদ্ধি (১টি ইনক্রিমেন্ট)
             let fullBasicWithInc = fixedStep;
             let inc2026Index = fixedIndex;
             if (inc2026Index + 1 < gData.newSteps.length) {
@@ -1484,195 +1082,203 @@
                 fullBasicWithInc = gData.newSteps[inc2026Index];
             }
 
-            // মোট বৃদ্ধিপ্রাপ্ত অংশ
             const totalIncrease = fullBasicWithInc - basicOld;
-
-            // ১৫% বিশেষ সুবিধা (পূর্বের ৩০ জুন ২০২৬ মূল বেতনের ১৫%)
             const oldSpecialBenefit = basicOld * 0.15;
 
-            // ৩. অনুচ্ছেদ ১(৩) অনুযায়ী বাস্তবায়নের স্তরবিন্যাস
             const isHigherGrade = (grade <= 9);
-            const pStep1 = isHigherGrade ? 0.40 : 0.50; // ১ম ধাপ: ৯ম+ ৪০%, ১০-২০তম ৫০%
-            const pStep2 = isHigherGrade ? 0.70 : 0.75; // ২য় ধাপ: ৯ম+ ৭০%, ১০-২০তম ৭৫%
+            const pStep1 = isHigherGrade ? 0.40 : 0.50;
+            const pStep2 = isHigherGrade ? 0.70 : 0.75;
 
-            // ১ম ধাপ: ১ জুলাই ২০২৬ – ৩১ ডিসেম্বর ২০২৬
             const incStep1 = totalIncrease * pStep1;
             const basicStep1 = basicOld + incStep1;
             const netGainStep1 = incStep1 - oldSpecialBenefit;
 
-            // ২য় ধাপ: ১ জানুয়ারি ২০২৭ – ৩০ জুন ২০২৭
             const incStep2 = totalIncrease * pStep2;
             const basicStep2 = basicOld + incStep2;
             const netGainStep2 = incStep2 - oldSpecialBenefit;
-            const step2IncrementalGain = netGainStep2 - netGainStep1; // ১ম ধাপের চেয়ে অতিরিক্ত নিট লাভ
+            const step2IncrementalGain = netGainStep2 - netGainStep1;
 
-            // ৩য় ধাপ: ১ জুলাই ২০২৭ – ৩১ ডিসেম্বর ২০২৭ (১০০% স্কেল + ১ জুলাই ২০২৭ ইনক্রিমেন্ট)
             let basicStep3 = fullBasicWithInc;
             if (inc2026Index + 1 < gData.newSteps.length) {
                 basicStep3 = gData.newSteps[inc2026Index + 1];
             }
             const incStep3 = basicStep3 - basicOld;
             const netGainStep3 = incStep3 - oldSpecialBenefit;
-            const step3IncrementalGain = netGainStep3 - netGainStep2; // ২য় ধাপের চেয়ে অতিরিক্ত নিট লাভ
+            const step3IncrementalGain = netGainStep3 - netGainStep2;
 
-            // সামারি কার্ড আপডেট
-            document.getElementById('summaryCard').innerHTML = `
-                <p><strong>নির্বাচিত পদমর্যাদা:</strong> ${toBn(grade)}ম গ্রেড &nbsp;|&nbsp; <strong>৩০ জুন ২০২৬-এ মূল বেতন:</strong> ${toBn(basicOld.toFixed(2))} টাকা</p>
-                <p><strong>নতুন স্কেলে নির্ধারিত পূর্ণ মূল বেতন:</strong> ${toBn(fullBasicWithInc)} টাকা (১ জুলাই ২০২৬ ইনক্রিমেন্টসহ)</p>
-                <p><strong>বেতনবৃদ্ধি বাবদ মোট পার্থক্য:</strong> ${toBn(totalIncrease)} টাকা &nbsp;|&nbsp; <strong>বিলুপ্ত ১৫% বিশেষ সুবিধা:</strong> ${toBn(oldSpecialBenefit.toFixed(2))} টাকা/মাস</p>
-            `;
-
-            // টেবিল ডাটা প্রদর্শন
-            const rows = [
-                {
-                    period: '১ জুলাই ২০২৬ – ৩১ ডিসেম্বর ২০২৬',
-                    rule: `১ম ধাপ: বৃদ্ধিপ্রাপ্ত পার্থক্যের ${toBn(pStep1 * 100)}% প্রদান`,
-                    basic: basicStep1,
-                    displayText: `+${toBn(netGainStep1.toFixed(2))} টাকা/মাস`,
-                    subNote: `(১৫% বিশেষ সুবিধা কর্তন সমন্বয়ের পর নিট লাভ)`
-                },
-                {
-                    period: '১ জানুয়ারি ২০২৭ – ৩০ জুন ২০২৭',
-                    rule: `২য় ধাপ: বৃদ্ধিপ্রাপ্ত পার্থক্যের ${toBn(pStep2 * 100)}% প্রদান`,
-                    basic: basicStep2,
-                    displayText: `আরও অতিরিক্ত +${toBn(step2IncrementalGain.toFixed(2))} টাকা/মাস`,
-                    subNote: `(১ম ধাপের চেয়ে অতিরিক্ত বৃদ্ধি | মোট নিট বৃদ্ধি: ${toBn(netGainStep2.toFixed(2))} টাকা)`
-                },
-                {
-                    period: '১ জুলাই ২০২৭ – ৩১ ডিসেম্বর ২০২৭',
-                    rule: '৩য় ধাপ: শতভাগ স্কেল + ১ জুলাই ২০২৭ বার্ষিক ইনক্রিমেন্ট',
-                    basic: basicStep3,
-                    displayText: `আরও অতিরিক্ত +${toBn(step3IncrementalGain.toFixed(2))} টাকা/মাস`,
-                    subNote: `(২য় ধাপের চেয়ে অতিরিক্ত বৃদ্ধি | মোট নিট বৃদ্ধি: ${toBn(netGainStep3.toFixed(2))} টাকা)`
-                },
-                {
-                    period: '১ জানুয়ারি ২০২৮ হইতে',
-                    rule: '১ জুলাই ২০২৭-এর বেসিক বহাল + নতুন বর্ধিত ভাতা কার্যকর',
-                    basic: basicStep3,
-                    displayText: `বেসিক অপরিবর্তিত`,
-                    subNote: `(নতুন বর্ধিত সাধারণ ও বিশেষ ভাতাদি কার্যকর হবে)`
+            // --- ২০১৫ স্কেলের সর্বসাকুল্যে মোট বেতন হিসাব (১৫% বিশেষ সুবিধাসহ) এবং সরকারি নিয়মে কর্তন (~১০০-১৫০ টাকা) ---
+            let oldHrPercent = 0.45;
+            if (location === 'govt_quarter') {
+                oldHrPercent = 0;
+            } else {
+                if (location === 'dhaka') {
+                    if (grade >= 16) oldHrPercent = 0.60;
+                    else if (grade >= 10) oldHrPercent = 0.55;
+                    else oldHrPercent = 0.50;
+                } else if (location === 'other_cc') {
+                    if (grade >= 16) oldHrPercent = 0.50;
+                    else if (grade >= 10) oldHrPercent = 0.45;
+                    else oldHrPercent = 0.40;
+                } else {
+                    if (grade >= 16) oldHrPercent = 0.45;
+                    else if (grade >= 10) oldHrPercent = 0.40;
+                    else oldHrPercent = 0.35;
                 }
-            ];
-
-            let tableHtml = '';
-            rows.forEach(r => {
-                tableHtml += `
-                    <tr>
-                        <td><strong>${r.period}</strong></td>
-                        <td><span class="badge">${r.rule}</span></td>
-                        <td class="text-right"><strong>${toBn(r.basic.toFixed(2))} টাকা</strong></td>
-                        <td class="text-right" style="color: #047857; font-weight: 700;">
-                            ${r.displayText}<br>
-                            <small style="font-size: 12px; color: #64748b; font-weight: 500;">${r.subNote}</small>
-                        </td>
-                    </tr>
-                `;
-            });
-            document.getElementById('resultTableBody').innerHTML = tableHtml;
-
-            // ৪. ২০২৮ সালের জানুয়ারি মাসের পূর্ণাঙ্গ বেতন ও ভাতার হিসাব (অনুচ্ছেদ ১২-৩০)
-            const basic2028 = basicStep3;
-            const location = document.getElementById('location').value;
-            let hrPercent = 0.45;
-
-            // বাড়িভাড়ার শতকরা হার নির্ধারণ (অনুচ্ছেদ ১৫(৬))
-            if (grade >= 16 && grade <= 20) {
-                if (location === 'dhaka') hrPercent = 0.60;
-                else if (location === 'other_cc') hrPercent = 0.50;
-                else hrPercent = 0.45;
-            } else if (grade >= 10 && grade <= 15) {
-                if (location === 'dhaka') hrPercent = 0.50;
-                else if (location === 'other_cc') hrPercent = 0.40;
-                else hrPercent = 0.35;
-            } else if (grade >= 5 && grade <= 9) {
-                if (location === 'dhaka') hrPercent = 0.45;
-                else if (location === 'other_cc') hrPercent = 0.35;
-                else hrPercent = 0.30;
-            } else if (grade >= 1 && grade <= 4) {
-                if (location === 'dhaka') hrPercent = 0.40;
-                else if (location === 'other_cc') hrPercent = 0.30;
-                else hrPercent = 0.25;
             }
-            const houseRent = basic2028 * hrPercent;
+            const oldHouseRent = basicOld * oldHrPercent;
+            const oldMedical = 1500;
+            const oldTiffin = (grade >= 11 && document.getElementById('tiffinEligible').checked) ? 200 : 0;
+            const oldConveyance = (grade >= 11 && document.getElementById('conveyanceEligible').checked) ? 300 : 0;
+            const oldWashing = document.getElementById('washingEligible').checked ? 100 : 0;
 
-            // পাহাড়ি ও হাওড়/দ্বীপ/চর ভাতা (অনুচ্ছেদ ২৫ ও ২৬)
-            let remoteAllowanceAmt = 0;
-            let remoteAllowanceTitle = '';
-            const remoteType = document.getElementById('remoteAllowance').value;
-            if (remoteType === 'hill_sadar') {
-                remoteAllowanceAmt = Math.min(basic2028 * 0.20, 5000);
-                remoteAllowanceTitle = 'পাহাড়ি ভাতা (সদর উপজেলা - অনুচ্ছেদ ২৫)';
-            } else if (remoteType === 'hill_other') {
-                remoteAllowanceAmt = Math.min(basic2028 * 0.20, 5500);
-                remoteAllowanceTitle = 'পাহাড়ি ভাতা (অন্যান্য উপজেলা - অনুচ্ছেদ ২৫)';
-            } else if (remoteType === 'haor') {
-                remoteAllowanceAmt = Math.min(basic2028 * 0.20, 5000);
-                remoteAllowanceTitle = 'হাওড় / দ্বীপ / চর ভাতা (অনুচ্ছেদ ২৬)';
-            }
-
-            // চিকিৎসা ভাতা (অনুচ্ছেদ ১৩)
-            const ageGroup = document.getElementById('ageGroup').value;
-            const medical = (ageGroup === '50_plus') ? 4000 : 3000;
-
-            // শিক্ষা সহায়ক ভাতা (অনুচ্ছেদ ১৮)
-            const children = parseInt(document.getElementById('childrenCount').value);
-            let education = 0;
-            if (children === 1) education = 500;
-            else if (children >= 2) education = 1000;
-
-            // টিফিন ভাতা (অনুচ্ছেদ ১৯: ১১-২০তম গ্রেড ৫০০ টাকা)
-            let tiffin = 0;
-            if (grade >= 11 && grade <= 20 && document.getElementById('tiffinEligible').checked) {
-                tiffin = 500;
-            }
-
-            // যাতায়াত ভাতা (অনুচ্ছেদ ২১: ১১-২০তম গ্রেড সিটি কর্পোরেশনে ৬০০ টাকা)
-            let conveyance = 0;
-            if (grade >= 11 && grade <= 20 && document.getElementById('conveyanceEligible').checked) {
-                conveyance = 600;
-            }
-
-            // মোবাইল ভাতা (অনুচ্ছেদ ২২: ১ম-৫ম গ্রেড ৫০০ টাকা, ৬ষ্ঠ-২০তম গ্রেড ১৫০ টাকা)
-            const mobile = (grade <= 5) ? 500 : 150;
-
-            // ধোলাই ভাতা (অনুচ্ছেদ ২৩: ৩০০ টাকা)
-            let washing = 0;
-            if (document.getElementById('washingEligible').checked) {
-                washing = 300;
-            }
-
-            // ৫. ফায়ার সার্ভিস ঝুঁকিভাতা ও পদক ভাতার হিসাব
-            let fireRisk = 0;
+            let oldFireRisk2018 = 0;
             let fireMedalTotal = 0;
             const isFireEligible = document.getElementById('fireServiceEligible').checked;
+            if (isFireEligible && grade >= 10 && grade <= 18) {
+                const expKey = document.getElementById('fireServiceYears').value;
+                if (fireRiskRates2018[grade] && fireRiskRates2018[grade][expKey]) {
+                    oldFireRisk2018 = fireRiskRates2018[grade][expKey];
+                }
+            }
 
             if (isFireEligible) {
-                // ক. ঝুঁকিভাতা হিসাব (গ্রেড ১০ হতে ১৮)
-                if (grade >= 10 && grade <= 18) {
-                    const expKey = document.getElementById('fireServiceYears').value;
-                    if (fireRiskRates[grade] && fireRiskRates[grade][expKey]) {
-                        fireRisk = fireRiskRates[grade][expKey];
-                    }
-                } else {
-                    alert('সতর্কতা: ফায়ার সার্ভিস ও সিভিল ডিফেন্সের অপারেশনাল ঝুঁকিভাতা শুধুমাত্র ১০ম হতে ১৮তম গ্রেডের কর্মচারীদের জন্য প্রযোজ্য।');
-                }
-
-                // খ. পদক ভাতা হিসাব (প্রযোজ্য ক্ষেত্রে)
                 if (document.getElementById('fireMedal1').checked) fireMedalTotal += 1000;
                 if (document.getElementById('fireMedal2').checked) fireMedalTotal += 1000;
                 if (document.getElementById('fireMedal3').checked) fireMedalTotal += 1500;
                 if (document.getElementById('fireMedal4').checked) fireMedalTotal += 1500;
             }
 
-            const grossTotal = basic2028 + houseRent + remoteAllowanceAmt + medical + education + tiffin + conveyance + mobile + washing + fireRisk + fireMedalTotal;
+            // স্ট্যান্ডার্ড সরকারি কল্যাণ ও বীমা কর্তন (যেমন আপনার উদাহরণের ১৩২ টাকা)
+            const standardDeduction = 132;
 
-            // ভাতার তালিকা প্রস্তুত
-            let allowancesHtml = `
-                <div class="allowance-item"><span>মূল বেতন (Basic):</span> <strong>${toBn(basic2028.toFixed(2))} টাকা</strong></div>
-                <div class="allowance-item"><span>বাড়ি ভাড়া (${toBn(hrPercent * 100)}%):</span> <strong>${toBn(houseRent.toFixed(2))} টাকা</strong></div>
+            const oldGross2015 = (basicOld + oldHouseRent + oldMedical + oldTiffin + oldConveyance + oldWashing + oldFireRisk2018 + fireMedalTotal + oldSpecialBenefit) - standardDeduction;
+
+            document.getElementById('summaryCard').innerHTML = `
+                <p><strong>নির্বাচিত পদমর্যাদা:</strong> ${toBn(grade)}ম গ্রেড &nbsp;|&nbsp; <strong>৩০ জুন ২০২৬-এ মূল বেতন:</strong> ${toBn(basicOld.toFixed(2))} টাকা</p>
+                <p><strong>নতুন স্কেলে নির্ধারিত পূর্ণ মূল বেতন:</strong> ${toBn(fullBasicWithInc)} টাকা (১ জুলাই ২০২৬ ইনক্রিমেন্টসহ)</p>
+                <p><strong>বেতনবৃদ্ধি বাবদ মোট পার্থক্য:</strong> ${toBn(totalIncrease)} টাকা &nbsp;|&nbsp; <strong>বিলুপ্ত ১৫% বিশেষ সুবিধা:</strong> ${toBn(oldSpecialBenefit.toFixed(2))} টাকা/মাস</p>
             `;
 
-            // পাহাড়ি বা হাওড় ভাতা প্রযোজ্য থাকলে তালিকায় যুক্ত হবে
+            // বর্তমান সর্বসাকুল্যে বেতন: (১৫% বাদে ২০১৫ এর সর্বসাকুল্যে বেতন) + বেসিক বৃদ্ধি
+            const oldGrossWithout15 = (oldGross2015 + standardDeduction) - oldSpecialBenefit;
+            const currentGrossStep1 = (oldGrossWithout15 + incStep1) - standardDeduction;
+            const currentGrossStep2 = (oldGrossWithout15 + incStep2) - standardDeduction;
+            const currentGrossStep3 = (oldGrossWithout15 + incStep3) - standardDeduction;
+
+            const rows = [
+                {
+                    period: '১ জুলাই ২০২৬ – ৩১ ডিসেম্বর ২০২৬',
+                    rule: `১ম ধাপ: বৃদ্ধিপ্রাপ্ত পার্থক্যের ${toBn(pStep1 * 100)}% প্রদান`,
+                    basic: basicStep1,
+                    oldGross: oldGross2015,
+                    currentGross: currentGrossStep1,
+                    netGain: netGainStep1,
+                    desc: `প্রকৃত বৃদ্ধি: +${toBn(netGainStep1.toFixed(2))} টাকা`
+                },
+                {
+                    period: '১ জানুয়ারি ২০২৭ – ৩০ জুন ২০২৭',
+                    rule: `২য় ধাপ: বৃদ্ধিপ্রাপ্ত পার্থক্যের ${toBn(pStep2 * 100)}% প্রদান`,
+                    basic: basicStep2,
+                    oldGross: oldGross2015,
+                    currentGross: currentGrossStep2,
+                    netGain: netGainStep2,
+                    desc: `সর্বমোট বৃদ্ধি: +${toBn(netGainStep2.toFixed(2))} টাকা (অতিরিক্ত +${toBn(step2IncrementalGain.toFixed(2))})`
+                },
+                {
+                    period: '১ জুলাই ২০২৭ – ৩১ ডিসেম্বর ২০২৭',
+                    rule: '৩য় ধাপ: শতভাগ স্কেল + ১ জুলাই ২০২৭ ইনক্রিমেন্ট',
+                    basic: basicStep3,
+                    oldGross: oldGross2015,
+                    currentGross: currentGrossStep3,
+                    netGain: netGainStep3,
+                    desc: `সর্বমোট বৃদ্ধি: +${toBn(netGainStep3.toFixed(2))} টাকা (অতিরিক্ত +${toBn(step3IncrementalGain.toFixed(2))})`
+                },
+                {
+                    period: '১ জানুয়ারি ২০২৮ হইতে',
+                    rule: '১ জুলাই ২০২৭-এর বেসিক বহাল + নতুন বর্ধিত ভাতা কার্যকর',
+                    basic: basicStep3,
+                    oldGross: oldGross2015,
+                    currentGross: 0,
+                    netGain: netGainStep3,
+                    desc: `বেসিক অপরিবর্তিত (নতুন ভাতা যুক্ত)`
+                }
+            ];
+
+            let tableHtml = '';
+            rows.forEach(r => {
+                let currentGrossDisplay = r.currentGross > 0 ? `${toBn(r.currentGross.toFixed(2))} টাকা` : 'নিচে ২০২৮ সালের গ্রস দেখুন';
+                tableHtml += `
+                    <tr>
+                        <td><strong>${r.period}</strong></td>
+                        <td><span class="badge">${r.rule}</span></td>
+                        <td class="text-right"><strong>${toBn(r.basic.toFixed(2))} টাকা</strong></td>
+                        <td class="text-right">${toBn(r.oldGross.toFixed(2))} টাকা</td>
+                        <td class="text-right" style="color: #1d4ed8; font-weight: 700;">${currentGrossDisplay}</td>
+                        <td class="text-right" style="color: #047857; font-weight: 700;">${r.desc}</td>
+                    </tr>
+                `;
+            });
+            document.getElementById('resultTableBody').innerHTML = tableHtml;
+
+            // --- ২০২৮ সালের নতুন প্রজ্ঞাপন ও গেজেট অনুযায়ী পূর্ণাঙ্গ গ্রস স্যালারির হিসাব ---
+            const basic2028 = basicStep3;
+            let hrPercent2028 = 0.45;
+
+            if (location === 'govt_quarter') {
+                hrPercent2028 = 0;
+            } else {
+                if (grade >= 16 && grade <= 20) {
+                    hrPercent2028 = (location === 'dhaka') ? 0.60 : (location === 'other_cc' ? 0.50 : 0.45);
+                } else if (grade >= 10 && grade <= 15) {
+                    hrPercent2028 = (location === 'dhaka') ? 0.50 : (location === 'other_cc' ? 0.40 : 0.35);
+                } else if (grade >= 5 && grade <= 9) {
+                    hrPercent2028 = (location === 'dhaka') ? 0.45 : (location === 'other_cc' ? 0.35 : 0.30);
+                } else {
+                    hrPercent2028 = (location === 'dhaka') ? 0.40 : (location === 'other_cc' ? 0.30 : 0.25);
+                }
+            }
+            const houseRent2028 = basic2028 * hrPercent2028;
+
+            let remoteAllowanceAmt = 0;
+            let remoteAllowanceTitle = '';
+            const remoteType = document.getElementById('remoteAllowance').value;
+            if (remoteType === 'hill_sadar') {
+                remoteAllowanceAmt = Math.min(basic2028 * 0.20, 5000);
+                remoteAllowanceTitle = 'পাহাড়ি ভাতা (সদর উপজেলা)';
+            } else if (remoteType === 'hill_other') {
+                remoteAllowanceAmt = Math.min(basic2028 * 0.20, 5500);
+                remoteAllowanceTitle = 'পাহাড়ি ভাতা (অন্যান্য উপজেলা)';
+            } else if (remoteType === 'haor') {
+                remoteAllowanceAmt = Math.min(basic2028 * 0.20, 5000);
+                remoteAllowanceTitle = 'হাওড় / দ্বীপ / চর ভাতা';
+            }
+
+            const ageGroup = document.getElementById('ageGroup').value;
+            const medical = (ageGroup === '50_plus') ? 4000 : 3000;
+
+            const children = parseInt(document.getElementById('childrenCount').value);
+            let education = (children === 1) ? 500 : (children >= 2 ? 1000 : 0);
+
+            let tiffin = (grade >= 11 && grade <= 20 && document.getElementById('tiffinEligible').checked) ? 500 : 0;
+            let conveyance = (grade >= 11 && grade <= 20 && document.getElementById('conveyanceEligible').checked) ? 600 : 0;
+            const mobile = (grade <= 5) ? 500 : 150;
+            let washing = document.getElementById('washingEligible').checked ? 300 : 0;
+
+            let fireRisk2028 = 0;
+            if (isFireEligible && grade >= 10 && grade <= 18) {
+                const expKey = document.getElementById('fireServiceYears').value;
+                if (fireRiskRates2028[grade] && fireRiskRates2028[grade][expKey]) {
+                    fireRisk2028 = fireRiskRates2028[grade][expKey];
+                }
+            }
+
+            const grossTotal = (basic2028 + houseRent2028 + remoteAllowanceAmt + medical + education + tiffin + conveyance + mobile + washing + fireRisk2028 + fireMedalTotal) - standardDeduction;
+
+            let allowancesHtml = `
+                <div class="allowance-item"><span>মূল বেতন (Basic):</span> <strong>${toBn(basic2028.toFixed(2))} টাকা</strong></div>
+                <div class="allowance-item"><span>বাড়ি ভাড়া (${toBn(hrPercent2028 * 100)}%):</span> <strong>${toBn(houseRent2028.toFixed(2))} টাকা</strong></div>
+            `;
+
             if (remoteAllowanceAmt > 0) {
                 allowancesHtml += `
                     <div class="allowance-item" style="background:#eff6ff; border-color:#bfdbfe;">
@@ -1689,19 +1295,21 @@
                 <div class="allowance-item"><span>যাতায়াত ভাতা:</span> <strong>${toBn(conveyance)} টাকা</strong></div>
                 <div class="allowance-item"><span>মোবাইল ভাতা:</span> <strong>${toBn(mobile)} টাকা</strong></div>
                 <div class="allowance-item"><span>ধোলাই ভাতা:</span> <strong>${toBn(washing)} টাকা</strong></div>
+                <div class="allowance-item" style="background:#fff1f2; border-color:#fecdd3;">
+                    <span style="color:#e11d48; font-weight:600;">কল্যাণ ও অন্যান্য কর্তন:</span> 
+                    <strong style="color:#e11d48;">-${toBn(standardDeduction)} টাকা</strong>
+                </div>
             `;
 
-            // ফায়ার সার্ভিস ঝুঁকিভাতা যুক্ত থাকলে তালিকায় প্রদর্শন
-            if (isFireEligible && fireRisk > 0) {
+            if (isFireEligible && fireRisk2028 > 0) {
                 allowancesHtml += `
                     <div class="allowance-item" style="background:#fef2f2; border-color:#fca5a5;">
-                        <span style="color:#b91c1c; font-weight:600;">ফায়ার সার্ভিস ঝুঁকি ভাতা (২৯/১০/২০১৮ প্রজ্ঞাপন):</span> 
-                        <strong style="color:#b91c1c;">${toBn(fireRisk)} টাকা</strong>
+                        <span style="color:#b91c1c; font-weight:600;">ফায়ার সার্ভিস ঝুঁকি ভাতা (২০২৮ হার):</span> 
+                        <strong style="color:#b91c1c;">${toBn(fireRisk2028)} টাকা</strong>
                     </div>
                 `;
             }
 
-            // ফায়ার সার্ভিস পদক ভাতা যুক্ত থাকলে তালিকায় প্রদর্শন
             if (isFireEligible && fireMedalTotal > 0) {
                 allowancesHtml += `
                     <div class="allowance-item" style="background:#fff7ed; border-color:#fed7aa;">
