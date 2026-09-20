@@ -75,11 +75,11 @@
             height: 82px;
             margin-bottom: 12px;
             filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
-            transition: transform 0.2s ease;
+            transition: transform 0.3s ease;
         }
 
         .bd-logo:hover {
-            transform: scale(1.04);
+            transform: scale(1.06) rotate(3deg);
         }
 
         .header h1 {
@@ -97,7 +97,7 @@
             margin-top: 6px;
         }
 
-        /* পৃথক পৃথক ডায়নামিক সেকশন কার্ড */
+        /* ডায়নামিক ইন্টারেক্টিভ সেকশন কার্ড */
         .section-card-1 {
             background: #f0fdf4;
             border: 1.5px solid #a7f3d0;
@@ -105,6 +105,12 @@
             padding: 22px 20px;
             margin-bottom: 24px;
             box-shadow: 0 4px 12px rgba(5, 150, 105, 0.04);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .section-card-1:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(5, 150, 105, 0.08);
         }
 
         .section-card-2 {
@@ -114,6 +120,12 @@
             padding: 22px 20px;
             margin-bottom: 24px;
             box-shadow: 0 4px 12px rgba(2, 132, 199, 0.04);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .section-card-2:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(2, 132, 199, 0.08);
         }
 
         /* হাইলাইটেড সেকশন টাইটেল ব্যাজ */
@@ -181,6 +193,7 @@
             color: var(--secondary);
         }
 
+        /* ইনপুট ফিল্ড ও মসৃণ ফোকাস */
         select,
         input[type="text"],
         input[type="number"] {
@@ -192,7 +205,7 @@
             outline: none;
             background-color: #ffffff;
             color: var(--text-main);
-            transition: all 0.25s ease;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
             -webkit-appearance: none;
             appearance: none;
         }
@@ -210,6 +223,7 @@
         input[type="number"]:focus {
             border-color: var(--primary);
             box-shadow: 0 0 0 4px rgba(5, 150, 105, 0.18);
+            transform: translateY(-1px);
         }
 
         .help-text {
@@ -251,7 +265,7 @@
             padding: 11px 14px;
             border-radius: 8px;
             border: 1.5px solid #e2e8f0;
-            transition: all 0.2s ease;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
             user-select: none;
             -webkit-tap-highlight-color: transparent;
         }
@@ -259,6 +273,8 @@
         .checkbox-label:hover {
             border-color: var(--primary);
             background-color: #f0fdf4;
+            transform: translateY(-1px);
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.04);
         }
 
         .checkbox-label input {
@@ -277,6 +293,12 @@
             border-radius: 16px;
             margin-bottom: 24px;
             box-shadow: 0 4px 12px rgba(185, 28, 28, 0.04);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .fire-service-wrapper:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(185, 28, 28, 0.08);
         }
 
         .fire-title {
@@ -296,14 +318,35 @@
             border-top: 1px dashed var(--fire-border);
         }
 
-        .fire-subtitle {
+        /* ফায়ার সার্ভিসের নতুন স্বতন্ত্র কালার ব্যাজসমূহ */
+        .fire-risk-label-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            color: #1e40af; /* প্রাণবন্ত রয়েল ব্লু */
+            border: 1.5px solid #93c5fd;
+            padding: 7px 14px;
+            border-radius: 10px;
             font-size: 14.5px;
             font-weight: 700;
-            color: #991b1b;
-            margin: 16px 0 10px 0;
-            display: flex;
+            margin-bottom: 8px;
+            box-shadow: 0 2px 6px rgba(30, 64, 175, 0.08);
+        }
+
+        .fire-medal-label-badge {
+            display: inline-flex;
             align-items: center;
-            gap: 6px;
+            gap: 8px;
+            background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+            color: #92400e; /* উজ্জ্বল সোনালি অ্যাম্বার */
+            border: 1.5px solid #fcd34d;
+            padding: 7px 14px;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: 800;
+            margin: 18px 0 10px 0;
+            box-shadow: 0 2px 6px rgba(146, 64, 14, 0.08);
         }
 
         /* আকর্ষণীয় ক্যালকুলেট বাটন */
@@ -433,6 +476,7 @@
             border-bottom: 1px solid #e2e8f0;
             padding: 13px 14px;
             font-size: 14.5px;
+            transition: background-color 0.2s ease;
         }
 
         th {
@@ -441,6 +485,10 @@
             font-weight: 700;
             border-bottom: 2px solid #cbd5e1;
             white-space: nowrap;
+        }
+
+        tr:hover td {
+            background-color: #f8fafc;
         }
 
         tr:last-child td {
@@ -468,9 +516,13 @@
             padding: 24px;
             margin-top: 30px;
             box-shadow: 0 4px 15px rgba(22, 101, 52, 0.06);
+            transition: transform 0.25s ease;
         }
 
-        /* ১ জানুয়ারি ২০২৮ মোট বেতনের হাইলাইটেড টাইটেল */
+        .allowance-box:hover {
+            transform: translateY(-2px);
+        }
+
         .allowance-title {
             margin-bottom: 18px;
             display: flex;
@@ -511,6 +563,12 @@
             align-items: center;
             font-size: 15px;
             font-weight: 500;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .allowance-item:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.04);
         }
 
         .allowance-item strong {
@@ -531,7 +589,12 @@
             flex-wrap: wrap;
             gap: 12px;
             box-shadow: 0 10px 25px -3px rgba(4, 120, 87, 0.35);
-            transition: transform 0.2s ease;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .allowance-total:hover {
+            transform: scale(1.01);
+            box-shadow: 0 14px 30px -3px rgba(4, 120, 87, 0.45);
         }
 
         .total-label-wrapper {
@@ -604,6 +667,11 @@
             flex-wrap: wrap;
             gap: 12px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+            transition: transform 0.25s ease;
+        }
+
+        .visitor-counter-card:hover {
+            transform: translateY(-2px);
         }
 
         .visitor-label {
@@ -691,6 +759,12 @@
                 margin-bottom: 12px;
             }
 
+            .fire-risk-label-badge,
+            .fire-medal-label-badge {
+                font-size: 13.5px;
+                padding: 6px 12px;
+            }
+
             .form-grid {
                 gap: 14px;
                 margin-bottom: 12px;
@@ -735,6 +809,10 @@
 
             .allowance-box {
                 padding: 18px 14px;
+            }
+
+            .allowance-title {
+                font-size: 16.5px;
             }
 
             .allowance-list {
@@ -821,7 +899,6 @@
 
                 <div class="form-group">
                     <label for="basicOld">৩০ জুন ২০২৬-এ আহরিত মূল বেতন (২০১৫ পে-স্কেল অনুযায়ী):</label>
-                    <!-- বাংলা ও ইংরেজি উভয় ভাষায় লেখার সুবিধা -->
                     <input type="text" inputmode="numeric" id="basicOld" placeholder="যেমন: 12090 বা ১২০৯০">
                     <span class="help-text">১ জুলাই ২০২৬-এর ইনক্রিমেন্ট লাগার পূর্বের মূল বেতন লিখুন</span>
                 </div>
@@ -898,18 +975,21 @@
             <div class="fire-title">
                 <span>🚒 ফায়ার সার্ভিস ও সিভিল ডিফেন্স ঝুঁকি ভাতা ও পদক ভাতা</span>
             </div>
-            <!-- নির্দেশিত সঠিক টেক্সট -->
             <label class="checkbox-label" style="background:#ffffff; border-color: var(--fire-border);">
                 <input type="checkbox" id="fireServiceEligible" onchange="toggleFireServiceBox()">
                 <span style="color: var(--fire-red); font-weight:700;">আমি ফায়ার সার্ভিস ও সিভিল ডিফেন্স অধিদপ্তরের কর্মকর্তা/কর্মচারী</span>
             </label>
 
             <div class="fire-details" id="fireDetailsBox">
-                <!-- ঝুঁকিভাতার চাকরির বয়স -->
+                <!-- ঝুঁকিভাতার চাকরির বয়স (রয়েল ব্লু ব্যাজ) -->
                 <div class="form-group" style="max-width: 480px; margin-top: 8px;">
-                    <label for="fireServiceYears" style="color: var(--fire-red);">চাকরির মোট বয়স / মেয়াদ নির্বাচন
-                        করুন (ঝুঁকি ভাতার জন্য):</label>
-                    <select id="fireServiceYears" style="border-color: var(--fire-border);">
+                    <div>
+                        <span class="fire-risk-label-badge">
+                            <span>⏱️</span>
+                            <span>চাকরির মোট বয়স / মেয়াদ নির্বাচন করুন (ঝুঁকি ভাতার জন্য):</span>
+                        </span>
+                    </div>
+                    <select id="fireServiceYears" style="border-color: #93c5fd;">
                         <option value="0-5">০ হতে ৫ বছর</option>
                         <option value="5-10">৫+ হতে ১০ বছর</option>
                         <option value="10-15">১০+ হতে ১৫ বছর</option>
@@ -921,22 +1001,27 @@
                     </span>
                 </div>
 
-                <!-- পদক ভাতা সাবলীল শিরোনাম -->
-                <div class="fire-subtitle">🎖️ পদক ভাতা নির্বাচন করুন (যদি পদকপ্রাপ্ত হয়ে থাকেন):</div>
-                <div class="checkbox-grid" style="margin-top: 8px;">
-                    <label class="checkbox-label" style="border-color: var(--fire-border);">
+                <!-- পদক ভাতা সাবলীল শিরোনাম (গোল্ডেন অ্যাম্বার ব্যাজ) -->
+                <div>
+                    <span class="fire-medal-label-badge">
+                        <span>🎖️</span>
+                        <span>পদক ভাতা নির্বাচন করুন (যদি পদকপ্রাপ্ত হয়ে থাকেন):</span>
+                    </span>
+                </div>
+                <div class="checkbox-grid" style="margin-top: 4px;">
+                    <label class="checkbox-label" style="border-color: #fcd34d;">
                         <input type="checkbox" id="fireMedal1">
                         <span>১. প্রেসিডেন্ট ফায়ার সার্ভিস ও সিভিল ডিফেন্স পদক (১,০০০ টাকা)</span>
                     </label>
-                    <label class="checkbox-label" style="border-color: var(--fire-border);">
+                    <label class="checkbox-label" style="border-color: #fcd34d;">
                         <input type="checkbox" id="fireMedal2">
                         <span>২. প্রেসিডেন্ট ফায়ার সার্ভিস ও সিভিল ডিফেন্স (সেবা) পদক (১,০০০ টাকা)</span>
                     </label>
-                    <label class="checkbox-label" style="border-color: var(--fire-border);">
+                    <label class="checkbox-label" style="border-color: #fcd34d;">
                         <input type="checkbox" id="fireMedal3">
                         <span>৩. ফায়ার সার্ভিস ও সিভিল ডিফেন্স পদক (১,৫০০ টাকা)</span>
                     </label>
-                    <label class="checkbox-label" style="border-color: var(--fire-border);">
+                    <label class="checkbox-label" style="border-color: #fcd34d;">
                         <input type="checkbox" id="fireMedal4">
                         <span>৪. ফায়ার সার্ভিস ও সিভিল ডিফেন্স (সেবা) পদক (১,৫০০ টাকা)</span>
                     </label>
@@ -985,7 +1070,6 @@
             <!-- ২০২৮ পূর্ণাঙ্গ মোট বেতনের বক্স -->
             <div class="allowance-box">
                 <div class="allowance-title">
-                    <!-- হাইলাইটেড টাইটেল -->
                     <span class="allowance-title-highlight">১ জানুয়ারি ২০২৮ থেকে প্রাপ্য মাসিক পূর্ণাঙ্গ মোট বেতন (Gross Salary)</span>
                     <span class="badge" style="background:#bbf7d0; color:#14532d;">নতুন বর্ধিত ভাতা কার্যকর</span>
                 </div>
