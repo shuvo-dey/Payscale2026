@@ -44,7 +44,7 @@
             --fire-border: #fca5a5;
             --highlight-green: #edf7ed;
             
-            /* সেকশন ভিত্তিক সফট কালার */
+            /* সেকশন ভিত্তিক কাস্টম সফট ব্যাকগ্রাউন্ড */
             --bg-fixation: #f0fdf4;
             --border-fixation: #86efac;
             --bg-monthly: #f0f9ff;
@@ -212,7 +212,7 @@
             padding: 13px 15px;
             border: 1.8px solid var(--border-color);
             border-radius: 10px;
-            font-size: 16px;
+            font-size: 15.5px;
             font-weight: 500;
             outline: none;
             background-color: #ffffff;
@@ -369,14 +369,13 @@
         }
 
         /* ---------------------------------------------------- */
-        /* আউটপুট সেকশন (আলাদা রঙের ফিল্ড ও বিশেষ হাইলাইট)        */
+        /* আউটপুট সেকশন                                          */
         /* ---------------------------------------------------- */
         .result-section {
             display: none;
             margin-top: 30px;
         }
 
-        /* ১. মূল বেতন নির্ধারণ কার্ড */
         .card-fixation {
             background: var(--bg-fixation);
             border: 1.5px solid var(--border-fixation);
@@ -400,7 +399,6 @@
             gap: 8px;
         }
 
-        /* ২. মাসিক বেতন ও ভাতা কার্ড */
         .card-monthly {
             background: var(--bg-monthly);
             border: 1.5px solid var(--border-monthly);
@@ -424,7 +422,6 @@
             gap: 8px;
         }
 
-        /* ৩. বাৎসরিক প্রাপ্য কার্ড */
         .card-annual {
             background: var(--bg-annual);
             border: 1.5px solid var(--border-annual);
@@ -493,6 +490,18 @@
             margin-top: 6px;
         }
 
+        .incentive-tag-badge {
+            display: inline-block;
+            background: #fee2e2;
+            color: #991b1b;
+            border: 1px solid #fca5a5;
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 700;
+            margin-top: 4px;
+        }
+
         details.scale-accordion {
             margin-top: 14px;
             border-top: 1px solid var(--border-color);
@@ -527,7 +536,6 @@
             margin: 0 2px;
         }
 
-        /* টেবিল স্টাইলিং */
         .table-responsive {
             overflow-x: auto;
             border-radius: 10px;
@@ -574,7 +582,6 @@
             background: #f8fafc;
         }
 
-        /* বকেয়া ও নোটিশ বক্স */
         .notice-box-combined {
             background-color: #fffbeb;
             border: 1.5px solid #fcd34d;
@@ -614,7 +621,6 @@
             font-weight: 700;
         }
 
-        /* প্রিন্ট ও শেয়ার বাটন গ্রুপ */
         .action-btns-wrapper {
             margin: 22px 0;
             display: flex;
@@ -706,7 +712,7 @@
         }
 
         /* ---------------------------------------------------- */
-        /* প্রিন্ট রিপোর্ট লেআউট (হেডার, লোগো ও নামসহ A4 সাইজ)    */
+        /* প্রিন্ট লেআউট (হেডার, লোগো ও নামসহ নিখুঁত প্রদর্শন)      */
         /* ---------------------------------------------------- */
         @media print {
             body {
@@ -719,7 +725,7 @@
                 visibility: hidden !important;
             }
 
-            /* প্রিন্টে দৃশ্যমান হবে: হেডার, রেজাল্ট সেকশন, ডিসক্লেইমার এবং ডেভেলপার ক্রেডিট */
+            /* প্রিন্টে হেডার, রেজাল্ট সেকশন, ডিসক্লেইমার ও ডেভেলপার ক্রেডিট দৃশ্যমান রাখা */
             .header, .header *,
             #resultSection, #resultSection *, 
             .disclaimer-card, .disclaimer-card *,
@@ -824,26 +830,38 @@
             </div>
         </div>
 
-        <!-- ১. মূল বেতন ও গ্রেডের তথ্য (কোনো অপশন সিলেক্ট করা থাকবে না) -->
+        <!-- ১. মূল বেতন, উচ্চতর গ্রেড ও পদের তথ্য -->
         <div class="section-card-1">
             <div class="section-title-badge-1">
                 <span>📋</span>
-                <span>মূল বেতন ও গ্রেডের তথ্য প্রদান করুন</span>
+                <span>মূল বেতন, উচ্চতর গ্রেড ও পদের তথ্য প্রদান করুন</span>
             </div>
 
             <div class="form-grid">
                 <div class="form-group">
-                    <label for="grade">বর্তমান গ্রেড নির্বাচন করুন (২০২৬ এর নতুন পে-স্কেল অনুযায়ী):</label>
+                    <label for="grade">বর্তমান পদবী অনুযায়ী মূল গ্রেড (২০২৬ পে-স্কেল অনুযায়ী):</label>
                     <select id="grade" onchange="onGradeChange()">
-                        <option value="" selected>-- গ্রেড বাছাই করুন --</option>
+                        <option value="" selected>-- মূল পদে নিয়োগপ্রাপ্ত গ্রেড বাছাই করুন --</option>
                     </select>
                     <span class="help-text" id="scaleHint"></span>
+                </div>
+
+                <!-- নতুন সংযোজন: উচ্চতর গ্রেড নির্বাচন (গেজেট অনুচ্ছেদ ৬) -->
+                <div class="form-group">
+                    <label for="higherGrade">উচ্চতর গ্রেড সংক্রান্ত তথ্য (গেজেটের অনুচ্ছেদ ৬ অনুযায়ী):</label>
+                    <select id="higherGrade">
+                        <option value="0" selected>উচ্চতর গ্রেড নেই / প্রযোজ্য নয় (মূল পদে কর্মরত)</option>
+                        <option value="1">১ম উচ্চতর গ্রেড প্রাপ্ত/প্রাপ্য (৮ বছর চাকরিকাল পূর্তিতে ১টি উচ্চতর গ্রেড)</option>
+                        <option value="2">২য় উচ্চতর গ্রেড প্রাপ্ত/প্রাপ্য (পরবর্তী ৬ বছর / মোট ১৪ বছর পূর্তিতে ২য় উচ্চতর গ্রেড)</option>
+                        <option value="3">৩য় উচ্চতর গ্রেড প্রাপ্ত/প্রাপ্য (ব্লকড পদের ক্ষেত্রে ৩য় উচ্চতর গ্রেড)</option>
+                    </select>
+                    <span class="help-text" style="color: #047857; font-weight: 600;">* উচ্চতর গ্রেড বাছাই করলে ২০২৬ স্কেলে স্বয়ংক্রিয়ভাবে উক্ত উচ্চতর স্কেলে বেতন নির্ধারিত হবে।</span>
                 </div>
 
                 <div class="form-group">
                     <label for="basicOld">৩০ জুন ২০২৬-এ আহরিত মূল বেতন (২০১৫ পে-স্কেল অনুযায়ী):</label>
                     <select id="basicOld">
-                        <option value="" selected>-- প্রথমে উপরের গ্রেড নির্বাচন করুন --</option>
+                        <option value="" selected>-- প্রথমে উপরের মূল গ্রেড নির্বাচন করুন --</option>
                     </select>
                     <span class="help-text">১ জুলাই ২০২৬-এর ইনক্রিমেন্ট লাগার পূর্বের নির্ধারিত মূল বেতন ধাপ বাছাই করুন</span>
                 </div>
@@ -929,7 +947,7 @@
         <!-- ফায়ার সার্ভিস ও সিভিল ডিফেন্স ঝুঁকিভাতা ও পদক ভাতা সেকশন -->
         <div class="fire-service-wrapper">
             <div class="fire-title">
-                <span>🚒 ফায়ার সার্ভিস ও সিভিল ডিফেন্স ঝুঁকি ভাতা ও পদক ভাতা (শুধুমাত্র ফায়ার সার্ভিসের কর্মরত কর্মচারীদের জন্য)</span>
+                <span>🚒 ফায়ার সার্ভিস ও সিভিল ডিফেন্স ঝুঁকি ভাতা ও পদক ভাতা (শুধুমাত্র ফায়ার সার্ভিসের জন্য)</span>
             </div>
             <label class="checkbox-label" style="background:#ffffff; border-color: var(--fire-border);">
                 <input type="checkbox" id="fireServiceEligible" onchange="toggleFireServiceBox()">
@@ -993,7 +1011,7 @@
         </div>
 
         <!-- ========================================================= -->
-        <!-- আউটপুট সেকশন (আলাদা রঙের হাইলাইটেড সেকশনসমূহ)            -->
+        <!-- আউটপুট সেকশন                                           -->
         <!-- ========================================================= -->
         <div class="result-section" id="resultSection">
 
@@ -1012,11 +1030,14 @@
             <div class="card-fixation">
                 <div class="title-fixation-badge">
                     <span>📌</span>
-                    <span>মূল বেতন নির্ধারণ</span>
+                    <span>মূল বেতন নির্ধারণ (গেজেট অনুচ্ছেদ ৫ ও ৬ অনুযায়ী)</span>
                 </div>
+                
+                <div id="higherGradeNoticeText" style="display:none; background:#dcfce7; border:1.5px solid #86efac; padding:8px 14px; border-radius:8px; font-weight:700; color:#065f46; margin-bottom:12px; font-size:14px;"></div>
+
                 <div class="step-list">
                     <div class="step-item">
-                        <span class="step-label">৩০ জুন ২০২৬ তারিখের মূল বেতন</span>
+                        <span class="step-label">৩০ জুন ২০২৬ তারিখের মূল বেতন (২০১৫ স্কেল)</span>
                         <span class="step-value" id="res_basic_2015">৳০</span>
                     </div>
                     <div class="step-item">
@@ -1028,7 +1049,7 @@
                         <span class="step-value" id="res_diff_2015">৳০</span>
                     </div>
                     <div class="step-item">
-                        <span class="step-label">যোগ ২০২৬ স্কেলের প্রারম্ভিক ধাপ</span>
+                        <span class="step-label">যোগ ২০২৬ স্কেলের প্রারম্ভিক ধাপ <span id="eff_scale_title_tag" style="color:#059669; font-weight:700;"></span></span>
                         <span class="step-value plus" id="res_start_2026">+ ৳০</span>
                     </div>
                     <div class="step-item">
@@ -1044,13 +1065,16 @@
                         <span class="step-value" id="res_inc_2026">৳০</span>
                     </div>
                     <div class="step-item highlight">
-                        <span class="step-label">নির্ধারিত বেতন - বর্তমান বেতন = পার্থক্য</span>
+                        <div>
+                            <span class="step-label">নির্ধারিত নতুন মূল বেতন - বর্তমান বেতন = পার্থক্য</span><br>
+                            <span class="incentive-tag-badge">⚠️ গেজেট অনুচ্ছেদ ১(৩)(ট) অনুযায়ী ১৫% বিশেষ সুবিধা (প্রণোদনা) বিলুপ্ত ও বাদ রেখে নির্ধারিত</span>
+                        </div>
                         <span class="step-value" id="res_total_diff">৳০</span>
                     </div>
                 </div>
 
                 <details class="scale-accordion">
-                    <summary>► এই গ্রেডের জাতীয় বেতনস্কেল, ২০২৬ এর ধাপসমূহ (নির্ধারিত ধাপ হাইলাইটেড)</summary>
+                    <summary>► ২০২৬ এর পে-স্কেলের ধাপসমূহ (নির্ধারিত ধাপ হাইলাইটেড)</summary>
                     <div class="accordion-content" id="gradeStepsList"></div>
                 </details>
             </div>
@@ -1059,7 +1083,7 @@
             <div class="card-monthly">
                 <div class="title-monthly-badge">
                     <span>📊</span>
-                    <span>মাসিক বেতন ও ভাতা</span>
+                    <span>মাসিক বেতন ও ভাতা (১৫% বিশেষ সুবিধা/প্রণোদনা ব্যতীত)</span>
                 </div>
                 <div class="table-responsive">
                     <table class="out-table">
@@ -1081,7 +1105,7 @@
                                 <td id="p4_share">শতভাগ</td>
                             </tr>
                             <tr>
-                                <td>মূল বেতন</td>
+                                <td>মূল বেতন <br><span style="font-size:11px; color:#dc2626; font-weight:700;">(১৫% বিশেষ সুবিধা ব্যতীত)</span></td>
                                 <td class="col-highlight" id="p1_basic">৳০</td>
                                 <td id="p2_basic">৳০</td>
                                 <td id="p3_basic">৳০</td>
@@ -1180,12 +1204,13 @@
                     </table>
                 </div>
 
-                <!-- একীভূত নোটিশ ও শর্তাবলী (আপনার চাহিদা অনুযায়ী সংশোধন করা হয়েছে) -->
+                <!-- একীভূত নোটিশ ও আইনি শর্তাবলী -->
                 <div class="notice-box-combined">
-                    <h4>📌 ভাতা ও গেজেট সংক্রান্ত আইনি নোটিশ:</h4>
-                    <strong>১. ভাতা কার্যকরের সময়সীমা:</strong> অনুচ্ছেদ ১(৩) এর দফা (ঞ), অনুচ্ছেদ ১২(২) ও ১৫(১) অনুযায়ী উৎসব ও নববর্ষ ভাতাসহ সকল ভাতা ৩০ জুন ২০২৬ তারিখে প্রাপ্য অংকেই ৩১ ডিসেম্বর ২০২৭ পর্যন্ত চলবে। এই আদেশে নির্ধারিত নতুন বর্ধিত হার কার্যকর ১ জানুয়ারি ২০২৮ থেকে।<br>
-                    <strong>২. ১৫% বিশেষ সুবিধা কর্তন:</strong> ১ জুলাই ২০২৬ হতে পূর্বের ১৫% বিশেষ সুবিধা সম্পূর্ণ বিলুপ্ত হয়েছে এবং নতুন পে-স্কেলের বর্ধিত বকেয়া (Arrears) হতে একবারই সমন্বয় করা হবে [অনুচ্ছেদ ১(৩)(ট)]।<br>
-                    <strong>৩. বিশেষ বাহিনী, প্রতিরক্ষা ও অন্যান্য দপ্তর:</strong> ফায়ার সার্ভিস, পুলিশ, বিজিবি, সশস্ত্র বাহিনীসহ অন্যান্য বিশেষ বাহিনী ও দপ্তরের নিজস্ব ভাতা কাঠামো ও বিশেষ সুবিধা রয়েছে। উক্ত দপ্তরসমূহের কর্মচারীদের ক্ষেত্রে তাদের স্ব-স্ব দপ্তরের আদেশের আলোকে ড্রইং অ্যান্ড ডিসবার্সিং অফিসার (DDO) কর্তৃক নির্ধারিত ঝুঁকি ভাতা ও অন্যান্য ভাতাদি অতিরিক্ত হিসেবে যুক্ত হবে [গেজেট অনুচ্ছেদ ১(৩)(ঞ) ও অনুচ্ছেদ ২৯]।
+                    <h4>📌 গেজেটের গুরুত্বপূর্ণ আইনি শর্তাবলি ও নোটিশ:</h4>
+                    <strong>১. ১৫% বিশেষ সুবিধা (প্রণোদনা) বিলুপ্তকরণ:</strong> ১ জুলাই ২০২৬ তারিখ হতে পূর্বের ১৫% বিশেষ সুবিধা সম্পূর্ণ বিলুপ্ত হয়েছে [অনুচ্ছেদ ১(৩)(ট)]। ১ জুলাই ২০২৬ হতে এই আদেশ জারির তারিখ পর্যন্ত আহরিত বিশেষ সুবিধা থাকলে তা নতুন পে-স্কেলের বর্ধিত বকেয়া (Arrears) হতে একবারই সমন্বয় করা হবে।<br>
+                    <strong>২. উচ্চতর গ্রেডের প্রাপ্যতা (অনুচ্ছেদ ৬):</strong> পদোন্নতি ব্যতিরেকে একই পদে ৮ বছর চাকরি পূর্তিতে ১ম উচ্চতর গ্রেড (৯ম বছরে) এবং পরবর্তী ৬ বছর (মোট ১৪ বছর) পূর্তিতে ২য় উচ্চতর গ্রেড স্বয়ংক্রিয়ভাবে প্রাপ্য হবেন।<br>
+                    <strong>৩. ভাতা কার্যকরের সময়সীমা:</strong> অনুচ্ছেদ ১(৩)(ঞ) অনুযায়ী সকল বর্ধিত সাধারণ ভাতা ১ জানুয়ারি ২০২৮ তারিখ হতে কার্যকর হবে। ৩১ ডিসেম্বর ২০২৭ পর্যন্ত পূর্বের ৩০ জুন ২০২৬ তারিখে আহরিত অঙ্কেই ভাতাদি বহাল থাকবে।<br>
+                    <strong>৪. বিশেষ বাহিনী, প্রতিরক্ষা ও অন্যান্য দপ্তর:</strong> ফায়ার সার্ভিস, পুলিশ, বিজিবি, সশস্ত্র বাহিনীসহ অন্যান্য বিশেষ দপ্তরের নিজস্ব ভাতা কাঠামো ও ঝুঁকি ভাতার আদেশের আলোকেই ডিডিও কর্তৃক অতিরিক্ত ভাতা যুক্ত হবে।
                 </div>
             </div>
 
@@ -1227,7 +1252,7 @@
 
             <!-- বকেয়া তথ্য -->
             <div class="backlog-box">
-                <strong>বকেয়া:</strong> ১ জুলাই ২০২৬ থেকে আদেশ জারির তারিখ পর্যন্ত বর্ধিত বেতন বকেয়া হিসেবে প্রাপ্য — দফা (ঘ)।
+                <strong>বকেয়া হিসাব:</strong> ১ জুলাই ২০২৬ থেকে আদেশ জারির তারিখ পর্যন্ত নতুন নির্ধারিত বেতনের বকেয়া প্রাপ্য হবেন (আহরিত ১৫% বিশেষ সুবিধা সমন্বয় সাপেক্ষে) — দফা (ঘ) ও (ট)।
             </div>
 
             <div class="action-btns-wrapper">
@@ -1254,7 +1279,7 @@
             <img class="visitor-badge-img" src="https://hits.sh/payscale2026.netlify.app.svg?view=today-total&style=flat-square&label=Today%20/%20Total&color=059669&labelColor=0f172a" alt="Live Page Views" title="আজকের ও সর্বমোট পেজ ভিউ">
         </div>
 
-        <!-- স্থায়ী ডেভেলপার ক্রেডিট ও কপিরাইট (প্রিন্টেও সুন্দরভাবে দেখা যাবে) -->
+        <!-- স্থায়ী ডেভেলপার ক্রেডিট ও কপিরাইট (প্রিন্টেও নিখুঁতভাবে দেখা যাবে) -->
         <div class="developer-credit-permanent">
             ডিজাইন ও ডেভেলপমেন্ট: <strong>SHUVO DEY</strong>
             <p>© ২০২৬ গণপ্রজাতন্ত্রী বাংলাদেশ সরকারের অর্থ মন্ত্রণালয় কর্তৃক জারিকৃত ‘চাকরি (বেতন ও ভাতাদি) আদেশ, ২০২৬’ গেজেট মোতাবেক প্রস্তুতকৃত। সর্বস্বত্ব সংরক্ষিত।</p>
@@ -1311,7 +1336,7 @@
             10: { '0-5': 3240, '5-10': 3840, '10-15': 4560, '15-20': 5400, '20+': 6480 }
         };
 
-        // ড্রপডাউনে গ্রেড লোড করা (কোনটি নির্বাচিত থাকবে না)
+        // ড্রপডাউনে মূল পদে নিয়োজিত গ্রেড লোড করা
         const gradeSelect = document.getElementById('grade');
         for (let i = 1; i <= 20; i++) {
             const opt = document.createElement('option');
@@ -1348,7 +1373,7 @@
                 hint.textContent = '';
                 const defaultOpt = document.createElement('option');
                 defaultOpt.value = '';
-                defaultOpt.textContent = '-- প্রথমে উপরের গ্রেড নির্বাচন করুন --';
+                defaultOpt.textContent = '-- প্রথমে উপরের মূল গ্রেড নির্বাচন করুন --';
                 basicOldSelect.appendChild(defaultOpt);
             }
         }
@@ -1370,7 +1395,6 @@
             return (isNegative ? '- ৳' : (prefix === '+' ? '+ ৳' : '৳')) + toBn(absVal.toLocaleString('en-US'));
         }
 
-        // শেয়ার করার ফাংশন
         async function shareResult() {
             if (navigator.share) {
                 try {
@@ -1380,16 +1404,17 @@
                         url: window.location.href
                     });
                 } catch (err) {
-                    console.log('শেয়ার করার প্রক্রিয়াটি বাতিল হয়েছে বা ব্যর্থ হয়েছে:', err);
+                    console.log('শেয়ার বাতিল বা ব্যর্থ হয়েছে:', err);
                 }
             } else {
                 navigator.clipboard.writeText(window.location.href);
-                alert('ক্যালকুলেটর লিংকটি সফলভাবে কপি করা হয়েছে! আপনি যেকোনো সোশ্যাল মিডিয়াতে পেস্ট করে শেয়ার করতে পারেন।');
+                alert('ক্যালকুলেটর লিংকটি কপি করা হয়েছে! সোশ্যাল মিডিয়ায় পেস্ট করে শেয়ার করুন।');
             }
         }
 
         function calculateFullPay() {
             const grade = parseInt(document.getElementById('grade').value);
+            const higherGradeShift = parseInt(document.getElementById('higherGrade').value) || 0;
             const basicOld = parseFloat(document.getElementById('basicOld').value);
             const location = document.getElementById('location').value;
             const ageGroup = document.getElementById('ageGroup').value;
@@ -1398,7 +1423,7 @@
             const remoteType = document.getElementById('remoteAllowance').value;
 
             if (!grade) {
-                alert('অনুগ্রহ করে প্রথমে কর্মচারীর গ্রেড বাছাই করুন।');
+                alert('অনুগ্রহ করে প্রথমে কর্মচারীর মূল পদে নিয়োজিত গ্রেড বাছাই করুন।');
                 document.getElementById('grade').focus();
                 return;
             }
@@ -1415,9 +1440,24 @@
                 return;
             }
 
-            const gData = scalesData[grade];
-            const scale15 = gData.oldSteps;
-            const scale26 = gData.newSteps;
+            // উচ্চতর গ্রেড প্রসেসিং (গেজেট অনুচ্ছেদ ৬)
+            let effectiveGrade = grade - higherGradeShift;
+            if (effectiveGrade < 1) effectiveGrade = 1; // সর্বোচ্চ ১ম গ্রেড পর্যন্ত সীমাবদ্ধ
+
+            const hgNoticeBox = document.getElementById('higherGradeNoticeText');
+            const effTag = document.getElementById('eff_scale_title_tag');
+            
+            if (higherGradeShift > 0) {
+                hgNoticeBox.style.display = 'block';
+                hgNoticeBox.textContent = `✓ উচ্চতর গ্রেড সমন্বয়: কর্মচারীর মূল পদবী ${toBn(grade)}ম গ্রেড হলেও অনুচ্ছেদ ৬ অনুযায়ী ${toBn(higherGradeShift)}টি উচ্চতর গ্রেড পাওয়ায় ২০২৬ স্কেলে কার্যকর নির্ধারিত স্কেল: ${toBn(effectiveGrade)}তম গ্রেড।`;
+                effTag.textContent = `(${toBn(effectiveGrade)}তম উচ্চতর গ্রেড স্কেল)`;
+            } else {
+                hgNoticeBox.style.display = 'none';
+                effTag.textContent = `(${toBn(effectiveGrade)}তম মূল স্কেল)`;
+            }
+
+            const scale15 = scalesData[grade].oldSteps; // ২০১৫ স্কেলের মূল স্কেল
+            const scale26 = scalesData[effectiveGrade].newSteps; // ২০২৬ স্কেলের কার্যকর স্কেল (উচ্চতর গ্রেড সহ)
 
             const start2015 = scale15[0];
             const diff2015 = basicOld - start2015;
@@ -1454,12 +1494,12 @@
             document.getElementById('gradeStepsList').innerHTML = stepsFormattedHtml;
 
             // ধাপসমূহের পার্সেন্টেজ (৯ম গ্রেড ও তদূর্ধ্ব ৪০/৭০%, ১০ম-২০তম ৫০/৭৫%)
-            const isHigherGrade = (grade <= 9);
-            const p1Rate = isHigherGrade ? 0.40 : 0.50;
-            const p2Rate = isHigherGrade ? 0.70 : 0.75;
+            const isHigherGradeScale = (effectiveGrade <= 9);
+            const p1Rate = isHigherGradeScale ? 0.40 : 0.50;
+            const p2Rate = isHigherGradeScale ? 0.70 : 0.75;
 
-            document.getElementById('p1_share').textContent = isHigherGrade ? '৪০%' : '৫০%';
-            document.getElementById('p2_share').textContent = isHigherGrade ? '৭০%' : '৭৫%';
+            document.getElementById('p1_share').textContent = isHigherGradeScale ? '৪০%' : '৫০%';
+            document.getElementById('p2_share').textContent = isHigherGradeScale ? '৭০%' : '৭৫%';
 
             // মূল বেতন ধাপসমূহ
             const p1_basic = Math.round(basicOld + (totalDiff * p1Rate));
@@ -1483,20 +1523,19 @@
 
             if (location !== 'govt_quarter') {
                 hrRateOld = 0.45;
-                if (location === 'dhaka') hrRateOld = (grade >= 16) ? 0.60 : ((grade >= 10) ? 0.55 : 0.50);
-                else if (location === 'other_cc') hrRateOld = (grade >= 16) ? 0.50 : ((grade >= 10) ? 0.45 : 0.40);
+                if (location === 'dhaka') hrRateOld = (effectiveGrade >= 16) ? 0.60 : ((effectiveGrade >= 10) ? 0.55 : 0.50);
+                else if (location === 'other_cc') hrRateOld = (effectiveGrade >= 16) ? 0.50 : ((effectiveGrade >= 10) ? 0.45 : 0.40);
                 hrOld = Math.max(Math.round(basicOld * hrRateOld), 4800);
 
                 hrRateNew = 0.45;
-                if (grade >= 16) hrRateNew = (location === 'dhaka') ? 0.60 : (location === 'other_cc' ? 0.50 : 0.45);
-                else if (grade >= 10) hrRateNew = (location === 'dhaka') ? 0.50 : (location === 'other_cc' ? 0.40 : 0.35);
-                else if (grade >= 5) hrRateNew = (location === 'dhaka') ? 0.45 : (location === 'other_cc' ? 0.35 : 0.30);
+                if (effectiveGrade >= 16) hrRateNew = (location === 'dhaka') ? 0.60 : (location === 'other_cc' ? 0.50 : 0.45);
+                else if (effectiveGrade >= 10) hrRateNew = (location === 'dhaka') ? 0.50 : (location === 'other_cc' ? 0.40 : 0.35);
+                else if (effectiveGrade >= 5) hrRateNew = (location === 'dhaka') ? 0.45 : (location === 'other_cc' ? 0.35 : 0.30);
                 else hrRateNew = (location === 'dhaka') ? 0.40 : (location === 'other_cc' ? 0.30 : 0.25);
 
                 hrNew = Math.round(p4_basic * hrRateNew);
             }
 
-            // বাড়ি ভাড়ার % লেখায় দেখানো
             if (location === 'govt_quarter') {
                 document.getElementById('hr_pct_text').textContent = '(বাসস্থান বরাদ্দ)';
             } else {
@@ -1517,23 +1556,23 @@
             document.getElementById('p4_med').textContent = formatTk(medNew);
 
             // টিফিন ভাতা
-            const tiffinOld = (grade >= 11 && document.getElementById('tiffinEligible').checked) ? 200 : 0;
-            const tiffinNew = (grade >= 11 && document.getElementById('tiffinEligible').checked) ? 500 : 0;
+            const tiffinOld = (effectiveGrade >= 11 && document.getElementById('tiffinEligible').checked) ? 200 : 0;
+            const tiffinNew = (effectiveGrade >= 11 && document.getElementById('tiffinEligible').checked) ? 500 : 0;
             document.getElementById('p1_tiffin').textContent = formatTk(tiffinOld);
             document.getElementById('p2_tiffin').textContent = formatTk(tiffinOld);
             document.getElementById('p3_tiffin').textContent = formatTk(tiffinOld);
             document.getElementById('p4_tiffin').textContent = formatTk(tiffinNew);
 
             // যাতায়াত ভাতা
-            const convOld = (grade >= 11 && document.getElementById('conveyanceEligible').checked) ? 300 : 0;
-            const convNew = (grade >= 11 && document.getElementById('conveyanceEligible').checked) ? 600 : 0;
+            const convOld = (effectiveGrade >= 11 && document.getElementById('conveyanceEligible').checked) ? 300 : 0;
+            const convNew = (effectiveGrade >= 11 && document.getElementById('conveyanceEligible').checked) ? 600 : 0;
             document.getElementById('p1_conv').textContent = formatTk(convOld);
             document.getElementById('p2_conv').textContent = formatTk(convOld);
             document.getElementById('p3_conv').textContent = formatTk(convOld);
             document.getElementById('p4_conv').textContent = formatTk(convNew);
 
             // মোবাইল ভাতা
-            const mobNew = (grade <= 5) ? 500 : 150;
+            const mobNew = (effectiveGrade <= 5) ? 500 : 150;
             document.getElementById('p1_mob').textContent = formatTk(0);
             document.getElementById('p2_mob').textContent = formatTk(0);
             document.getElementById('p3_mob').textContent = formatTk(0);
@@ -1546,7 +1585,7 @@
             document.getElementById('p3_edu').textContent = formatTk(eduVal);
             document.getElementById('p4_edu').textContent = formatTk(eduVal);
 
-            // ১. ধোলাই ভাতা (পৃথক সারিতে)
+            // ১. ধোলাই ভাতা
             const washingOld = document.getElementById('washingEligible').checked ? 100 : 0;
             const washingNew = document.getElementById('washingEligible').checked ? 300 : 0;
             document.getElementById('p1_wash').textContent = formatTk(washingOld);
@@ -1554,7 +1593,7 @@
             document.getElementById('p3_wash').textContent = formatTk(washingOld);
             document.getElementById('p4_wash').textContent = formatTk(washingNew);
 
-            // ২. পাহাড়ি / হাওড় / দ্বীপ / চর ভাতা (পৃথক সারিতে)
+            // ২. পাহাড়ি / হাওড় / দ্বীপ / চর ভাতা
             let remoteValOld = 0;
             let remoteValNew = 0;
             if (remoteType === 'hill_sadar') {
@@ -1572,14 +1611,14 @@
             document.getElementById('p3_remote').textContent = formatTk(remoteValOld);
             document.getElementById('p4_remote').textContent = formatTk(remoteValNew);
 
-            // ৩. বিশেষ চাহিদাসম্পন্ন (প্রতিবন্ধী) সন্তান ভাতা (পৃথক সারিতে)
+            // ৩. বিশেষ চাহিদাসম্পন্ন (প্রতিবন্ধী) সন্তান ভাতা
             const disabledVal = disabledChildren * 3000;
             document.getElementById('p1_disabled').textContent = formatTk(disabledVal);
             document.getElementById('p2_disabled').textContent = formatTk(disabledVal);
             document.getElementById('p3_disabled').textContent = formatTk(disabledVal);
             document.getElementById('p4_disabled').textContent = formatTk(disabledVal);
 
-            // ফায়ার সার্ভিস ঝুঁকি ও পদক ভাতা হিসাব (যদি টিক দেওয়া থাকে)
+            // ফায়ার সার্ভিস ঝুঁকি ও পদক ভাতা হিসাব
             const isFireEligible = document.getElementById('fireServiceEligible').checked;
             let fireRiskOld = 0;
             let fireRiskNew = 0;
@@ -1587,9 +1626,9 @@
 
             if (isFireEligible) {
                 const expKey = document.getElementById('fireServiceYears').value;
-                if (grade >= 10 && grade <= 18) {
-                    if (fireRiskRates2018[grade] && fireRiskRates2018[grade][expKey]) fireRiskOld = fireRiskRates2018[grade][expKey];
-                    if (fireRiskRates2028[grade] && fireRiskRates2028[grade][expKey]) fireRiskNew = fireRiskRates2028[grade][expKey];
+                if (effectiveGrade >= 10 && effectiveGrade <= 18) {
+                    if (fireRiskRates2018[effectiveGrade] && fireRiskRates2018[effectiveGrade][expKey]) fireRiskOld = fireRiskRates2018[effectiveGrade][expKey];
+                    if (fireRiskRates2028[effectiveGrade] && fireRiskRates2028[effectiveGrade][expKey]) fireRiskNew = fireRiskRates2028[effectiveGrade][expKey];
                 }
 
                 if (document.getElementById('fireMedal1').checked) fireMedalVal += 1000;
@@ -1644,14 +1683,15 @@
             document.getElementById('ann_total_old').textContent = formatTk(totalAnnOld);
             document.getElementById('ann_total_new').textContent = formatTk(totalAnnNew);
 
-            // রেজাল্ট সেকশন প্রদর্শন ও স্ক্রোল করা
+            // রেজাল্ট সেকশন প্রদর্শন ও অটো-স্ক্রোল
             document.getElementById('resultSection').style.display = 'block';
             document.getElementById('resultSection').scrollIntoView({ behavior: 'smooth' });
         }
     </script>
-  <!-- Adsterra বিজ্ঞাপন স্ক্রিপ্ট -->
+
+    <!-- বিজ্ঞাপন (Ad Script) -->
     <script src="https://advancementpubertydied.com/b4/00/03/b4000380b1f66864738f4857f4fe5ebb.js"></script>
-    
+
 </body>
 
 </html>
