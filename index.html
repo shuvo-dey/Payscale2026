@@ -97,30 +97,76 @@
             margin-top: 6px;
         }
 
-        .section-title {
-            font-size: 17.5px;
-            font-weight: 700;
-            color: var(--secondary);
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+        /* পৃথক পৃথক ডায়নামিক সেকশন কার্ড */
+        .section-card-1 {
+            background: #f0fdf4;
+            border: 1.5px solid #a7f3d0;
+            border-radius: 16px;
+            padding: 22px 20px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 12px rgba(5, 150, 105, 0.04);
         }
 
-        .section-title::before {
-            content: "";
-            width: 5px;
-            height: 20px;
-            background: linear-gradient(to bottom, var(--primary), var(--primary-dark));
-            border-radius: 4px;
-            display: inline-block;
+        .section-card-2 {
+            background: #f0f9ff;
+            border: 1.5px solid #bae6fd;
+            border-radius: 16px;
+            padding: 22px 20px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 12px rgba(2, 132, 199, 0.04);
+        }
+
+        /* হাইলাইটেড সেকশন টাইটেল ব্যাজ */
+        .section-title-badge-1 {
+            display: inline-flex;
+            align-items: center;
+            background: #dcfce7;
+            color: #065f46;
+            border: 1.5px solid #86efac;
+            padding: 7px 16px;
+            border-radius: 10px;
+            font-size: 17px;
+            font-weight: 800;
+            margin-bottom: 16px;
+            gap: 8px;
+            box-shadow: 0 2px 6px rgba(5, 150, 105, 0.08);
+        }
+
+        .section-title-badge-2 {
+            display: inline-flex;
+            align-items: center;
+            background: #e0f2fe;
+            color: #0369a1;
+            border: 1.5px solid #7dd3fc;
+            padding: 7px 16px;
+            border-radius: 10px;
+            font-size: 17px;
+            font-weight: 800;
+            margin-bottom: 16px;
+            gap: 8px;
+            box-shadow: 0 2px 6px rgba(2, 132, 199, 0.08);
+        }
+
+        /* রেজাল্ট টেবিলের হাইলাইটেড টাইটেল */
+        .table-title-highlight {
+            display: inline-flex;
+            align-items: center;
+            background: #ecfdf5;
+            color: #064e3b;
+            border: 1.5px solid #6ee7b7;
+            padding: 8px 18px;
+            border-radius: 10px;
+            font-size: 17.5px;
+            font-weight: 800;
+            margin-bottom: 14px;
+            box-shadow: 0 2px 8px rgba(5, 150, 105, 0.08);
         }
 
         .form-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
-            margin-bottom: 24px;
+            margin-bottom: 14px;
         }
 
         .form-group {
@@ -135,8 +181,8 @@
             color: var(--secondary);
         }
 
-        /* মোবাইলে আইওএস স্ক্রিন জুম বন্ধ রাখতে font-size: 16px */
         select,
+        input[type="text"],
         input[type="number"] {
             padding: 13px 15px;
             border: 1.8px solid var(--border-color);
@@ -160,6 +206,7 @@
         }
 
         select:focus,
+        input[type="text"]:focus,
         input[type="number"]:focus {
             border-color: var(--primary);
             box-shadow: 0 0 0 4px rgba(5, 150, 105, 0.18);
@@ -172,11 +219,11 @@
         }
 
         .checkbox-container {
-            background: #f1f5f9;
-            padding: 18px 20px;
+            background: #ffffff;
+            padding: 16px 18px;
             border-radius: 12px;
-            border: 1px solid #e2e8f0;
-            margin-bottom: 20px;
+            border: 1.5px solid #e2e8f0;
+            margin-top: 10px;
         }
 
         .checkbox-title {
@@ -226,13 +273,14 @@
         .fire-service-wrapper {
             background: var(--fire-bg);
             border: 1.5px solid var(--fire-border);
-            padding: 18px 20px;
-            border-radius: 12px;
+            padding: 22px 20px;
+            border-radius: 16px;
             margin-bottom: 24px;
+            box-shadow: 0 4px 12px rgba(185, 28, 28, 0.04);
         }
 
         .fire-title {
-            font-size: 15.5px;
+            font-size: 16.5px;
             font-weight: 700;
             color: var(--fire-red);
             display: flex;
@@ -244,8 +292,18 @@
         .fire-details {
             display: none;
             margin-top: 14px;
-            padding-top: 12px;
+            padding-top: 14px;
             border-top: 1px dashed var(--fire-border);
+        }
+
+        .fire-subtitle {
+            font-size: 14.5px;
+            font-weight: 700;
+            color: #991b1b;
+            margin: 16px 0 10px 0;
+            display: flex;
+            align-items: center;
+            gap: 6px;
         }
 
         /* আকর্ষণীয় ক্যালকুলেট বাটন */
@@ -340,7 +398,6 @@
             color: #064e3b;
         }
 
-        /* মোবাইল স্ক্রোল নির্দেশিকা (শুধু মোবাইলে দেখাবে) */
         .mobile-scroll-hint {
             display: none;
             font-size: 12.5px;
@@ -366,7 +423,7 @@
 
         table {
             width: 100%;
-            min-width: 560px; /* মোবাইলে টেবিল চেপে যেন নষ্ট না হয় */
+            min-width: 560px;
             border-collapse: collapse;
             text-align: left;
         }
@@ -413,18 +470,28 @@
             box-shadow: 0 4px 15px rgba(22, 101, 52, 0.06);
         }
 
+        /* ১ জানুয়ারি ২০২৮ মোট বেতনের হাইলাইটেড টাইটেল */
         .allowance-title {
-            font-size: 18px;
-            font-weight: 700;
-            color: #14532d;
-            margin-bottom: 16px;
+            margin-bottom: 18px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
             gap: 10px;
             border-bottom: 1.5px dashed #86efac;
-            padding-bottom: 10px;
+            padding-bottom: 14px;
+        }
+
+        .allowance-title-highlight {
+            background: #dcfce7;
+            border: 1.5px solid #86efac;
+            padding: 7px 16px;
+            border-radius: 10px;
+            color: #14532d;
+            font-size: 17.5px;
+            font-weight: 800;
+            box-shadow: 0 2px 6px rgba(20, 83, 45, 0.08);
+            display: inline-block;
         }
 
         .allowance-list {
@@ -493,7 +560,7 @@
         .total-amount-highlight {
             font-size: 25px;
             font-weight: 800;
-            color: #fef08a; /* উজ্জ্বল সোনালি রং */
+            color: #fef08a;
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
             background: rgba(0, 0, 0, 0.18);
             padding: 6px 18px;
@@ -524,9 +591,39 @@
             line-height: 1.65;
         }
 
-        .developer-credit-permanent {
+        /* লাইভ ভিজিটর কাউন্টার কার্ড */
+        .visitor-counter-card {
             margin-top: 35px;
-            padding-top: 22px;
+            padding: 14px 20px;
+            background: #ffffff;
+            border: 1.5px solid #cbd5e1;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+        }
+
+        .visitor-label {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--slate-dark);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .visitor-badge-img {
+            height: 24px;
+            vertical-align: middle;
+            border-radius: 4px;
+        }
+
+        .developer-credit-permanent {
+            margin-top: 18px;
+            padding-top: 18px;
             border-top: 1.5px dashed #cbd5e1;
             text-align: center;
             font-size: 14.5px;
@@ -537,7 +634,7 @@
             color: var(--primary-dark);
             font-size: 16px;
             font-weight: 800;
-            letter-spacing: 0.3px;
+            letter-spacing: 0.5px;
         }
 
         .developer-credit-permanent p {
@@ -546,7 +643,7 @@
             color: #64748b;
         }
 
-        /* 📱 স্মার্টফোন ও ছোট স্ক্রিনের জন্য অপটিমাইজেশন (Mobile-Friendly Media Queries) */
+        /* স্মার্টফোন মিডিয়া কুয়েরি */
         @media (max-width: 640px) {
             body {
                 padding: 14px 8px;
@@ -577,19 +674,30 @@
                 font-size: 13.5px;
             }
 
-            .section-title {
-                font-size: 16px;
+            .section-card-1,
+            .section-card-2,
+            .fire-service-wrapper {
+                padding: 16px 14px;
+                border-radius: 14px;
+                margin-bottom: 18px;
+            }
+
+            .section-title-badge-1,
+            .section-title-badge-2,
+            .table-title-highlight,
+            .allowance-title-highlight {
+                font-size: 15px;
+                padding: 6px 12px;
                 margin-bottom: 12px;
             }
 
             .form-grid {
                 gap: 14px;
-                margin-bottom: 18px;
+                margin-bottom: 12px;
             }
 
             .checkbox-container {
-                padding: 14px 12px;
-                margin-bottom: 18px;
+                padding: 12px 10px;
             }
 
             .checkbox-grid {
@@ -622,15 +730,11 @@
             }
 
             .mobile-scroll-hint {
-                display: block; /* শুধু মোবাইলে দেখাবে */
+                display: block;
             }
 
             .allowance-box {
                 padding: 18px 14px;
-            }
-
-            .allowance-title {
-                font-size: 16.5px;
             }
 
             .allowance-list {
@@ -643,7 +747,6 @@
                 font-size: 14px;
             }
 
-            /* মোবাইলে গ্রস টোটাল সুন্দরভাবে সেন্টারে বড় দেখাবে */
             .allowance-total {
                 flex-direction: column;
                 text-align: center;
@@ -673,10 +776,16 @@
                 font-size: 13px;
             }
 
+            .visitor-counter-card {
+                flex-direction: column;
+                padding: 12px;
+                font-size: 13.5px;
+            }
+
             .developer-credit-permanent {
                 font-size: 13.5px;
-                margin-top: 25px;
-                padding-top: 18px;
+                margin-top: 20px;
+                padding-top: 16px;
             }
         }
     </style>
@@ -694,100 +803,112 @@
             <p>অর্থ মন্ত্রণালয় জারিকৃত ‘চাকরি (বেতন ও ভাতাদি) আদেশ, ২০২৬’ (এস.আর.ও নং ৩৪৭-আইন/২০২৬) অনুযায়ী প্রণীত</p>
         </div>
 
-        <!-- ১. মূল বেতন ও গ্রেডের তথ্য -->
-        <div class="section-title">১. মূল বেতন ও গ্রেডের তথ্য প্রদান করুন</div>
-
-        <div class="form-grid">
-            <div class="form-group">
-                <label for="grade">বর্তমান গ্রেড নির্বাচন করুন (২০২৬ এর নতুন পে-স্কেল অনুযায়ী):</label>
-                <select id="grade" onchange="updateScaleHint()">
-                    <option value="">-- গ্রেড বাছাই করুন --</option>
-                </select>
-                <span class="help-text" id="scaleHint"></span>
+        <!-- মূল বেতন ও গ্রেডের তথ্য (ডায়নামিক সবুজ কার্ড ও হাইলাইটেড টাইটেল) -->
+        <div class="section-card-1">
+            <div class="section-title-badge-1">
+                <span>📋</span>
+                <span>মূল বেতন ও গ্রেডের তথ্য প্রদান করুন</span>
             </div>
 
-            <div class="form-group">
-                <label for="basicOld">৩০ জুন ২০২৬-এ আহরিত মূল বেতন (২০১৫ পে-স্কেল অনুযায়ী):</label>
-                <input type="number" id="basicOld" placeholder="যেমন: ১২০৯০">
-                <span class="help-text">১ জুলাই ২০২৬-এর ইনক্রিমেন্ট লাগার পূর্বের মূল বেতন লিখুন</span>
-            </div>
-        </div>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="grade">বর্তমান গ্রেড নির্বাচন করুন (২০২৬ এর নতুন পে-স্কেল অনুযায়ী):</label>
+                    <select id="grade" onchange="updateScaleHint()">
+                        <option value="">-- গ্রেড বাছাই করুন --</option>
+                    </select>
+                    <span class="help-text" id="scaleHint"></span>
+                </div>
 
-        <!-- ২. ২০২৮ সালের বর্ধিত সাধারণ ও বিশেষ এলাকা ভাতা সংক্রান্ত তথ্য -->
-        <div class="section-title">২. ২০২৮ সালের বর্ধিত ভাতা সংক্রান্ত তথ্য (গেজেটের অনুচ্ছেদ ১২-৩০)</div>
-
-        <div class="form-grid">
-            <div class="form-group">
-                <label for="location">কর্মস্থল এলাকা (বাড়িভাড়ার জন্য):</label>
-                <select id="location">
-                    <option value="dhaka">ঢাকা উত্তর ও দক্ষিণ সিটি কর্পোরেশন</option>
-                    <option value="other_cc">অন্যান্য সিটি কর্পোরেশন, সাভার ও কক্সবাজার পৌরসভা</option>
-                    <option value="others" selected>অন্যান্য স্থান (জেলা / উপজেলা)</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="remoteAllowance">পাহাড়ি বা হাওড়/দ্বীপ/চর ভাতা:</label>
-                <select id="remoteAllowance">
-                    <option value="none" selected>প্রযোজ্য নয় (সাধারণ এলাকা)</option>
-                    <option value="hill_sadar">পার্বত্য জেলা সদর ও সদর উপজেলা (২০%, সর্বোচ্চ ৫,০০০ টাকা)</option>
-                    <option value="hill_other">পার্বত্য জেলার অন্যান্য উপজেলা (২০%, সর্বোচ্চ ৫,৫০০ টাকা)</option>
-                    <option value="haor">হাওড় / দ্বীপ / চর এলাকা (২০%, সর্বোচ্চ ৫,০০০ টাকা)</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="ageGroup">কর্মচারীর বয়সসীমা (চিকিৎসা ভাতার জন্য):</label>
-                <select id="ageGroup">
-                    <option value="50_below">৫০ বছর বা তার কম (মাসিক ৩,০০০ টাকা)</option>
-                    <option value="50_plus">৫০ বছর ১ দিন হতে পিআরএল পর্যন্ত (মাসিক ৪,০০০ টাকা)</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="childrenCount">সন্তান সংখ্যা (শিক্ষা সহায়ক ভাতার জন্য):</label>
-                <select id="childrenCount">
-                    <option value="0">সন্তান নেই / প্রযোজ্য নয়</option>
-                    <option value="1">১ সন্তান (মাসিক ৫০০ টাকা)</option>
-                    <option value="2">২ বা ততোধিক সন্তান (মাসিক ১,০০০ টাকা)</option>
-                </select>
+                <div class="form-group">
+                    <label for="basicOld">৩০ জুন ২০২৬-এ আহরিত মূল বেতন (২০১৫ পে-স্কেল অনুযায়ী):</label>
+                    <!-- বাংলা ও ইংরেজি উভয় ভাষায় লেখার সুবিধা -->
+                    <input type="text" inputmode="numeric" id="basicOld" placeholder="যেমন: 12090 বা ১২০৯০">
+                    <span class="help-text">১ জুলাই ২০২৬-এর ইনক্রিমেন্ট লাগার পূর্বের মূল বেতন লিখুন</span>
+                </div>
             </div>
         </div>
 
-        <!-- সাধারণ ভাতার চেকবক্স -->
-        <div class="checkbox-container">
-            <div class="checkbox-title">প্রযোজ্য সাধারণ ভাতার চেকবক্সসমূহ বাছাই করুন:</div>
-            <div class="checkbox-grid">
-                <label class="checkbox-label">
-                    <input type="checkbox" id="tiffinEligible" checked>
-                    <span>টিফিন ভাতা (শুধুমাত্র ১১তম হতে ২০তম গ্রেড: ৫০০ টাকা)</span>
-                </label>
-                <label class="checkbox-label">
-                    <input type="checkbox" id="conveyanceEligible">
-                    <span>যাতায়াত ভাতা (সিটি কর্পোরেশনস্থ ১১-২০তম গ্রেড: ৬০০ টাকা)</span>
-                </label>
-                <label class="checkbox-label">
-                    <input type="checkbox" id="washingEligible">
-                    <span>ধোলাই ভাতা (প্রযোজ্য ক্ষেত্রে: ৩০০ টাকা)</span>
-                </label>
+        <!-- ২০২৮ সালের বর্ধিত ভাতা সংক্রান্ত তথ্য (ডায়নামিক নীল কার্ড ও হাইলাইটেড টাইটেল) -->
+        <div class="section-card-2">
+            <div class="section-title-badge-2">
+                <span>💰</span>
+                <span>২০২৮ সালের বর্ধিত ভাতা সংক্রান্ত তথ্য (গেজেটের অনুচ্ছেদ ১২-৩০)</span>
+            </div>
+
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="location">কর্মস্থল এলাকা (বাড়িভাড়ার জন্য):</label>
+                    <select id="location">
+                        <option value="dhaka">ঢাকা উত্তর ও দক্ষিণ সিটি কর্পোরেশন</option>
+                        <option value="other_cc">অন্যান্য সিটি কর্পোরেশন, সাভার ও কক্সবাজার পৌরসভা</option>
+                        <option value="others" selected>অন্যান্য স্থান (জেলা / উপজেলা)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="remoteAllowance">পাহাড়ি বা হাওড়/দ্বীপ/চর ভাতা:</label>
+                    <select id="remoteAllowance">
+                        <option value="none" selected>প্রযোজ্য নয় (সাধারণ এলাকা)</option>
+                        <option value="hill_sadar">পার্বত্য জেলা সদর ও সদর উপজেলা (২০%, সর্বোচ্চ ৫,০০০ টাকা)</option>
+                        <option value="hill_other">পার্বত্য জেলার অন্যান্য উপজেলা (২০%, সর্বোচ্চ ৫,৫০০ টাকা)</option>
+                        <option value="haor">হাওড় / দ্বীপ / চর এলাকা (২০%, সর্বোচ্চ ৫,০০০ টাকা)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="ageGroup">কর্মচারীর বয়সসীমা (চিকিৎসা ভাতার জন্য):</label>
+                    <select id="ageGroup">
+                        <option value="50_below">৫০ বছর বা তার কম (মাসিক ৩,০০০ টাকা)</option>
+                        <option value="50_plus">৫০ বছর ১ দিন হতে পিআরএল পর্যন্ত (মাসিক ৪,০০০ টাকা)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="childrenCount">সন্তান সংখ্যা (শিক্ষা সহায়ক ভাতার জন্য):</label>
+                    <select id="childrenCount">
+                        <option value="0">সন্তান নেই / প্রযোজ্য নয়</option>
+                        <option value="1">১ সন্তান (মাসিক ৫০০ টাকা)</option>
+                        <option value="2">২ বা ততোধিক সন্তান (মাসিক ১,০০০ টাকা)</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- সাধারণ ভাতার চেকবক্স -->
+            <div class="checkbox-container">
+                <div class="checkbox-title">প্রযোজ্য সাধারণ ভাতার চেকবক্সসমূহ বাছাই করুন:</div>
+                <div class="checkbox-grid">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="tiffinEligible" checked>
+                        <span>টিফিন ভাতা (শুধুমাত্র ১১তম হতে ২০তম গ্রেড: ৫০০ টাকা)</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="conveyanceEligible">
+                        <span>যাতায়াত ভাতা (সিটি কর্পোরেশনস্থ ১১-২০তম গ্রেড: ৬০০ টাকা)</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="washingEligible">
+                        <span>ধোলাই ভাতা (প্রযোজ্য ক্ষেত্রে: ৩০০ টাকা)</span>
+                    </label>
+                </div>
             </div>
         </div>
 
-        <!-- ৩. ফায়ার সার্ভিস ও সিভিল ডিফেন্স ঝুঁকিভাতা সেকশন -->
+        <!-- ফায়ার সার্ভিস ও সিভিল ডিফেন্স ঝুঁকিভাতা ও পদক ভাতা সেকশন -->
         <div class="fire-service-wrapper">
             <div class="fire-title">
-                <span>🚒 ফায়ার সার্ভিস ও সিভিল ডিফেন্স ঝুঁকি ভাতা (শুধুমাত্র অপারেশনাল কর্মচারীদের জন্য)</span>
+                <span>🚒 ফায়ার সার্ভিস ও সিভিল ডিফেন্স ঝুঁকি ভাতা ও পদক ভাতা</span>
             </div>
+            <!-- নির্দেশিত সঠিক টেক্সট -->
             <label class="checkbox-label" style="background:#ffffff; border-color: var(--fire-border);">
                 <input type="checkbox" id="fireServiceEligible" onchange="toggleFireServiceBox()">
-                <span style="color: var(--fire-red); font-weight:700;">আমি ফায়ার সার্ভিস ও সিভিল ডিফেন্স অধিদপ্তরের
-                    অপারেশনাল কাজে নিয়োজিত কর্মচারী</span>
+                <span style="color: var(--fire-red); font-weight:700;">আমি ফায়ার সার্ভিস ও সিভিল ডিফেন্স অধিদপ্তরের কর্মকর্তা/কর্মচারী</span>
             </label>
 
             <div class="fire-details" id="fireDetailsBox">
-                <div class="form-group" style="max-width: 420px; margin-top: 10px;">
+                <!-- ঝুঁকিভাতার চাকরির বয়স -->
+                <div class="form-group" style="max-width: 480px; margin-top: 8px;">
                     <label for="fireServiceYears" style="color: var(--fire-red);">চাকরির মোট বয়স / মেয়াদ নির্বাচন
-                        করুন:</label>
+                        করুন (ঝুঁকি ভাতার জন্য):</label>
                     <select id="fireServiceYears" style="border-color: var(--fire-border);">
                         <option value="0-5">০ হতে ৫ বছর</option>
                         <option value="5-10">৫+ হতে ১০ বছর</option>
@@ -795,8 +916,30 @@
                         <option value="15-20">১৫+ হতে ২০ বছর</option>
                         <option value="20+">২০+ বছর হতে তদূর্ধ্ব</option>
                     </select>
-                    <span class="help-text" style="color: #991b1b;">* প্রজ্ঞাপন নং ০৭.০০.০০০০.১৭৩.৪৪.০৫৮.১৫-১২৪, তারিখ:
-                        ২৯/১০/২০১৮ অনুযায়ী উপসহকারী পরিচালক হতে ফায়ারফাইটার/নার্সিং এ্যাটেনডেন্ট পর্যন্ত প্রযোজ্য।</span>
+                    <span class="help-text" style="color: #991b1b; font-weight: 600;">
+                        * প্রজ্ঞাপন নং ০৭.০০.০০০০.১৭৩.৪৪.০৫৮.১৫-১২৪, তারিখ: ২৯/১০/২০১৮ অনুযায়ী উপসহকারী পরিচালক হতে ফায়ারফাইটার/নার্সিং এ্যাটেনডেন্ট পর্যন্ত প্রযোজ্য।
+                    </span>
+                </div>
+
+                <!-- পদক ভাতা সাবলীল শিরোনাম -->
+                <div class="fire-subtitle">🎖️ পদক ভাতা নির্বাচন করুন (যদি পদকপ্রাপ্ত হয়ে থাকেন):</div>
+                <div class="checkbox-grid" style="margin-top: 8px;">
+                    <label class="checkbox-label" style="border-color: var(--fire-border);">
+                        <input type="checkbox" id="fireMedal1">
+                        <span>১. প্রেসিডেন্ট ফায়ার সার্ভিস ও সিভিল ডিফেন্স পদক (১,০০০ টাকা)</span>
+                    </label>
+                    <label class="checkbox-label" style="border-color: var(--fire-border);">
+                        <input type="checkbox" id="fireMedal2">
+                        <span>২. প্রেসিডেন্ট ফায়ার সার্ভিস ও সিভিল ডিফেন্স (সেবা) পদক (১,০০০ টাকা)</span>
+                    </label>
+                    <label class="checkbox-label" style="border-color: var(--fire-border);">
+                        <input type="checkbox" id="fireMedal3">
+                        <span>৩. ফায়ার সার্ভিস ও সিভিল ডিফেন্স পদক (১,৫০০ টাকা)</span>
+                    </label>
+                    <label class="checkbox-label" style="border-color: var(--fire-border);">
+                        <input type="checkbox" id="fireMedal4">
+                        <span>৪. ফায়ার সার্ভিস ও সিভিল ডিফেন্স (সেবা) পদক (১,৫০০ টাকা)</span>
+                    </label>
                 </div>
             </div>
         </div>
@@ -815,9 +958,14 @@
 
             <div class="summary-card" id="summaryCard"></div>
 
-            <div class="section-title">সময়ভিত্তিক মূল বেতন ও অতিরিক্ত নিট বৃদ্ধি বিবরণী:</div>
+            <!-- সময়ভিত্তিক বিবরণের হাইলাইটেড টাইটেল -->
+            <div>
+                <div class="table-title-highlight">
+                    <span>📊</span>
+                    <span>সময়ভিত্তিক মূল বেতন ও অতিরিক্ত নিট বৃদ্ধি বিবরণী:</span>
+                </div>
+            </div>
             
-            <!-- মোবাইলের জন্য স্ক্রোল সহায়িকা -->
             <div class="mobile-scroll-hint">👈 পুরো ছকটি দেখতে ডানে-বামে আঙুল দিয়ে টানুন 👉</div>
             
             <div class="table-container">
@@ -837,7 +985,8 @@
             <!-- ২০২৮ পূর্ণাঙ্গ মোট বেতনের বক্স -->
             <div class="allowance-box">
                 <div class="allowance-title">
-                    <span>১ জানুয়ারি ২০২৮ থেকে প্রাপ্য মাসিক পূর্ণাঙ্গ মোট বেতন (Gross Salary)</span>
+                    <!-- হাইলাইটেড টাইটেল -->
+                    <span class="allowance-title-highlight">১ জানুয়ারি ২০২৮ থেকে প্রাপ্য মাসিক পূর্ণাঙ্গ মোট বেতন (Gross Salary)</span>
                     <span class="badge" style="background:#bbf7d0; color:#14532d;">নতুন বর্ধিত ভাতা কার্যকর</span>
                 </div>
 
@@ -855,12 +1004,8 @@
                 <!-- বিশেষ বাহিনী ও ঝুঁকি ভাতার অবগতি নোট -->
                 <div class="special-forces-note">
                     <strong>📌 বিশেষ ভাতা ও প্রতিরক্ষা বাহিনীর অবগতি নোট:</strong><br>
-                    ফায়ার সার্ভিস ও সিভিল ডিফেন্স অধিদপ্তরের অপারেশনাল কর্মচারীদের ঝুঁকি ভাতা (২৯/১০/২০১৮ প্রজ্ঞাপন)
-                    এবং পার্বত্য/হাওড় ভাতা (অনুচ্ছেদ ২৫ ও ২৬) সফলভাবে সংযুক্ত করা হয়েছে।<br>
-                    অন্যান্য বিশেষ বাহিনী ও দপ্তর (যেমন: পুলিশ বাহিনী, ফায়ার সার্ভিস, বিজিবি, প্রতিরক্ষা সার্ভিসের
-                    বেসামরিক কর্মচারী, কোস্টগার্ড, কারারক্ষী, আনসার ও গ্রাম প্রতিরক্ষা বাহিনী, এনএসআই, ডিজিএফআই এবং
-                    স্বাস্থ্য পরিদপ্তরের কুষ্ঠ ও যক্ষ্মা কার্যক্রমের ঝুঁকিভাতা) স্ব-স্ব দপ্তরের নির্ধারিত আদেশ অনুযায়ী
-                    ডিডিও কর্তৃক অতিরিক্ত হিসেবে যুক্ত হবে।
+                    ফায়ার সার্ভিস ও সিভিল ডিফেন্স অধিদপ্তরের অপারেশনাল কর্মচারীদের ঝুঁকি ভাতা (২৯/১০/২০১৮ প্রজ্ঞাপন), পদক ভাতা এবং পার্বত্য/হাওড় ভাতা (অনুচ্ছেদ ২৫ ও ২৬) সফলভাবে সংযুক্ত করা হয়েছে।<br>
+                    অন্যান্য বিশেষ বাহিনী ও দপ্তর (যেমন: পুলিশ বাহিনী, বিজিবি, প্রতিরক্ষা সার্ভিসের বেসামরিক কর্মচারী, কোস্টগার্ড, কারারক্ষী, আনসার ও গ্রাম প্রতিরক্ষা বাহিনী, এনএসআই, ডিজিএফআই এবং স্বাস্থ্য পরিদপ্তরের কুষ্ঠ ও যক্ষ্মা কার্যক্রমের ঝুঁকিভাতা) স্ব-স্ব দপ্তরের নির্ধারিত আদেশ অনুযায়ী ডিডিও কর্তৃক অতিরিক্ত হিসেবে যুক্ত হবে।
                 </div>
             </div>
 
@@ -878,9 +1023,15 @@
 
         </div>
 
+        <!-- লাইভ ভিজিটর কাউন্টার কার্ড -->
+        <div class="visitor-counter-card">
+            <span class="visitor-label">👁️ পেজ ভিজিটর কাউন্টার (আজ / সর্বমোট):</span>
+            <img class="visitor-badge-img" src="https://hits.sh/payscale2026.netlify.app.svg?view=today-total&style=flat-square&label=Today%20/%20Total&color=059669&labelColor=0f172a" alt="Live Page Views" title="আজকের ও সর্বমোট পেজ ভিউ">
+        </div>
+
         <!-- সব সময় দৃশ্যমান স্থায়ী ফুটার ও কপিরাইট সেকশন -->
         <div class="developer-credit-permanent">
-            ডিজাইন ও ডেভেলপমেন্ট: <strong>Shuvo Dey</strong>
+            ডিজাইন ও ডেভেলপমেন্ট: <strong>SHUVO DEY</strong>
             <p>© ২০২৬ গণপ্রজাতন্ত্রী বাংলাদেশ সরকারের অর্থ মন্ত্রণালয় কর্তৃক জারিকৃত ‘চাকরি (বেতন ও ভাতাদি) আদেশ,
                 ২০২৬’ গেজেট মোতাবেক প্রস্তুতকৃত। সর্বস্বত্ব সংরক্ষিত।</p>
         </div>
@@ -951,6 +1102,14 @@
             document.getElementById('fireDetailsBox').style.display = isChecked ? 'block' : 'none';
         }
 
+        // বাংলা ও ইংরেজি উভয় সংখ্যার ইনপুট গ্রহণের ফাংশন
+        function parseBnNumber(input) {
+            if (!input) return NaN;
+            const bnDigits = { '০': '0', '১': '1', '২': '2', '৩': '3', '৪': '4', '৫': '5', '৬': '6', '৭': '7', '৮': '8', '৯': '9' };
+            const converted = input.toString().replace(/[০-৯]/g, d => bnDigits[d]).replace(/,/g, '').trim();
+            return parseFloat(converted);
+        }
+
         function toBn(num) {
             if (num === undefined || num === null) return '';
             const bnDigits = ['০', '১', '২', '৩', '৪', '৫', '৬', '৭', '৮', '৯'];
@@ -959,10 +1118,11 @@
 
         function calculateFullPay() {
             const grade = parseInt(document.getElementById('grade').value);
-            const basicOld = parseFloat(document.getElementById('basicOld').value);
+            const basicOldRaw = document.getElementById('basicOld').value;
+            const basicOld = parseBnNumber(basicOldRaw);
 
             if (!grade || isNaN(basicOld) || basicOld <= 0) {
-                alert('অনুগ্রহ করে গ্রেড বাছাই করুন এবং ৩০ জুন ২০২৬-এর সঠিক মূল বেতন লিখুন।');
+                alert('অনুগ্রহ করে গ্রেড বাছাই করুন এবং ৩০ জুন ২০২৬-এর সঠিক মূল বেতন (বাংলা বা ইংরেজিতে) লিখুন।');
                 return;
             }
 
@@ -1156,10 +1316,13 @@
                 washing = 300;
             }
 
-            // ৫. ফায়ার সার্ভিস ঝুঁকিভাতার হিসাব (প্রজ্ঞাপন নং- ১২৪, তারিখ ২৯/১০/২০১৮ ও অনুচ্ছেদ ২৯)
+            // ৫. ফায়ার সার্ভিস ঝুঁকিভাতা ও পদক ভাতার হিসাব
             let fireRisk = 0;
+            let fireMedalTotal = 0;
             const isFireEligible = document.getElementById('fireServiceEligible').checked;
+
             if (isFireEligible) {
+                // ক. ঝুঁকিভাতা হিসাব (গ্রেড ১০ হতে ১৮)
                 if (grade >= 10 && grade <= 18) {
                     const expKey = document.getElementById('fireServiceYears').value;
                     if (fireRiskRates[grade] && fireRiskRates[grade][expKey]) {
@@ -1168,9 +1331,15 @@
                 } else {
                     alert('সতর্কতা: ফায়ার সার্ভিস ও সিভিল ডিফেন্সের অপারেশনাল ঝুঁকিভাতা শুধুমাত্র ১০ম হতে ১৮তম গ্রেডের কর্মচারীদের জন্য প্রযোজ্য।');
                 }
+
+                // খ. পদক ভাতা হিসাব (প্রযোজ্য ক্ষেত্রে)
+                if (document.getElementById('fireMedal1').checked) fireMedalTotal += 1000;
+                if (document.getElementById('fireMedal2').checked) fireMedalTotal += 1000;
+                if (document.getElementById('fireMedal3').checked) fireMedalTotal += 1500;
+                if (document.getElementById('fireMedal4').checked) fireMedalTotal += 1500;
             }
 
-            const grossTotal = basic2028 + houseRent + remoteAllowanceAmt + medical + education + tiffin + conveyance + mobile + washing + fireRisk;
+            const grossTotal = basic2028 + houseRent + remoteAllowanceAmt + medical + education + tiffin + conveyance + mobile + washing + fireRisk + fireMedalTotal;
 
             // ভাতার তালিকা প্রস্তুত
             let allowancesHtml = `
@@ -1197,12 +1366,22 @@
                 <div class="allowance-item"><span>ধোলাই ভাতা:</span> <strong>${toBn(washing)} টাকা</strong></div>
             `;
 
-            // ফায়ার সার্ভিস যুক্ত থাকলে তালিকায় প্রদর্শন
+            // ফায়ার সার্ভিস ঝুঁকিভাতা যুক্ত থাকলে তালিকায় প্রদর্শন
             if (isFireEligible && fireRisk > 0) {
                 allowancesHtml += `
                     <div class="allowance-item" style="background:#fef2f2; border-color:#fca5a5;">
                         <span style="color:#b91c1c; font-weight:600;">ফায়ার সার্ভিস ঝুঁকি ভাতা (২৯/১০/২০১৮ প্রজ্ঞাপন):</span> 
                         <strong style="color:#b91c1c;">${toBn(fireRisk)} টাকা</strong>
+                    </div>
+                `;
+            }
+
+            // ফায়ার সার্ভিস পদক ভাতা যুক্ত থাকলে তালিকায় প্রদর্শন
+            if (isFireEligible && fireMedalTotal > 0) {
+                allowancesHtml += `
+                    <div class="allowance-item" style="background:#fff7ed; border-color:#fed7aa;">
+                        <span style="color:#c2410c; font-weight:600;">ফায়ার সার্ভিস পদক ভাতা:</span> 
+                        <strong style="color:#c2410c;">${toBn(fireMedalTotal)} টাকা</strong>
                     </div>
                 `;
             }
@@ -1218,4 +1397,3 @@
 </body>
 
 </html>
-
