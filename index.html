@@ -65,9 +65,9 @@
 
         .header {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 24px;
             border-bottom: 2px dashed #e2e8f0;
-            padding-bottom: 24px;
+            padding-bottom: 22px;
         }
 
         .bd-logo {
@@ -95,6 +95,35 @@
             font-size: 15px;
             font-weight: 500;
             margin-top: 6px;
+        }
+
+        /* গেজেট ডাউনলোড লিঙ্ক কার্ড */
+        .gazette-link-wrapper {
+            margin-top: 14px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .gazette-link-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #ffffff;
+            color: #b91c1c;
+            border: 1.5px solid #fca5a5;
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 700;
+            text-decoration: none;
+            box-shadow: 0 2px 8px rgba(185, 28, 28, 0.08);
+            transition: all 0.25s ease;
+        }
+
+        .gazette-link-btn:hover {
+            background: #fef2f2;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 14px rgba(185, 28, 28, 0.15);
         }
 
         /* ডায়নামিক ইন্টারেক্টিভ সেকশন কার্ড */
@@ -159,7 +188,6 @@
             box-shadow: 0 2px 6px rgba(2, 132, 199, 0.08);
         }
 
-        /* রেজাল্ট টেবিলের হাইলাইটেড টাইটেল */
         .table-title-highlight {
             display: inline-flex;
             align-items: center;
@@ -193,10 +221,8 @@
             color: var(--secondary);
         }
 
-        /* ইনপুট ফিল্ড ও মসৃণ ফোকাস */
-        select,
-        input[type="text"],
-        input[type="number"] {
+        /* ইনপুট ফিল্ড ও ড্রপডাউন */
+        select {
             padding: 13px 15px;
             border: 1.8px solid var(--border-color);
             border-radius: 10px;
@@ -208,9 +234,6 @@
             transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
             -webkit-appearance: none;
             appearance: none;
-        }
-
-        select {
             background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23475569' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
             background-repeat: no-repeat;
             background-position: right 14px center;
@@ -218,9 +241,7 @@
             padding-right: 40px;
         }
 
-        select:focus,
-        input[type="text"]:focus,
-        input[type="number"]:focus {
+        select:focus {
             border-color: var(--primary);
             box-shadow: 0 0 0 4px rgba(5, 150, 105, 0.18);
             transform: translateY(-1px);
@@ -318,13 +339,12 @@
             border-top: 1px dashed var(--fire-border);
         }
 
-        /* ফায়ার সার্ভিসের নতুন স্বতন্ত্র কালার ব্যাজসমূহ */
         .fire-risk-label-badge {
             display: inline-flex;
             align-items: center;
             gap: 8px;
             background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
-            color: #1e40af; /* প্রাণবন্ত রয়েল ব্লু */
+            color: #1e40af;
             border: 1.5px solid #93c5fd;
             padding: 7px 14px;
             border-radius: 10px;
@@ -339,7 +359,7 @@
             align-items: center;
             gap: 8px;
             background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
-            color: #92400e; /* উজ্জ্বল সোনালি অ্যাম্বার */
+            color: #92400e;
             border: 1.5px solid #fcd34d;
             padding: 7px 14px;
             border-radius: 10px;
@@ -349,7 +369,7 @@
             box-shadow: 0 2px 6px rgba(146, 64, 14, 0.08);
         }
 
-        /* আকর্ষণীয় ক্যালকুলেট বাটন */
+        /* ক্যালকুলেট বাটন */
         .calc-btn-wrapper {
             margin: 15px 0 25px 0;
         }
@@ -408,6 +428,40 @@
             50% { transform: translateY(-3px); }
         }
 
+        /* পিডিএফ ডাউনলোড / প্রিন্ট বাটন */
+        .print-btn-wrapper {
+            margin: 16px 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .print-btn {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            color: #ffffff;
+            border: 1.5px solid #334155;
+            padding: 13px 22px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 6px 18px rgba(15, 23, 42, 0.15);
+            transition: all 0.25s ease;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .print-btn:hover {
+            background: linear-gradient(135deg, #334155 0%, #1e293b 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 24px rgba(15, 23, 42, 0.25);
+        }
+
+        .print-btn:active {
+            transform: scale(0.98);
+        }
+
         .result-section {
             display: none;
             margin-top: 35px;
@@ -431,7 +485,7 @@
             border-left: 6px solid var(--primary);
             padding: 20px 24px;
             border-radius: 12px;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
 
         .summary-card p {
@@ -576,7 +630,7 @@
             font-weight: 700;
         }
 
-        /* মোট বেতনের (Gross Total) হাইলাইটেড ও ডাইনামিক কার্ড */
+        /* মোট বেতনের (Gross Total) হাইলাইটেড কার্ড */
         .allowance-total {
             background: linear-gradient(135deg, #064e3b 0%, #047857 60%, #0f766e 100%);
             color: #ffffff;
@@ -654,9 +708,22 @@
             line-height: 1.65;
         }
 
+        /* আইনি ও সচেতনতামূলক ডিসক্লেইমার কার্ড */
+        .disclaimer-card {
+            margin-top: 30px;
+            padding: 16px 20px;
+            background: #fff7ed;
+            border: 1.5px solid #fed7aa;
+            border-left: 5px solid #ea580c;
+            border-radius: 12px;
+            font-size: 13.5px;
+            color: #9a3412;
+            line-height: 1.6;
+        }
+
         /* লাইভ ভিজিটর কাউন্টার কার্ড */
         .visitor-counter-card {
-            margin-top: 35px;
+            margin-top: 25px;
             padding: 14px 20px;
             background: #ffffff;
             border: 1.5px solid #cbd5e1;
@@ -711,6 +778,58 @@
             color: #64748b;
         }
 
+        /* 🖨️ প্রিন্ট ও পিডিএফ ডাউনলোড অপটিমাইজেশন */
+        @media print {
+            body {
+                background-color: #ffffff !important;
+                padding: 0 !important;
+                color: #000000 !important;
+            }
+
+            .container {
+                box-shadow: none !important;
+                border: none !important;
+                padding: 0 !important;
+                max-width: 100% !important;
+            }
+
+            .section-card-1,
+            .section-card-2,
+            .fire-service-wrapper,
+            .calc-btn-wrapper,
+            .print-btn-wrapper,
+            .gazette-link-wrapper,
+            .mobile-scroll-hint,
+            .visitor-counter-card {
+                display: none !important;
+            }
+
+            .result-section {
+                display: block !important;
+                margin-top: 10px !important;
+            }
+
+            .summary-card,
+            .allowance-box {
+                border: 1px solid #000000 !important;
+                background: #ffffff !important;
+                color: #000000 !important;
+            }
+
+            .allowance-total {
+                background: #f1f5f9 !important;
+                color: #000000 !important;
+                border: 1.5px solid #000000 !important;
+            }
+
+            .total-amount-highlight {
+                color: #000000 !important;
+                background: transparent !important;
+                border: none !important;
+                font-weight: 800 !important;
+            }
+        }
+
         /* স্মার্টফোন মিডিয়া কুয়েরি */
         @media (max-width: 640px) {
             body {
@@ -723,8 +842,8 @@
             }
 
             .header {
-                margin-bottom: 22px;
-                padding-bottom: 18px;
+                margin-bottom: 20px;
+                padding-bottom: 16px;
             }
 
             .bd-logo {
@@ -740,6 +859,11 @@
 
             .header p {
                 font-size: 13.5px;
+            }
+
+            .gazette-link-btn {
+                font-size: 13px;
+                padding: 7px 14px;
             }
 
             .section-card-1,
@@ -788,6 +912,13 @@
                 padding: 16px 18px;
                 font-size: 17.5px;
                 border-radius: 12px;
+            }
+
+            .print-btn {
+                width: 100%;
+                justify-content: center;
+                font-size: 15px;
+                padding: 12px;
             }
 
             .calc-btn .icon {
@@ -849,7 +980,8 @@
             }
 
             .special-forces-note,
-            .footer-note {
+            .footer-note,
+            .disclaimer-card {
                 padding: 14px 12px;
                 font-size: 13px;
             }
@@ -879,9 +1011,18 @@
                 alt="বাংলাদেশ সরকারের সিলমোহর" title="গণপ্রজাতন্ত্রী বাংলাদেশ সরকার">
             <h1>জাতীয় বেতন স্কেল ২০২৬ পে-ফিক্সেশন ও বেতন-ভাতা ক্যালকুলেটর</h1>
             <p>অর্থ মন্ত্রণালয় জারিকৃত ‘চাকরি (বেতন ও ভাতাদি) আদেশ, ২০২৬’ (এস.আর.ও নং ৩৪৭-আইন/২০২৬) অনুযায়ী প্রণীত</p>
+
+            <!-- গেজেট লিঙ্ক -->
+            <div class="gazette-link-wrapper">
+                <a href="https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-mof/2026/8/650d48d2-18b6-41ad-aef8-19dd39b4e973.pdf"
+                    target="_blank" rel="noopener noreferrer" class="gazette-link-btn">
+                    <span>📄</span>
+                    <span>জাতীয় বেতন স্কেল ২০২৬ অফিশিয়াল গেজেট (PDF ডাউনলোড / দেখুন)</span>
+                </a>
+            </div>
         </div>
 
-        <!-- মূল বেতন ও গ্রেডের তথ্য (ডায়নামিক সবুজ কার্ড ও হাইলাইটেড টাইটেল) -->
+        <!-- মূল বেতন ও গ্রেডের তথ্য -->
         <div class="section-card-1">
             <div class="section-title-badge-1">
                 <span>📋</span>
@@ -891,21 +1032,24 @@
             <div class="form-grid">
                 <div class="form-group">
                     <label for="grade">বর্তমান গ্রেড নির্বাচন করুন (২০২৬ এর নতুন পে-স্কেল অনুযায়ী):</label>
-                    <select id="grade" onchange="updateScaleHint()">
+                    <select id="grade" onchange="onGradeChange()">
                         <option value="">-- গ্রেড বাছাই করুন --</option>
                     </select>
                     <span class="help-text" id="scaleHint"></span>
                 </div>
 
+                <!-- ইনপুট বক্সের বদলে স্বয়ংক্রিয় ড্রপডাউন -->
                 <div class="form-group">
                     <label for="basicOld">৩০ জুন ২০২৬-এ আহরিত মূল বেতন (২০১৫ পে-স্কেল অনুযায়ী):</label>
-                    <input type="text" inputmode="numeric" id="basicOld" placeholder="যেমন: 12090 বা ১২০৯০">
-                    <span class="help-text">১ জুলাই ২০২৬-এর ইনক্রিমেন্ট লাগার পূর্বের মূল বেতন লিখুন</span>
+                    <select id="basicOld">
+                        <option value="">-- প্রথমে উপরের গ্রেড নির্বাচন করুন --</option>
+                    </select>
+                    <span class="help-text">১ জুলাই ২০২৬-এর ইনক্রিমেন্ট লাগার পূর্বের নির্ধারিত মূল বেতন ধাপ বাছাই করুন</span>
                 </div>
             </div>
         </div>
 
-        <!-- ২০২৮ সালের বর্ধিত ভাতা সংক্রান্ত তথ্য (ডায়নামিক নীল কার্ড ও হাইলাইটেড টাইটেল) -->
+        <!-- ২০২৮ সালের বর্ধিত ভাতা সংক্রান্ত তথ্য -->
         <div class="section-card-2">
             <div class="section-title-badge-2">
                 <span>💰</span>
@@ -973,7 +1117,7 @@
         <!-- ফায়ার সার্ভিস ও সিভিল ডিফেন্স ঝুঁকিভাতা ও পদক ভাতা সেকশন -->
         <div class="fire-service-wrapper">
             <div class="fire-title">
-                <span>🚒 ফায়ার সার্ভিস ও সিভিল ডিফেন্স ঝুঁকি ভাতা ও পদক ভাতা(শুধুমাত্র ফায়ার সার্ভিসে কর্মরত কর্মকর্তা/কর্মচারীদের জন্য প্রযোজ্য)</span>
+                <span>🚒 ফায়ার সার্ভিস ও সিভিল ডিফেন্স ঝুঁকি ভাতা ও পদক ভাতা</span>
             </div>
             <label class="checkbox-label" style="background:#ffffff; border-color: var(--fire-border);">
                 <input type="checkbox" id="fireServiceEligible" onchange="toggleFireServiceBox()">
@@ -981,7 +1125,7 @@
             </label>
 
             <div class="fire-details" id="fireDetailsBox">
-                <!-- ঝুঁকিভাতার চাকরির বয়স (রয়েল ব্লু ব্যাজ) -->
+                <!-- ঝুঁকিভাতার চাকরির বয়স -->
                 <div class="form-group" style="max-width: 480px; margin-top: 8px;">
                     <div>
                         <span class="fire-risk-label-badge">
@@ -1001,7 +1145,7 @@
                     </span>
                 </div>
 
-                <!-- পদক ভাতা সাবলীল শিরোনাম (গোল্ডেন অ্যাম্বার ব্যাজ) -->
+                <!-- পদক ভাতা সাবলীল শিরোনাম -->
                 <div>
                     <span class="fire-medal-label-badge">
                         <span>🎖️</span>
@@ -1040,6 +1184,14 @@
 
         <!-- রেজাল্ট সেকশন -->
         <div class="result-section" id="resultSection">
+
+            <!-- রেজাল্টের উপরে PDF ডাউনলোড বাটন -->
+            <div class="print-btn-wrapper">
+                <button class="print-btn" onclick="window.print()">
+                    <span>📥</span>
+                    <span>পিডিএফ (PDF) ডাউনলোড / প্রিন্ট করুন</span>
+                </button>
+            </div>
 
             <div class="summary-card" id="summaryCard"></div>
 
@@ -1105,6 +1257,20 @@
                 </ol>
             </div>
 
+            <!-- রেজাল্টের নিচে PDF ডাউনলোড বাটন -->
+            <div class="print-btn-wrapper" style="margin-top: 25px;">
+                <button class="print-btn" onclick="window.print()">
+                    <span>📥</span>
+                    <span>পিডিএফ (PDF) ডাউনলোড / প্রিন্ট করুন</span>
+                </button>
+            </div>
+
+        </div>
+
+        <!-- সচেতনতামূলক ও দায়িত্বমুক্তি ডিসক্লেইমার কার্ড -->
+        <div class="disclaimer-card">
+            <strong>📌 আইনি দিকনির্দেশনা ও সতর্কতা:</strong><br>
+            এটি কোনো অফিশিয়াল সরকারি ওয়েবসাইট নয়। গণপ্রজাতন্ত্রী বাংলাদেশ সরকারের অর্থ মন্ত্রণালয় কর্তৃক জারিকৃত ‘চাকরি (বেতন ও ভাতাদি) আদেশ, ২০২৬’ (এস.আর.ও নং ৩৪৭-আইন/২০২৬) গেজেটের বিধানাবলি অনুসারে হিসাব প্রদর্শনের জন্য তৈরি একটি সহায়ক পাবলিক ক্যালকুলেটর। কর্মচারীদের চূড়ান্ত বেতন নির্ধারণ ও অনুমোদন প্রক্রিয়ায় ড্রইং অ্যান্ড ডিসবার্সিং অফিসার (DDO) এবং সংশ্লিষ্ট হিসাবরক্ষণ অফিসের (CAO/DAO/UAO) প্রতিপাদনই চূড়ান্ত ও আইনগতভাবে কার্যকর বলিয়া গণ্য হইবে।
         </div>
 
         <!-- লাইভ ভিজিটর কাউন্টার কার্ড -->
@@ -1123,28 +1289,88 @@
     </div>
 
     <script>
-        // ২০২৬ এবং ২০১৫ স্কেলের গ্রেডভিত্তিক পূর্ণাঙ্গ ধাপসমূহ (গেজেটের অনুচ্ছেদ ৩)
+        // ২০১৫ স্কেল এবং ২০২৬ স্কেলের গ্রেডভিত্তিক পূর্ণাঙ্গ অনুমোদিত ধাপসমূহ
         const scalesData = {
-            1: { oldMin: 78000, newSteps: [156000] },
-            2: { oldMin: 66000, newSteps: [132000, 135700, 139400, 143200, 147200, 151200, 153000] },
-            3: { oldMin: 56500, newSteps: [113000, 117000, 121100, 125300, 129700, 134300, 139000, 143800, 148800] },
-            4: { oldMin: 50000, newSteps: [100000, 103500, 107200, 110900, 114800, 118800, 123000, 127300, 131700, 136300, 142400] },
-            5: { oldMin: 43000, newSteps: [86000, 89500, 93100, 96800, 100700, 104700, 108900, 113200, 117700, 122500, 127400, 132400, 139700] },
-            6: { oldMin: 35500, newSteps: [71000, 74600, 78300, 82200, 86400, 90700, 95200, 100000, 104900, 110200, 115700, 121500, 127600, 134000] },
-            7: { oldMin: 29000, newSteps: [58000, 60900, 64000, 67200, 70500, 74100, 77800, 81700, 85700, 90000, 94500, 99200, 104200, 109400, 114900, 120600, 126800] },
-            8: { oldMin: 23000, newSteps: [46000, 48300, 50800, 53300, 56000, 58800, 61700, 64800, 68000, 71400, 75000, 78700, 82700, 86800, 91100, 95700, 100500, 105500, 110800] },
-            9: { oldMin: 22000, newSteps: [44000, 46200, 48600, 51000, 53500, 56200, 59000, 62000, 65100, 68300, 71700, 75300, 79100, 83000, 87200, 91500, 96100, 100900, 105900] },
-            10: { oldMin: 16000, newSteps: [32000, 33600, 35300, 37100, 38900, 40900, 42900, 45100, 47300, 49700, 52200, 54800, 57500, 60400, 63400, 66600, 69900, 73400, 77300] },
-            11: { oldMin: 12500, newSteps: [25000, 26300, 27600, 29000, 30400, 32000, 33600, 35200, 37000, 38800, 40800, 42800, 44900, 47200, 49500, 52000, 54600, 57300, 60500] },
-            12: { oldMin: 11300, newSteps: [24300, 25600, 26800, 28200, 29600, 31100, 32600, 34200, 36000, 37700, 39600, 41600, 43700, 45900, 48200, 50600, 53100, 55700, 58700] },
-            13: { oldMin: 11000, newSteps: [24000, 25200, 26500, 27800, 29200, 30700, 32200, 33800, 35500, 37300, 39100, 41100, 43200, 45300, 47600, 49900, 52400, 55100, 58000] },
-            14: { oldMin: 10200, newSteps: [23500, 24700, 26000, 27300, 28600, 30000, 31500, 33100, 34800, 36500, 38300, 40200, 42300, 44400, 46600, 48900, 51300, 53900, 56800] },
-            15: { oldMin: 9700, newSteps: [22800, 24000, 25200, 26400, 27800, 29100, 30600, 32100, 33700, 35400, 37200, 39000, 41000, 43000, 45200, 47400, 49800, 52300, 55200] },
-            16: { oldMin: 9300, newSteps: [21900, 23000, 24200, 25400, 26700, 28000, 29400, 30900, 32400, 34000, 35700, 37500, 39400, 41300, 43400, 45600, 47900, 50200, 52900] },
-            17: { oldMin: 9000, newSteps: [21400, 22500, 23600, 24800, 26100, 27400, 28700, 30200, 31700, 33200, 34900, 36700, 38500, 40400, 42400, 44500, 46800, 49100, 51900] },
-            18: { oldMin: 8800, newSteps: [21000, 22100, 23200, 24400, 25600, 26900, 28200, 29600, 31100, 32600, 34300, 36000, 37800, 39600, 41600, 43700, 45900, 48200, 50900] },
-            19: { oldMin: 8500, newSteps: [20500, 21600, 22700, 23800, 25000, 26200, 27500, 28900, 30300, 31900, 33400, 35100, 36900, 38700, 40600, 42700, 44800, 47000, 49600] },
-            20: { oldMin: 8250, newSteps: [20000, 21000, 22100, 23200, 24400, 25600, 26900, 28200, 29600, 31100, 32600, 34300, 36000, 37800, 39600, 41600, 43700, 45900, 48400] }
+            1: {
+                oldSteps: [78000],
+                newSteps: [156000]
+            },
+            2: {
+                oldSteps: [66000, 68480, 71050, 73720, 76490],
+                newSteps: [132000, 135700, 139400, 143200, 147200, 151200, 153000]
+            },
+            3: {
+                oldSteps: [56500, 58760, 61120, 63570, 66120, 68770, 71530, 74400],
+                newSteps: [113000, 117000, 121100, 125300, 129700, 134300, 139000, 143800, 148800]
+            },
+            4: {
+                oldSteps: [50000, 52000, 54080, 56250, 58500, 60840, 63280, 65820, 68460, 71200],
+                newSteps: [100000, 103500, 107200, 110900, 114800, 118800, 123000, 127300, 131700, 136300, 142400]
+            },
+            5: {
+                oldSteps: [43000, 44940, 46970, 49090, 51300, 53610, 56030, 58560, 61200, 63960, 66840, 69850],
+                newSteps: [86000, 89500, 93100, 96800, 100700, 104700, 108900, 113200, 117700, 122500, 127400, 132400, 139700]
+            },
+            6: {
+                oldSteps: [35500, 37280, 39150, 41110, 43170, 45330, 47600, 49980, 52480, 55110, 57870, 60770, 63810, 67010],
+                newSteps: [71000, 74600, 78300, 82200, 86400, 90700, 95200, 100000, 104900, 110200, 115700, 121500, 127600, 134000]
+            },
+            7: {
+                oldSteps: [29000, 30450, 31980, 33580, 35260, 37030, 38890, 40840, 42890, 45040, 47300, 49670, 52160, 54770, 57510, 60390, 63410],
+                newSteps: [58000, 60900, 64000, 67200, 70500, 74100, 77800, 81700, 85700, 90000, 94500, 99200, 104200, 109400, 114900, 120600, 126800]
+            },
+            8: {
+                oldSteps: [23000, 24150, 25360, 26630, 27970, 29370, 30840, 32390, 34010, 35720, 37510, 39390, 41360, 43430, 45610, 47900, 50300, 52820, 55470],
+                newSteps: [46000, 48300, 50800, 53300, 56000, 58800, 61700, 64800, 68000, 71400, 75000, 78700, 82700, 86800, 91100, 95700, 100500, 105500, 110800]
+            },
+            9: {
+                oldSteps: [22000, 23100, 24260, 25480, 26760, 28100, 29510, 30990, 32540, 34170, 35880, 37680, 39570, 41550, 43630, 45820, 48120, 50530, 53060],
+                newSteps: [44000, 46200, 48600, 51000, 53500, 56200, 59000, 62000, 65100, 68300, 71700, 75300, 79100, 83000, 87200, 91500, 96100, 100900, 105900]
+            },
+            10: {
+                oldSteps: [16000, 16800, 17640, 18530, 19460, 20440, 21470, 22550, 23680, 24870, 26120, 27430, 28810, 30260, 31780, 33370, 35040, 36800, 38640],
+                newSteps: [32000, 33600, 35300, 37100, 38900, 40900, 42900, 45100, 47300, 49700, 52200, 54800, 57500, 60400, 63400, 66600, 69900, 73400, 77300]
+            },
+            11: {
+                oldSteps: [12500, 13130, 13790, 14480, 15210, 15980, 16780, 17620, 18510, 19440, 20420, 21450, 22530, 23660, 24850, 26100, 27410, 28790, 30230],
+                newSteps: [25000, 26300, 27600, 29000, 30400, 32000, 33600, 35200, 37000, 38800, 40800, 42800, 44900, 47200, 49500, 52000, 54600, 57300, 60500]
+            },
+            12: {
+                oldSteps: [11300, 11870, 12470, 13100, 13760, 14450, 15180, 15940, 16740, 17580, 18460, 19390, 20360, 21380, 22450, 23580, 24760, 26000, 27300],
+                newSteps: [24300, 25600, 26800, 28200, 29600, 31100, 32600, 34200, 36000, 37700, 39600, 41600, 43700, 45900, 48200, 50600, 53100, 55700, 58700]
+            },
+            13: {
+                oldSteps: [11000, 11550, 12130, 12740, 13380, 14050, 14760, 15500, 16280, 17100, 17960, 18860, 19810, 20810, 21860, 22960, 24110, 25320, 26590],
+                newSteps: [24000, 25200, 26500, 27800, 29200, 30700, 32200, 33800, 35500, 37300, 39100, 41100, 43200, 45300, 47600, 49900, 52400, 55100, 58000]
+            },
+            14: {
+                oldSteps: [10200, 10710, 11250, 11820, 12420, 13050, 13710, 14400, 15120, 15880, 16680, 17520, 18400, 19320, 20290, 21310, 22380, 23500, 24680],
+                newSteps: [23500, 24700, 26000, 27300, 28600, 30000, 31500, 33100, 34800, 36500, 38300, 40200, 42300, 44400, 46600, 48900, 51300, 53900, 56800]
+            },
+            15: {
+                oldSteps: [9700, 10190, 10700, 11240, 11810, 12410, 13040, 13700, 14390, 15110, 15870, 16670, 17510, 18390, 19310, 20280, 21300, 22370, 23490],
+                newSteps: [22800, 24000, 25200, 26400, 27800, 29100, 30600, 32100, 33700, 35400, 37200, 39000, 41000, 43000, 45200, 47400, 49800, 52300, 55200]
+            },
+            16: {
+                oldSteps: [9300, 9770, 10260, 10780, 11320, 11890, 12490, 13120, 13780, 14470, 15200, 15960, 16760, 17600, 18480, 19410, 20390, 21410, 22490],
+                newSteps: [21900, 23000, 24200, 25400, 26700, 28000, 29400, 30900, 32400, 34000, 35700, 37500, 39400, 41300, 43400, 45600, 47900, 50200, 52900]
+            },
+            17: {
+                oldSteps: [9000, 9450, 9930, 10430, 10960, 11510, 12090, 12700, 13340, 14010, 14720, 15460, 16240, 17060, 17920, 18820, 19770, 20760, 21800],
+                newSteps: [21400, 22500, 23600, 24800, 26100, 27400, 28700, 30200, 31700, 33200, 34900, 36700, 38500, 40400, 42400, 44500, 46800, 49100, 51900]
+            },
+            18: {
+                oldSteps: [8800, 9240, 9710, 10200, 10710, 11250, 11820, 12420, 13050, 13710, 14400, 15120, 15880, 16680, 17520, 18400, 19320, 20290, 21310],
+                newSteps: [21000, 22100, 23200, 24400, 25600, 26900, 28200, 29600, 31100, 32600, 34300, 36000, 37800, 39600, 41600, 43700, 45900, 48200, 50900]
+            },
+            19: {
+                oldSteps: [8500, 8930, 9380, 9850, 10350, 10870, 11420, 12000, 12600, 13230, 13900, 14600, 15330, 16100, 16910, 17760, 18650, 19590, 20570],
+                newSteps: [20500, 21600, 22700, 23800, 25000, 26200, 27500, 28900, 30300, 31900, 33400, 35100, 36900, 38700, 40600, 42700, 44800, 47000, 49600]
+            },
+            20: {
+                oldSteps: [8250, 8670, 9110, 9570, 10050, 10560, 11090, 11650, 12240, 12860, 13510, 14190, 14900, 15650, 16440, 17270, 18140, 19050, 20010],
+                newSteps: [20000, 21000, 22100, 23200, 24400, 25600, 26900, 28200, 29600, 31100, 32600, 34300, 36000, 37800, 39600, 41600, 43700, 45900, 48400]
+            }
         };
 
         // ফায়ার সার্ভিস ঝুঁকি ভাতার ছক (প্রজ্ঞাপন নং ০৭.০০.০০০০.১৭৩.৪৪.০৫৮.১৫-১২৪, তারিখ: ২৯/১০/২০১৮)
@@ -1171,27 +1397,41 @@
             gradeSelect.appendChild(opt);
         }
 
-        function updateScaleHint() {
+        // গ্রেড পরিবর্তনের সাথে সাথে ২০১৫ স্কেলের অনুমোদিত ধাপ ড্রপডাউনে পপুলেট করা
+        function onGradeChange() {
             const g = parseInt(gradeSelect.value);
+            const basicOldSelect = document.getElementById('basicOld');
             const hint = document.getElementById('scaleHint');
+            
+            basicOldSelect.innerHTML = '';
+
             if (scalesData[g]) {
-                hint.textContent = `২০১৫ স্কেলে এই গ্রেডের প্রারম্ভিক মূল বেতন ছিল: ${toBn(scalesData[g].oldMin)} টাকা`;
+                const oldSteps = scalesData[g].oldSteps;
+                hint.textContent = `২০১৫ স্কেলে এই গ্রেডের স্কেল পরিসীমা ছিল: ${toBn(oldSteps[0])} হতে ${toBn(oldSteps[oldSteps.length-1])} টাকা`;
+
+                const defaultOpt = document.createElement('option');
+                defaultOpt.value = '';
+                defaultOpt.textContent = `-- ${toBn(g)}ম গ্রেডের মূল বেতন ধাপ নির্বাচন করুন --`;
+                basicOldSelect.appendChild(defaultOpt);
+
+                oldSteps.forEach(step => {
+                    const opt = document.createElement('option');
+                    opt.value = step;
+                    opt.textContent = `${toBn(step.toLocaleString('en-US'))} টাকা`;
+                    basicOldSelect.appendChild(opt);
+                });
             } else {
                 hint.textContent = '';
+                const defaultOpt = document.createElement('option');
+                defaultOpt.value = '';
+                defaultOpt.textContent = '-- প্রথমে উপরের গ্রেড নির্বাচন করুন --';
+                basicOldSelect.appendChild(defaultOpt);
             }
         }
 
         function toggleFireServiceBox() {
             const isChecked = document.getElementById('fireServiceEligible').checked;
             document.getElementById('fireDetailsBox').style.display = isChecked ? 'block' : 'none';
-        }
-
-        // বাংলা ও ইংরেজি উভয় সংখ্যার ইনপুট গ্রহণের ফাংশন
-        function parseBnNumber(input) {
-            if (!input) return NaN;
-            const bnDigits = { '০': '0', '১': '1', '২': '2', '৩': '3', '৪': '4', '৫': '5', '৬': '6', '৭': '7', '৮': '8', '৯': '9' };
-            const converted = input.toString().replace(/[০-৯]/g, d => bnDigits[d]).replace(/,/g, '').trim();
-            return parseFloat(converted);
         }
 
         function toBn(num) {
@@ -1202,22 +1442,23 @@
 
         function calculateFullPay() {
             const grade = parseInt(document.getElementById('grade').value);
-            const basicOldRaw = document.getElementById('basicOld').value;
-            const basicOld = parseBnNumber(basicOldRaw);
+            const basicOld = parseFloat(document.getElementById('basicOld').value);
 
-            if (!grade || isNaN(basicOld) || basicOld <= 0) {
-                alert('অনুগ্রহ করে গ্রেড বাছাই করুন এবং ৩০ জুন ২০২৬-এর সঠিক মূল বেতন (বাংলা বা ইংরেজিতে) লিখুন।');
+            if (!grade) {
+                alert('অনুগ্রহ করে প্রথমে কর্মচারীর গ্রেড বাছাই করুন।');
+                return;
+            }
+
+            if (isNaN(basicOld) || basicOld <= 0) {
+                alert('অনুগ্রহ করে ৩০ জুন ২০২৬-এ আহরিত মূল বেতনের ধাপ নির্বাচন করুন।');
                 return;
             }
 
             const gData = scalesData[grade];
-            if (basicOld < gData.oldMin) {
-                alert(`নির্বাচিত গ্রেডের মূল বেতন ২০১৫ স্কেলের সর্বনিম্ন ধাপ ${gData.oldMin} টাকার কম হতে পারবে না।`);
-                return;
-            }
+            const oldMin = gData.oldSteps[0];
 
             // ১. অনুচ্ছেদ ৫ অনুযায়ী পে-ফিক্সেশন
-            const diff = basicOld - gData.oldMin;
+            const diff = basicOld - oldMin;
             const newStart = gData.newSteps[0];
             const interim = newStart + diff;
 
@@ -1276,7 +1517,7 @@
 
             // সামারি কার্ড আপডেট
             document.getElementById('summaryCard').innerHTML = `
-                <p><strong>নির্বাচিত গ্রেড:</strong> ${toBn(grade)}ম গ্রেড &nbsp;|&nbsp; <strong>৩০ জুন ২০২৬-এ মূল বেতন:</strong> ${toBn(basicOld.toFixed(2))} টাকা</p>
+                <p><strong>নির্বাচিত পদমর্যাদা:</strong> ${toBn(grade)}ম গ্রেড &nbsp;|&nbsp; <strong>৩০ জুন ২০২৬-এ মূল বেতন:</strong> ${toBn(basicOld.toFixed(2))} টাকা</p>
                 <p><strong>নতুন স্কেলে নির্ধারিত পূর্ণ মূল বেতন:</strong> ${toBn(fullBasicWithInc)} টাকা (১ জুলাই ২০২৬ ইনক্রিমেন্টসহ)</p>
                 <p><strong>বেতনবৃদ্ধি বাবদ মোট পার্থক্য:</strong> ${toBn(totalIncrease)} টাকা &nbsp;|&nbsp; <strong>বিলুপ্ত ১৫% বিশেষ সুবিধা:</strong> ${toBn(oldSpecialBenefit.toFixed(2))} টাকা/মাস</p>
             `;
@@ -1478,6 +1719,7 @@
         }
     </script>
 
+    <!-- Adsterra বিজ্ঞাপন স্ক্রিপ্ট -->
     <script src="https://pl31424417.profitableratecpmnetwork.com/b4/00/03/b4000380b1f66864738f4857f4fe5ebb.js"></script>
 
 </body>
